@@ -12,64 +12,55 @@
     <header>
         ヘッダー
     </header>
-    <main>
-        <div class="card-body">
-            <caption>My Favorite Album</caption>
-            <table id="fav-table" class="table table-bordered" border="1">
-                <thead>
-                    <tr>
-                        <th>Album</th>
-                        <th>Artist</th>
-                        <th>Country</th>
-                        <th>Label</th>
-                        <th>Release</th>
-                        <th>Recommend</th>
-                    </tr>
-                </thead>
-                <tr>
-                    <td>Demi Masa</td>
-                    <td>simakDialog</td>
-                    <td>Indonesia</td>
-                    <td>Moonjune Records</td>
-                    <td>2009.06</td>
-                    <td>★★★★★★★★</td>
-                </tr>
-                <tr>
-                    <td>Postaeolian Train Robbery</td>
-                    <td>CoS</td>
-                    <td>Belgium</td>
-                    <td>Plus Records</td>
-                    <td>1974.08</td>
-                    <td>★★★★</td>
-                </tr>
-                <tr>
-                    <td>organizer</td>
-                    <td>KIYO＊SEN</td>
-                    <td>Japan</td>
-                    <td>ELEC RECORDS</td>
-                    <td>2018.07</td>
-                    <td>★★★</td>
-                </tr>
-                <tr>
-                    <td>Explorations</td>
-                    <td>Bill Evans</td>
-                    <td>America</td>
-                    <td>Riverside Records</td>
-                    <td>1961.03</td>
-                    <td>★★★★★★</td>
-                </tr>
-                <tr>
-                    <td>わたしの毎日</td>
-                    <td>石川ひとみ</td>
-                    <td>Japan</td>
-                    <td>IMPERIAL RECORDS</td>
-                    <td>2018.06</td>
-                    <td>★★★★★★★</td>
-                </tr>
-            </table>
-        </div>
-        <script src="./../js/script.js"></script>
-    </main>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>商品ID</th>
+                <th>商品名</th>
+                <th>ジャンル</th>
+                <th>機種</th>
+                <th>在庫数</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>太郎の大冒険</td>
+                <td>RPG</td>
+                <td>PS</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>タロドラ</td>
+                <td>パズル</td>
+                <td>switch</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>ぼいぼい</td>
+                <td>スポーツ</td>
+                <td>wii</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>tarobrothers</td>
+                <td>アクション</td>
+                <td>64</td>
+                <td>57</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>tarobrothers</td>
+                <td>アクション</td>
+                <td>wii</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="./../js/script.js"></script>
 </body>
 
 </html>
