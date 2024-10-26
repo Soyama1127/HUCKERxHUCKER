@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        GAMESOYA管理者
+        <p>GAMESOYA管理者</p>
     </header>
     <table border="1">
         <thead>
