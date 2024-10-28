@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        ヘッダー
+        GAMESoya
     </header>
     <main>
         画面
