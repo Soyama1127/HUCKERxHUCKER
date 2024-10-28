@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        曾山カス
+        GAMESOYA
     </header>
     <main>
         画面
