@@ -13,7 +13,7 @@
         GAMESOYA
     </header>
     <main>
-        画面
+        曾山を
     </main>
 
 </body>
