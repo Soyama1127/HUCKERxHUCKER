@@ -13,7 +13,7 @@
         ヘッダー
     </header>
     <main>
-        画面
+        カート 
     </main>
 </body>
 
