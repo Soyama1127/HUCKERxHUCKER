@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        曾山ラブ
+        曾山カス
     </header>
     <main>
         画面
