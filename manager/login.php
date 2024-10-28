@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <h1>GAMESOYA管理者</h1>
+        <h1>GAMESoya管理者</h1>
     </header>
     <main>
         画面
