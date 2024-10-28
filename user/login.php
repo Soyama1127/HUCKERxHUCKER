@@ -10,10 +10,22 @@
 
 <body>
     <header>
-        ヘッダー
+        <p>GAMESoya</p>
     </header>
     <main>
-        画面
+        <form action="home.php" method="post">
+            <p>Login</p>
+            <p>ログインID</p>
+            <input type="text" name="login_id"><br><br>
+            <p>パスワード</p>
+            <input type="text" name="pass"><br><br>
+            <input type="submit"><br>
+            <a href="home.php">ゲストとしてログイン</a>
+            <br><br>
+        </form>
+        <form action="signup.php" method="post">
+            <input type="submit">
+        </form>
     </main>
 </body>
 
