@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    height: 100vh;
+    header {
+        margin: 0;
+        text-align: center;
+        font-size: 70px;
+    }
+}
+
+header {
+    height: 100px;
+    background-color: blue;
+}
+
+main {
+    place-items: center;
+}
+
+main p {
+    text-align: center;
+}

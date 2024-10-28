@@ -19,12 +19,12 @@
             <input type="text" name="login_id"><br><br>
             <p>パスワード</p>
             <input type="text" name="pass"><br><br>
-            <input type="submit"><br>
+            <input type="submit" value="ログイン"><br>
             <a href="home.php">ゲストとしてログイン</a>
             <br><br>
         </form>
         <form action="signup.php" method="post">
-            <input type="submit">
+            <input type="submit" value="新規登録">
         </form>
     </main>
 </body>
