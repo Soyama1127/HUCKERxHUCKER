@@ -13,7 +13,7 @@
         ヘッダー
     </header>
     <main>
-        カート 
+        カート
     </main>
 </body>
 
