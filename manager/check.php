@@ -13,7 +13,7 @@
         GAMESOYA管理者
     </header>
     <main>
-        画面
+        確認
     </main>
 </body>
 
