@@ -14,7 +14,6 @@
     </header>
     <main>
         画面
-        aiueo
     </main>
 </body>
 
