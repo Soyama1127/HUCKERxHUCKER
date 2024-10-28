@@ -28,7 +28,7 @@
                 <td>太郎の大冒険</td>
                 <td>RPG</td>
                 <td>PS</td>
-                <td>100</td>
+                <td>200</td>
             </tr>
             <tr>
                 <td>2</td>
