@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        ヘッダー
+        GAMESOYA
     </header>
     <main>
         画面
