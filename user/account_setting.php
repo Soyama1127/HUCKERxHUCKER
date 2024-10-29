@@ -13,7 +13,14 @@
         GAMESOYA
     </header>
     <main>
-        曾山を
+    <form action="home.php" method="post">
+        ユーザー名<br>
+        <input type="text" name="user_name"><br>
+        ログインID<br>
+        <input type="text" name="id"><br>
+        パスワード<br>
+        <input type="text" name="pass"><br>
+        <input type="submit" value="新規登録">
     </main>
 
 </body>
