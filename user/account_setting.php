@@ -17,9 +17,9 @@
         ユーザー名<br>
         <input type="text" name="user_name"><br>
         ログインID<br>
-        <input type="text" name="id"><br>
+        <input type="text" name="user_id"><br>
         パスワード<br>
-        <input type="text" name="pass"><br>
+        <input type="text" name="user_password"><br>
         <input type="submit" value="新規登録">
     </main>
 
