@@ -13,7 +13,7 @@
         GAMESoya
     </header>
     <main>
-        画面
+        画面a
     </main>
 </body>
 
