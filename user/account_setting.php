@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/user.css">
-    <title>アカウント設定</title>
+    <title>アカウント更新</title>
 </head>
 
 <body>
