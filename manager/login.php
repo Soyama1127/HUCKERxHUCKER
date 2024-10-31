@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        GAMESoya管理
+        GAMESoya管理者
     </header>
     <main>
         <p>
