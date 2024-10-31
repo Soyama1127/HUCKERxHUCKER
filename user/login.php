@@ -15,7 +15,7 @@
     <main>
         <form action="home.php" method="post">
             <p>Login</p>
-            <p>ログインID</p>
+            <p>ログイン</p>
             <input type="text" name="login_id"><br><br>
             <p>パスワード</p>
             <input type="text" name="pass"><br><br>
