@@ -28,6 +28,7 @@
         <option value='famicon'>ファミコン</option>
         <option value='other'>その他</option>
         </select><br>
+        ジャンル<br>
         <select name='game_genre'>
         <option value='RPG'>RPG</option>
         <option value='action'>アクション</option>
