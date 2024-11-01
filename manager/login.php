@@ -10,25 +10,24 @@
 
 <body>
     <header>
-        GAMESoya管理
+        GAMESoya管理者
     </header>
     <main>
-        <p><h3>管理者ログイン</h3></p>
+        <p>
+        <h2>管理者ログイン</h2>
+        </p>
         <form action="home.php" method="post">
             管理者ID<br>
-            <input type="text" name="manager_id"><br>
+            <input type="text" name="manager_id" class="manager_id"><br>
             パスワード<br>
-            <input type="text" name="manager_pass"><br>
+            <input type="text" name="manager_pass" class="manager_pass"><br>
             <br><br>
-            <div class="login_button">
-                <p><input type="submit" value="ログインする"></p>
-            </div>
-            
+            <p><input type="submit" value="ログインする" class="login_button"></p>
+
         </form>
         <form action="signup.php" method="post">
-            <p><input type="submit" value="新規登録"></p>
+            <p><input type="submit" value="新規登録" class="signup_button"></p>
         </form>
-
     </main>
 </body>
 

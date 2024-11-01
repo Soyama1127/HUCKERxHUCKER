@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/user.css">
-    <title>アカウント設定</title>
+    <title>アカウント更新</title>
 </head>
 
 <body>
@@ -13,7 +13,14 @@
         GAMESOYA
     </header>
     <main>
-        曾山を
+    <form action="home.php" method="post">
+        ユーザー名<br>
+        <input type="text" name="user_name"><br>
+        ログインID<br>
+        <input type="text" name="user_id"><br>
+        パスワード<br>
+        <input type="text" name="user_password"><br>
+        <input type="submit" value="新規登録">
     </main>
 
 </body>
