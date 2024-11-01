@@ -13,8 +13,12 @@
         GAMESOYA管理者
     </header>
     <main>
-        画面
+    <form action="login.php" method="post">
+    <h2>登録完了しました</h2>
+    <input type=submit value=完了>
+</form> 
     </main>
 </body>
+
 
 </html>
