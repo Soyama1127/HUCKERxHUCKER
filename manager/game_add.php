@@ -27,7 +27,7 @@
         <option value='Xdox'>Xbox</option>
         <option value='famicon'>ファミコン</option>
         <option value='other'>その他</option>
-        </select>
+        </select><br>
         <select name='game_genre'>
         <option value='RPG'>RPG</option>
         <option value='action'>アクション</option>
