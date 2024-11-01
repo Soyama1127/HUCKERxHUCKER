@@ -14,7 +14,7 @@
     </header>
     <main>
     <form action="signup_complete.php" method="post">
-        管理者登録
+        <h3>管理者登録</h3>
         ID<br>
         <input type=text name=manager_id><br>
         パスワード<br>
