@@ -14,7 +14,7 @@
     </header>
     <main>
     <form action="login.php" method="post">
-    <h2>登録完了しました</h2>
+    <h1>登録完了しました</h1>
     <input type=submit value=完了>
 </form> 
     </main>
