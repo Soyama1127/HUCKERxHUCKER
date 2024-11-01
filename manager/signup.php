@@ -13,7 +13,7 @@
         GAMESOYA管理者
     </header>
     <main>
-    <form action="signup_conplete.php" method="post">
+    <form action="signup_complete.php" method="post">
         管理者登録
         ID<br>
         <input type=text name=manager_id><br>
