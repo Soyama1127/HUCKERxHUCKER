@@ -3,20 +3,12 @@
 function signuptest() {
     const id = document.getElementById("manager_id").value;
     const password = document.getElementById("manager_password").value;
-    const name = document.getElementById("manager_name").value;
-    const AllerrorMessage = document.getElementById("error-message-all");
     const IDerrorMessage = document.getElementById("error-message-id");
     const PasserrorMessage = document.getElementById("error-message-pass");
 
-    AllerrorMessage.innerHTML = "";
     IDerrorMessage.innerHTML = "";
     PasserrorMessage.innerHTML = "";
 
-    // 必須項目のチェック
-    if (!id || !password || !name) {
-        AllerrorMessage.innerHTML = "全項目を入力してください。";
-        return false;
-    }
 
     let error_count = 0; //エラー数の初期化
 
