@@ -34,7 +34,7 @@
 
         </form>
     </main>
-    <script src="./../js/script.js"></script>
+    <script src="./../js/manager.js"></script>
 </body>
 
 </html>
