@@ -29,7 +29,8 @@
             <br><br>
             <div id="error-message-all" class="err_msg"></div>
 
-            <input type=submit value="作成" class="manager_button">
+            <input type=submit value="作成" class="manager_button"><br>
+            <a href="login.php">ログイン画面に戻る</a>
 
         </form>
     </main>
