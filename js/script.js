@@ -1,5 +1,18 @@
 "use strict";
 
+// 管理者ログイン
+function logintest() {
+    const id = document.getElementById("manager_id").value;
+    const pass = document.getElementById("manager_pass").value;
+    const LoginerrorMessage = document.getElementById("error-message-log");
+
+    LoginerrorMessage.innerHTML = "";
+
+
+
+}
+
+// 管理者新規登録
 function signuptest() {
     const id = document.getElementById("manager_id").value;
     const password = document.getElementById("manager_password").value;
@@ -33,5 +46,3 @@ function signuptest() {
     return true;
 
 }
-
-

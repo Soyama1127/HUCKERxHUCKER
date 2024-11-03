@@ -17,9 +17,9 @@
         <div id="error-message-log" class="err_msg"></div>
         <form action="home.php" method="post">
             <label>管理者ID</label><br>
-            <input type="text" name="manager_id" class="login_text" required><br>
+            <input type="text" name="manager_id" id="manager_id" class="login_text" required><br>
             <label>パスワード</label><br>
-            <input type="password" name="manager_pass" class="login_text" required><br>
+            <input type="password" name="manager_pass" id="manager_pass" class="login_text" required><br>
             <input type="submit" value="ログインする" class="manager_button">
         </form>
         <form action="signup.php" method="post">
