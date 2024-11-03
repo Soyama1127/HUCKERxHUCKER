@@ -50,12 +50,13 @@ function signuptest() {
         if (xhr.status === 200) {
             if (xhr.responseText === "exists") {
                 IDerrorMessage.innerHTML = "このIDは使用されています";
-                return false;
+            } else {
+                document.getElementById("signup").submit();
             }
         }
     };
     xhr.send("manager_id=" + encodeURIComponent(id));
 
-    return true;
+    return false;
 
 }
