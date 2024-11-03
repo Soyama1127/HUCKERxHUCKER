@@ -16,9 +16,9 @@
         <h1>管理者ログイン</h1>
         <div id="error-message-log" class="err_msg"></div>
         <form action="home.php" method="post">
-            <label for="manager_id">管理者ID</label><br>
+            <label>管理者ID</label><br>
             <input type="text" name="manager_id" class="login_text" required><br>
-            <label for="manager_pass">パスワード</label><br>
+            <label>パスワード</label><br>
             <input type="password" name="manager_pass" class="login_text" required><br>
             <input type="submit" value="ログインする" class="manager_button">
         </form>
