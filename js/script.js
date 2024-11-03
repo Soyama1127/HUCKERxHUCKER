@@ -43,6 +43,21 @@ function signuptest() {
         return false;
     }
 
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "check.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            if (xhr.responseText === "exists") {
+                IDerrorMessage.innerHTML = "このIDは使用されています";
+            } else {
+                // フォームを送信
+                document.getElementById("signup").submit();
+            }
+        }
+    };
+    xhr.send("manager_id=" + encodeURIComponent(id));
+
     return true;
 
 }
