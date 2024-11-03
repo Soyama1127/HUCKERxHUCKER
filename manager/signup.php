@@ -5,25 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/manager.css">
+    <link rel="stylesheet" href="./../js/script.js">
     <title>管理者登録</title>
 </head>
 
 <body>
     <header>
-        GAMESOYA管理者
+        GAMESoya管理者
     </header>
     <main>
-    <form action="signup_complete.php" method="post">
+    <form id="signup" action="signup_complete.php" method="post" onsubmit="return signuptest();">
         <h3>管理者登録</h3>
         ID<br>
-        <input type=text name=manager_id><br>
+        <div id="error-message-id" class="err_msg"></div>
+        <input type="text" name="manager_id" id="manager_id"><br>
         パスワード<br>
-        <input type=text name=manager_password><br>
+        <div id="error-message-pass" class="err_msg"></div>
+        <input type="text" name="manager_password" id="manager_password"><br>
         管理者名<br>
-        <input type=text name=manager_name><br>
+        <input type="text" name="manager_name" id="manager_name"><br><br>
+        <div id="error-message-all" class="err_msg"></div>
         <input type=submit value=作成>
     </form>
     </main>
+
+    <script src="./../js/script.js"></script>
 </body>
 
 </html>
