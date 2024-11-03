@@ -11,7 +11,7 @@ header {
 }
 
 main {
-    max-width: 350px;
+    max-width: 400px;
     margin: 50px auto;
     padding: 20px;
     display: flex;
