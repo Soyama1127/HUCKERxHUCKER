@@ -50,9 +50,7 @@ function signuptest() {
         if (xhr.status === 200) {
             if (xhr.responseText === "exists") {
                 IDerrorMessage.innerHTML = "このIDは使用されています";
-            } else {
-                // フォームを送信
-                document.getElementById("signup").submit();
+                return false;
             }
         }
     };
