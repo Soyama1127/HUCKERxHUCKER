@@ -9,9 +9,6 @@
 </head>
 
 <body>
-    <header>
-        ヘッダー
-    </header>
     <main>
         画面
     </main>
