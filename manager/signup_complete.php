@@ -26,8 +26,8 @@
         $sql->execute([$id, $hashedPassword, $name]);
         ?>
         <form action="login.php" method="post">
-            <h1>登録完了しました</h1>
-            <input type=submit value=完了>
+            <h1>アカウントを作成しました</h1>
+            <input type=submit value=完了 class="manager_button">
         </form>
     </main>
 </body>
