@@ -27,7 +27,6 @@
             <label>管理者名</label>
             <input type="text" name="manager_name" id="manager_name" class="signup_text" placeholder="山田　太郎" required>
             <br><br>
-            <div id="error-message-all" class="err_msg"></div>
 
             <input type=submit value="作成" class="manager_button"><br>
             <a href="login.php">ログイン画面に戻る</a>
