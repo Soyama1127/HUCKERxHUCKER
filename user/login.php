@@ -10,13 +10,13 @@
 
 <body>
     <main>
-        <h1>GAMESoya</h1>
+        <img height="80px" src="./../img/GAMESoya ロゴ.png"><br><br>
         <form action="home.php" method="post">
             <label class="login_label">Login</label><br>
             <label>ログインID</label><br>
-            <input type="text" name="login_id" id="login_id" class="user_text"><br>
+            <input type="text" name="login_id" id="login_id" class="user_text" required><br>
             <label>パスワード</label><br>
-            <input type="text" name="pass" id="pass" class="user_text"><br>
+            <input type="text" name="pass" id="pass" class="user_text" required><br>
             <input type="submit" value="ログイン" class="user_button"><br>
             <a href="home.php" class="user_link">ゲストとしてログイン</a>
             <br>
