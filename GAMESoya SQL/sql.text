@@ -1,4 +1,6 @@
 $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
 
-ユーザー一覧
-$sql = $pdo->query('select * from user');
+管理者SQL
+
+    管理者追加
+    insert into manager(manager_id,manager_password,manager_name) values(?,?,?)
