@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../css/user.css">
-    <title>ユーザー登録</title>
+    <link rel="stylesheet" href="./../css/manager.css">
+    <title>管理者確認</title>
 </head>
 
 <body>
+    <header>
+        GAMESOYA管理者
+    </header>
     <main>
-        画面
+        確認
     </main>
 </body>
 

@@ -13,20 +13,17 @@
         GAMESoya管理者
     </header>
     <main>
-        <p>
-        <h2>管理者ログイン</h2>
-        </p>
+        <h1>管理者ログイン</h1>
+        <div id="error-message-log" class="err_msg"></div>
         <form action="home.php" method="post">
-            管理者ID<br>
-            <input type="text" name="manager_id" class="manager_id"><br>
-            パスワード<br>
-            <input type="text" name="manager_pass" class="manager_pass"><br>
-            <br><br>
-            <p><input type="submit" value="ログインする" class="login_button"></p>
-
+            <label>管理者ID</label><br>
+            <input type="text" name="manager_id" id="manager_id" class="login_text" required><br>
+            <label>パスワード</label><br>
+            <input type="password" name="manager_pass" id="manager_pass" class="login_text" required><br>
+            <input type="submit" value="ログインする" class="manager_button">
         </form>
         <form action="signup.php" method="post">
-            <p><input type="submit" value="新規登録" class="signup_button"></p>
+            <input type="submit" value="新規登録" class="manager_button">
         </form>
     </main>
 </body>

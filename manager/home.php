@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        GAMESOYA管理者
+        GAMESoya管理者
     </header>
     <h1>管理者画面</h1>
     <form action="login.php" method="post"><input name="0"value="ログアウト"></form>
