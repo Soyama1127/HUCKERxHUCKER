@@ -21,7 +21,5 @@
     <form action="pr_approval.php" method="post"><input name="e" type="submit" value="ユーザーPR"style="width:300px;height:50px"></form>
     <form action="game_stock_add.php" method="post"><input name="f" type="submit" value="在庫管理"style="width:300px;height:50px"></form>
 </body>
-
-
 </html>
 
