@@ -13,7 +13,7 @@
         GAMESOYA管理者
     </header>
     <main>
-        商品登録
+        商品登録<br>
         ゲーム名<br>
         <input type=text name=game_name><br>
         料金<br>
