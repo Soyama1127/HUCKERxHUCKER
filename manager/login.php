@@ -14,7 +14,6 @@
     </header>
     <main>
         <h1>管理者ログイン</h1>
-        <div id="error-message-log" class="err_msg"></div>
         <form id="login" action="home.php" method="post" onsubmit="return logintest();">
 
             <label>管理者ID</label><br>
@@ -23,6 +22,7 @@
             <label>パスワード</label><br>
             <input type="password" name="manager_pass" id="manager_pass" class="login_text" required><br>
 
+            <div id="error-message-log" class="err_msg"></div>
             <input type="submit" value="ログインする" class="manager_button">
 
         </form>
