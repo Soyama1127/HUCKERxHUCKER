@@ -13,7 +13,8 @@
         GAMESOYA管理者
     </header>
     <main>
-        商品登録
+    <form action="game_add_complete.php" method="post">
+        商品登録<br>
         ゲーム名<br>
         <input type=text name=game_name><br>
         料金<br>
@@ -37,8 +38,17 @@
         <option value='Xdox'>Xbox</option>
         <option value='famicon'>ファミコン</option>
         <option value='other'>その他</option>
-        </select>
-        
+        </select><br>
+        アイコン<br>
+        <input type="file" name="image"><br>
+        サンプル画像<br>
+        <input type="file" name="sampleimage"><br>
+        概要<br>
+        <textarea name="otoiawase" rows="5" cols="40"></textarea><br>
+        <input type=submit value="登録" class="manager_button"><br>
+
+  
+    </form>    
     </main>
 </body>
 
