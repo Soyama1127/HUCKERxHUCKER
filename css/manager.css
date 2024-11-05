@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: blue;
+    background-color: rgb(71, 71, 252);
     font-size: 90px;
     text-align: center;
 }
@@ -39,8 +39,8 @@ form {
     width: 80%;
     height: 35px;
     margin-top: 10px;
-    background-color: blue;
-    border-color: blue;
+    background-color: rgb(71, 71, 252);
+    border-color: rgb(71, 71, 252);
     color: white;
 }
 
