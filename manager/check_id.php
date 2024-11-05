@@ -15,4 +15,5 @@ if ($row_count > 0) {
 }
 
 $pdo = null;
+
 ?>
