@@ -54,14 +54,8 @@
     <form action="game_stock_add.php" method="post">
 
         <input type="submit" value="在庫管理" class="home_button">
-    
+
     </form>
 </body>
-<<<<<<< HEAD
-
 
 </html>
-=======
-</html>
-
->>>>>>> 7fa5834ebba11e8d3cfb45b809b56a9ecdb2d654
