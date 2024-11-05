@@ -74,3 +74,30 @@ function signuptest() {
     return false;
 
 }
+
+$(document).ready(function() {
+    $("#stockTable").tablesorter({
+        header: {
+            0: {
+                sorter: 'digit'
+            },
+            1: {
+                sorter: 'text'
+            },
+            2: {
+                sorter: 'text'
+            },
+            3: {
+                sorter: 'text'
+            },
+            4: {
+                sorter: 'digit'
+            }
+        },
+        sortList: [
+            [0, 0]
+        ],
+        headerTemplate: '{content} <span class="sort-indicator">↑↓</span>',
+
+    }); // tablesorter を適用
+});

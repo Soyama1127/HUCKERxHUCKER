@@ -85,3 +85,7 @@ h1 {
 .logout {
     display: inline;
 }
+
+.tablesorter {
+    width: 1000px;
+}
