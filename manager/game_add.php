@@ -42,7 +42,9 @@
         アイコン<br>
         <input type="file" name="image"><br>
         サンプル画像<br>
-        <input type="file" name="sampleimage"><br>
+        <input type="file" name="sampleimage1"><br>
+        <input type="file" name="sampleimage2"><br>
+        <input type="file" name="sampleimage3"><br>
         概要<br>
         <textarea name="otoiawase" rows="5" cols="40"></textarea><br>
         <input type=submit value="登録" class="manager_button"><br>
