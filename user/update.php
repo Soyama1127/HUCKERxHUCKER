@@ -10,11 +10,20 @@
 
 <body>
     <header>
-        ヘッダー
+        パスワード/ログインID
     </header>
     <main>
-        画面
+        パスワードの変更<br><br>
+        <label>現在のパスワード</label><br>
+        <input type="text"><br>
+        <label>新しいパスワード</label><br>
+        <input type="text" id="newpass"><br>
+        <label>新しいパスワード(確認)</label><br>
+        <input type="text" id="newpass1"><br>
+        <div id="error-message"></div>
+        <input type="submit" value="変更" onclick="kakunin();">
     </main>
+    <script src="./../js/user.js"></script>
 </body>
 
 </html>
