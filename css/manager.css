@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 header {
@@ -67,17 +68,14 @@ h1 {
 }
 
 .home_button {
-    display: block;
-    width: 200px;
+    width: 300px;
     height: 50px;
     padding: auto;
     font-size: 25px;
-    margin-bottom: 20px;
-    text-align: center;
 }
 
 .logout_button {
- background-color: rgb(255, 120, 120);
+    background-color: rgb(255, 120, 120);
     border-color: rgb(255, 120, 120);
     border-radius: 15%;
     font-size: 15px;
@@ -86,9 +84,10 @@ h1 {
 }
 
 .logout {
-    text-align: right;
-    display: block;
-    margin-right: 10px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
 }
 
 .tablesorter {

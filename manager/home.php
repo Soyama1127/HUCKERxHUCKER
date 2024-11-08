@@ -23,54 +23,50 @@
 
     </form>
     <br><br><br>
-    <div class="row mt-5">
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6 mb-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5">
+
+        <!-- 商品登録ボタン -->
+        <div class="col">
             <form action="game_add.php" method="post">
-
                 <input type="submit" value="商品登録" class="home_button">
-
             </form>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6 mb-3">
+        <!-- 商品更新ボタン -->
+        <div class="col">
             <form action="game_update.php" method="post">
-
                 <input type="submit" value="商品更新" class="home_button">
-
             </form>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6 mb-3">
+        <!-- 商品削除ボタン -->
+        <div class="col">
             <form action="game_delete.php" method="post">
-
                 <input type="submit" value="商品削除" class="home_button">
-
             </form>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6 mb-3">
+        <!-- ユーザー削除ボタン -->
+        <div class="col">
             <form action="user_delete.php" method="post">
-
                 <input type="submit" value="ユーザー削除" class="home_button">
-
             </form>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6 mb-3">
+        <!-- ユーザーPRボタン -->
+        <div class="col">
             <form action="pr_approval.php" method="post">
-
                 <input type="submit" value="ユーザーPR" class="home_button">
-
             </form>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6 mb-3">
+        <!-- 在庫管理ボタン -->
+        <div class="col">
             <form action="game_stock_add.php" method="post">
-
                 <input type="submit" value="在庫管理" class="home_button">
-
             </form>
         </div>
+
     </div>
 </body>
 
