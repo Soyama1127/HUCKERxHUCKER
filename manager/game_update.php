@@ -41,6 +41,7 @@
         </select>
         
     </main>
+    <form action="game_update_complete.php" method="post"><input name="a" type="submit" value="更新"style="width:300px;height:50px"></form>
     </main>
 </body>
 

@@ -12,6 +12,7 @@
     <header>
         GAMESOYA管理者
     </header>
+    <h1>ユーザーPR認証</h1>
     <main>
         画面
     </main>

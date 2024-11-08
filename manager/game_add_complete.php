@@ -13,7 +13,14 @@
         GAMESOYA管理者
     </header>
     <main>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        <h1>商品を登録しました</h1>
+=======
+        
+>>>>>>> 319bd38b3f08b407fc40983e6eabcc8151d1cf82
         <h1>登録完了しました</h1>
         <?php
         $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
@@ -55,10 +62,19 @@
         }
         ?>
         <form action="game_add.php" method="post">
+<<<<<<< HEAD
             <input type=submit value="続けて登録" class="manager_button">
             <form action="home.php" method="post">
                 <input type=submit value="ホーム画面に戻る" class="manager_button">
+=======
+        <input type=submit value="続けて登録" class="manager_button">
+        <form action="home.php" method="post">
+        <input type=submit value="ホーム画面に戻る" class="manager_button">
+>>>>>>> 15be628d4b600f252fa5b8aacc6dbb323d0e5bfb
+>>>>>>> 319bd38b3f08b407fc40983e6eabcc8151d1cf82
     </main>
+    <form action="game_add.php" method="post"><input name="1" type="submit" value="続けて登録"style="width:300px;height:50px"></form>
+    <form action="home.php" method="post"><input name="2" type="submit" value="ホームに戻る"style="width:300px;height:50px"></form>
 </body>
 
 </html>
