@@ -16,6 +16,7 @@
         
         <h1>登録完了しました</h1>
         <?php
+$pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
              $name = $_POST['game_name'];
              $price = $_POST['game_price'];
              $model = $_POST['model'];
@@ -39,20 +40,17 @@
                 if (move_uploaded_file($_FILES['sample1']['tmp_name'], $sample1)and
                     move_uploaded_file($_FILES['sample2']['tmp_name'], $sample2)and
                     move_uploaded_file($_FILES['sample3']['tmp_name'], $sample3)) {
+
+                        $sql = $pdo->prepare('insert into game(game_name,geme_price,game_model,game_genre,geme_image,game_sample1,geme_sample2,game_sample3,game_summary) values(?,?,?,?,?,?,?,?,?)');
+                        $sql->execute([$name, $price, $model,$genre,$image,$sample1,$sample2,$sample3,$summary]);
          
-                    $sql = $pdo->prepare('insert into game(game_sample1,gane_sample2,game_sample3)values(?,?,?)');
-                    $sql->execute([$sample1 , $sample2 , $sample3, ]);
-         
+                        echo '商品を登録しました';
                 } else {
                     echo '!CAUTION CAUTION!';
                 }
             } else {
                 echo 'アップロードできませんでした';
             }
-     
-             $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-             $sql = $pdo->prepare('insert into manager(game_name,geme_price,game_model,game_genre,geme_image,game_sample1,geme_sample2,game_sample3,game_summary) values(?,?,?,?,?,?,?,?,?)');
-             $sql->execute([$name, $price, $model,$genre,$image,$sample1,$sample2,$sample3,$summary]);
         ?>
         <form action="game_add.php" method="post">
         <input type=submit value="続けて登録" class="manager_button">
