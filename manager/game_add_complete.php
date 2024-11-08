@@ -15,7 +15,6 @@
     <main>
 
         <h1>商品を登録しました</h1>
-        <h1>登録完了しました</h1>
         <?php
         $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
         $name = $_POST['game_name'];
@@ -48,7 +47,6 @@
                 $sql = $pdo->prepare('insert into game(game_name,game_price,game_model,game_genre,game_icon,game_sample1,game_sample2,game_sample3,game_summary) values(?,?,?,?,?,?,?,?,?)');
                 $sql->execute([$name, $price, $model, $genre, $image, $sample1, $sample2, $sample3, $summary]);
 
-                echo '商品を登録しました';
             } else {
                 echo '!CAUTION CAUTION!';
             }
@@ -64,8 +62,6 @@
         </form>
 
     </main>
-    <form action="game_add.php" method="post"><input name="1" type="submit" value="続けて登録" style="width:300px;height:50px"></form>
-    <form action="home.php" method="post"><input name="2" type="submit" value="ホームに戻る" style="width:300px;height:50px"></form>
 </body>
 
 </html>
