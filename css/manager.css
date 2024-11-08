@@ -35,6 +35,10 @@ form {
     align-items: center;
 }
 
+h1 {
+    display: inline;
+}
+
 .manager_button {
     width: 80%;
     height: 35px;
@@ -60,4 +64,33 @@ form {
 
 .err_msg {
     color: red;
+}
+
+.home_button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    padding: auto;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.logout_button {
+ background-color: rgb(255, 120, 120);
+    border-color: rgb(255, 120, 120);
+    border-radius: 15%;
+    font-size: 15px;
+    width: 130px;
+    height: 30px;
+}
+
+.logout {
+    text-align: right;
+    display: block;
+    margin-right: 10px;
+}
+
+.tablesorter {
+    width: 1000px;
 }

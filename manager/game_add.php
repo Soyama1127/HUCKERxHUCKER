@@ -25,7 +25,7 @@
         <option value='PS'>PS(プレイステーション)</option>
         <option value='wii'>Wii</option>
         <option value='64'>64</option>
-        <option value='Xdox'>Xbox</option>
+        <option value='Xbox'>Xbox</option>
         <option value='famicon'>ファミコン</option>
         <option value='other'>その他</option>
         </select><br>
@@ -35,14 +35,16 @@
         <option value='action'>アクション</option>
         <option value='adventure'>アドベンチャー</option>
         <option value='simulation'>シュミレーション</option>
-        <option value='Xdox'>Xbox</option>
+        <option value='Xbox'>Xbox</option>
         <option value='famicon'>ファミコン</option>
         <option value='other'>その他</option>
         </select><br>
         アイコン<br>
         <input type="file" name="image"><br>
         サンプル画像<br>
-        <input type="file" name="sampleimage"><br>
+        <input type="file" name="sampleimage1"><br>
+        <input type="file" name="sampleimage2"><br>
+        <input type="file" name="sampleimage3"><br>
         概要<br>
         <textarea name="otoiawase" rows="5" cols="40"></textarea><br>
         <input type=submit value="登録" class="manager_button"><br>
