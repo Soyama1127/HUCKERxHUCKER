@@ -22,8 +22,8 @@
         <input type="submit" value="ログアウト" class="logout_button">
 
     </form>
-    <br><br><br>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-5">
+    <br><br>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 mt-5">
 
         <!-- 商品登録ボタン -->
         <div class="col">

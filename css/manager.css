@@ -2,13 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    position: relative;
 }
 
 header {
     background-color: rgb(71, 71, 252);
     font-size: 90px;
     text-align: center;
+    align-items: center;
+    padding: 10px;
 }
 
 main {
@@ -38,6 +39,7 @@ form {
 
 h1 {
     display: inline;
+    padding-left: 20px;
 }
 
 .manager_button {
@@ -75,19 +77,21 @@ h1 {
 }
 
 .logout_button {
+    display: inline;
     background-color: rgb(255, 120, 120);
     border-color: rgb(255, 120, 120);
     border-radius: 15%;
     font-size: 15px;
     width: 130px;
     height: 30px;
+    position: absolute;
+    right: 20px;
 }
 
 .logout {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
 }
 
 .tablesorter {
