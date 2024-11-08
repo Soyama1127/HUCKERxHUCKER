@@ -13,7 +13,7 @@
         GAMESOYA管理者
     </header>
     <main>
-    <form action="game_add_complete.php" method="post">
+    <form action="game_add_complete.php" method="post" enctype="multipart/form-data">
         商品登録<br>
         ゲーム名<br>
         <input type=text name=game_name><br>
@@ -42,11 +42,11 @@
         アイコン<br>
         <input type="file" name="image"><br>
         サンプル画像<br>
-        <input type="file" name="sampleimage1"><br>
-        <input type="file" name="sampleimage2"><br>
-        <input type="file" name="sampleimage3"><br>
+        <input type="file" name="sample1"><br>
+        <input type="file" name="sample2"><br>
+        <input type="file" name="sample3"><br>
         概要<br>
-        <textarea name="otoiawase" rows="5" cols="40"></textarea><br>
+        <textarea name="summary" rows="5" cols="40"></textarea><br>
         <input type=submit value="登録" class="manager_button"><br>
 
   
