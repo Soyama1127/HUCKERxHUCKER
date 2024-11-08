@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        GAMESOYA管理者
+        GAMESoya管理者
     </header>
     <main>
         <h1>商品登録</h1><br>
