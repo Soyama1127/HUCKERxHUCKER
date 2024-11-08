@@ -13,13 +13,16 @@
         GAMESoya管理者
     </header>
 
-    <h1>ホーム</h1>
+    <div class="home_header">
+        <h1>ホーム</h1>
 
-    <form action="login.php" method="post" class="logout">
+        <form action="login.php" method="post" class="logout">
 
-        <input type="submit" value="ログアウト" class="logout_button">
+            <input type="submit" value="ログアウト" class="logout_button">
 
-    </form>
+        </form>
+    </div>
+
 
     <form action="game_add.php" method="post">
 
