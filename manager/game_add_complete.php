@@ -13,8 +13,10 @@
         GAMESOYA管理者
     </header>
     <main>
-        画面
+        <h1>商品を登録しました</h1>
     </main>
+    <form action="game_add.php" method="post"><input name="1" type="submit" value="続けて登録"style="width:300px;height:50px"></form>
+    <form action="home.php" method="post"><input name="2" type="submit" value="ホームに戻る"style="width:300px;height:50px"></form>
 </body>
 
 </html>

@@ -10,8 +10,10 @@
 
 <body>
     <header>
-        <p>GAMESOYA管理者</p>
+        GAMESOYA管理者
     </header>
+    <h1>在庫一覧</h1>
+    <h1>在庫補充</h1>
     <table border="1">
         <thead>
             <tr>
@@ -61,6 +63,8 @@
         </tbody>
     </table>
     <script src="./../js/script.js"></script>
+    
+    <form action="game_stock_add_complete.php" method="post"><input type="submit" name="1" value="補充"></form>
 </body>
 
 </html>
