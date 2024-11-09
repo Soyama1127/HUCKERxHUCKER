@@ -9,6 +9,9 @@
     <script src="./../js/bootstrap.js"></script>
     <title>ホーム画面</title>
 </head>
+<?php
+$pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
+?>
 
 <body>
     <header>
@@ -48,6 +51,22 @@
             </div>
             </button>
         </div>
+    </div>
+    <div class="container">
+        <fieldset>
+            <div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6 mb-3">
+                <div>
+                    <?php
+                    $sql = $pdo->prepare('select * from game where game_genre = "action"');
+                    $sql->execute();
+                    foreach ($sql as $row) {
+                        echo "<img src='./../manager/", $row['game_icon'], "' alt='ゲーム画像' width='100'>";
+                        echo $row['game_name'];
+                    }
+                    ?>
+                </div>
+            </div>
+        </fieldset>
     </div>
 </body>
 
