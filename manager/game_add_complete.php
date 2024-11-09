@@ -32,10 +32,10 @@
             if (!file_exists('game')) {
                 mkdir('game');
             }
-            $image = 'game/' . basename($_FILES['image']['name']);
-            $sample1 = 'game/' . basename($_FILES['sample1']['name']);
-            $sample2 = 'game/' . basename($_FILES['sample2']['name']);
-            $sample3 = 'game/' . basename($_FILES['sample3']['name']);
+            $image = './../manager/game/' . basename($_FILES['image']['name']);
+            $sample1 = './../manager/game/' . basename($_FILES['sample1']['name']);
+            $sample2 = './../manager/game/' . basename($_FILES['sample2']['name']);
+            $sample3 = './../manager/game/' . basename($_FILES['sample3']['name']);
 
             if (
                 move_uploaded_file($_FILES['image']['tmp_name'], $image) and
@@ -48,7 +48,7 @@
                 $sql->execute([$name, $price, $model, $genre, $image, $sample1, $sample2, $sample3, $summary]);
 
             } else {
-                echo '!CAUTION CAUTION!';
+                echo 'ファイルの移動中にエラーが発生';
             }
         } else {
             echo 'アップロードできませんでした';
