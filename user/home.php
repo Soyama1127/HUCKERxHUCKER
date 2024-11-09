@@ -14,15 +14,15 @@
     <header>
         <div class="header-content">
             <div class="logo">
-                <img src='./../img/GAMESoya.PNG' width="150px" alt="Logo">
+                <img src='./../img/GAMESoya.PNG' width="200px" alt="Logo">
             </div>
 
             <div class="right-section">
-                <a href="search.php" class="button">
-                    <img src="./../img/search.webp" alt="Search">
-                </a>
                 <a href="cart.php" class="button">
                     <img src="./../img/cart.png" alt="Cart">
+                </a>
+                <a href="search.php" class="button">
+                    <img src="./../img/search.webp" alt="Search">
                 </a>
                 <a href="account.php" class="button">
                     アカウント
@@ -30,27 +30,25 @@
             </div>
         </div>
     </header>
-    <main>
-        <div class="container">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./../img/gamesoya home pic.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./../img/gamesoya home pic.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./../img/gamesoya home pic.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./../img/gamesoya home pic.png" class="d-block w-100" alt="...">
-                    </div>
+    <div class="container">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./../img/gamesoya home pic.png" class="d-block w-100" alt="...">
                 </div>
-                </button>
+                <div class="carousel-item">
+                    <img src="./../img/gamesoya home pic.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./../img/gamesoya home pic.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./../img/gamesoya home pic.png" class="d-block w-100" alt="...">
+                </div>
             </div>
+            </button>
         </div>
-    </main>
+    </div>
 </body>
 
 </html>

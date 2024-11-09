@@ -106,12 +106,3 @@ a {
     padding: 10px 20px;
     width: 100%;
 }
-
-.container {
-    width: 100%;
-}
-
-.carousel-item img {
-    height: 100px;
-    object-fit: cover;
-}
