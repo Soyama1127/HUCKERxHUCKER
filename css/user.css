@@ -4,6 +4,8 @@ body {
     padding: 0;
     height: 100vh;
     background: linear-gradient(180deg, rgb(78, 78, 234), rgb(17, 17, 17));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
@@ -109,4 +111,22 @@ a {
 
 .container {
     margin-top: 20px;
+}
+
+.game_img {
+    border-radius: 20%;
+    height: 100%;
+    margin-right: 10%;
+}
+
+.game_model {
+    color: white;
+}
+
+
+legend {
+    width: auto;
+    padding: 0 10px;
+    font-size: 1.2em;
+    color: white;
 }
