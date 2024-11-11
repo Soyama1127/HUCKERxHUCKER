@@ -29,13 +29,13 @@
                     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                     // クエリを実行し、結果をテーブル行として出力
-                    foreach ($pdo->query('SELECT * FROM class_info') as $row) {
+                    foreach ($pdo->query('SELECT * FROM game') as $row) {
                         echo '<tr>';
-                        echo '<td>' . htmlspecialchars($row['game_id']) . '</td>';
-                        echo '<td>' . htmlspecialchars($row['game_name']) . '</td>';
-                        echo '<td>' . htmlspecialchars($row['game_genre']) . '</td>';
-                        echo '<td>' . htmlspecialchars($row['game_model']) . '</td>';
-                        echo '<td>' . number_format($row['game_stock']) . '</td>';
+                        echo '<td>' . $row['game_id'] . '</td>';
+                        echo '<td>' . $row['game_name'] . '</td>';
+                        echo '<td>' . $row['game_genre'] . '</td>';
+                        echo '<td>' . $row['game_model'] . '</td>';
+                        echo '<td>' . $row['game_stock'] . '</td>';
                         echo '</tr>';
                     }
                 } catch (PDOException $e) {

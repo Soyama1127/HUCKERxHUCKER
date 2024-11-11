@@ -22,23 +22,23 @@
             <input type=text name=game_price class=login_text placeholder="￥" required><br>
             <label>機種</label><br>
             <select name='model' class=game_list>
-                <option value='switch'>Switch</option>
+                <option value='Switch'>Switch</option>
                 <option value='PS'>PS(プレイステーション)</option>
                 <option value='wii'>Wii</option>
                 <option value='64'>64</option>
                 <option value='Xbox'>Xbox</option>
-                <option value='famicon'>ファミコン</option>
-                <option value='other'>その他</option>
+                <option value='ファミコン'>ファミコン</option>
+                <option value='その他'>その他</option>
             </select><br>
             <label>ジャンル</label><br>
             <select name='game_genre' class=game_list>
                 <option value='RPG'>RPG</option>
-                <option value='action'>アクション</option>
-                <option value='adventure'>アドベンチャー</option>
-                <option value='simulation'>シュミレーション</option>
+                <option value='アクション'>アクション</option>
+                <option value='アドベンチャー'>アドベンチャー</option>
+                <option value='シュミレーション'>シュミレーション</option>
                 <option value='格闘'>格闘</option>
-                <option value='famicon'>音楽(リズム)</option>
-                <option value='other'>その他</option>
+                <option value='音楽'>音楽(リズム)</option>
+                <option value='その他'>その他</option>
             </select><br>
             <label>アイコン</label><br>
             <input type="file" name="image" class=game_icon required><br>
