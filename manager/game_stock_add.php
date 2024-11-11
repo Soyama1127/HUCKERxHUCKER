@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
-    <title>在庫補充画面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/manager.css">
+    <link rel="stylesheet" href="./../css/bootstrap.css">
+    <script src="./../js/bootstrap.js"></script>
+    <title>在庫管理</title>
 </head>
+
 <body>
     <header>
         GAMESoya管理者
     </header>
     <main>
-        <table border="2" id="stockTable" class="tablesorter">
+        <table id="stockTable" class="tablesorter">
             <thead>
                 <tr>
                     <th>商品ID</th>
@@ -24,7 +30,9 @@
                 try {
                     // データベース接続設定
                     $pdo = new PDO(
-                        'mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127'
+                        'mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;',
+                        'LAA1553864',
+                        'Pass1127'
                     );
                     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -48,4 +56,5 @@
     </main>
     <script src="./../js/manager.js"></script>
 </body>
+
 </html>
