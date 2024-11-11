@@ -58,163 +58,135 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             <?php
             $sql = $pdo->prepare('select * from game where game_genre = "RPG" limit 4');
             $sql->execute();
-            foreach ($sql as $row) {
-                echo "<div class='col-12 col-md-6'>";
-                echo "<div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>";
-                echo "<img src='./../manager/", $row['game_icon'], "' alt='ゲーム画像' class='game_img'>";
-                echo "<div class='card-body p-0 w-100'>";
-                echo "<h5 class='card-title mb-2'>", $row['game_name'], "</h5>";
-                echo "<p class='game_model'>", $row['game_model'], "</p>";
-                echo "<p class='card-text'>￥", $row['game_price'], "</p>";
-                echo "</div>";
-                echo "<form action='game.php' method='post'>";
-                echo "<input type='hidden' name='game_id' value='" . $row['game_id'] . "'>";
-                echo "<input type='submit' value='購入' class='btn btn-primary'>";
-                echo "</form>";
-                echo "</div>";
-                echo "</div>";
-            }
-            ?>
+            foreach ($sql as $row): ?>
+                <div class='col-12 col-md-6'>
+                    <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
+                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <div class='card-body p-0 w-100'>
+                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <p class='game_model'><?= $row['game_model'] ?></p>
+                            <p class='card-text'>￥<?= $row['game_price'] ?></p>
+                        </div>
+                        <form action='game.php' method='post'>
+                            <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
+                            <input type='submit' value='購入' class='btn btn-primary'>
+                        </form>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </fieldset>
         <fieldset class="row mt-5 ">
             <legend>アクション</legend>
             <?php
             $sql = $pdo->prepare('select * from game where game_genre = "アクション" limit 4');
             $sql->execute();
-            foreach ($sql as $row) {
-                echo "<div class='col-12 col-md-6'>";
-                echo "<div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>";
-                echo "<img src='./../manager/", $row['game_icon'], "' alt='ゲーム画像' class='game_img'>";
-                echo "<div class='card-body p-0 w-100'>";
-                echo "<h5 class='card-title mb-2'>", $row['game_name'], "</h5>";
-                echo "<p class='game_model'>", $row['game_model'], "</p>";
-                echo "<p class='card-text'>￥", $row['game_price'], "</p>";
-                echo "</div>";
-                echo "<form action='game.php' method='post'>";
-                echo "<input type='hidden' name='game_id' value='" . $row['game_id'] . "'>";
-                echo "<input type='submit' value='購入' class='btn btn-primary'>";
-                echo "</form>";
-                echo "</div>";
-                echo "</div>";
-            }
-            ?>
+            foreach ($sql as $row): ?>
+                <div class='col-12 col-md-6'>
+                    <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
+                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <div class='card-body p-0 w-100'>
+                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <p class='game_model'><?= $row['game_model'] ?></p>
+                            <p class='card-text'>￥<?= $row['game_price'] ?></p>
+                        </div>
+                        <form action='game.php' method='post'>
+                            <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
+                            <input type='submit' value='購入' class='btn btn-primary'>
+                        </form>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </fieldset>
         <fieldset class="row mt-5 ">
             <legend>アドベンチャー</legend>
             <?php
             $sql = $pdo->prepare('select * from game where game_genre = "アドベンチャー" limit 4');
             $sql->execute();
-            foreach ($sql as $row) {
-                echo "<div class='col-12 col-md-6'>";
-                echo "<div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>";
-                echo "<img src='./../manager/", $row['game_icon'], "' alt='ゲーム画像' class='game_img'>";
-                echo "<div class='card-body p-0 w-100'>";
-                echo "<h5 class='card-title mb-2'>", $row['game_name'], "</h5>";
-                echo "<p class='game_model'>", $row['game_model'], "</p>";
-                echo "<p class='card-text'>￥", $row['game_price'], "</p>";
-                echo "</div>";
-                echo "<form action='game.php' method='post'>";
-                echo "<input type='hidden' name='game_id' value='" . $row['game_id'] . "'>";
-                echo "<input type='submit' value='購入' class='btn btn-primary'>";
-                echo "</form>";
-                echo "</div>";
-                echo "</div>";
-            }
-            ?>
+            foreach ($sql as $row): ?>
+                <div class='col-12 col-md-6'>
+                    <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
+                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <div class='card-body p-0 w-100'>
+                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <p class='game_model'><?= $row['game_model'] ?></p>
+                            <p class='card-text'>￥<?= $row['game_price'] ?></p>
+                        </div>
+                        <form action='game.php' method='post'>
+                            <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
+                            <input type='submit' value='購入' class='btn btn-primary'>
+                        </form>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </fieldset>
         <fieldset class="row mt-5 ">
             <legend>シュミレーション</legend>
             <?php
             $sql = $pdo->prepare('select * from game where game_genre = "シュミレーション" limit 4');
             $sql->execute();
-            foreach ($sql as $row) {
-                echo "<div class='col-12 col-md-6'>";
-                echo "<div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>";
-                echo "<img src='./../manager/", $row['game_icon'], "' alt='ゲーム画像' class='game_img'>";
-                echo "<div class='card-body p-0 w-100'>";
-                echo "<h5 class='card-title mb-2'>", $row['game_name'], "</h5>";
-                echo "<p class='game_model'>", $row['game_model'], "</p>";
-                echo "<p class='card-text'>￥", $row['game_price'], "</p>";
-                echo "</div>";
-                echo "<form action='game.php' method='post'>";
-                echo "<input type='hidden' name='game_id' value='" . $row['game_id'] . "'>";
-                echo "<input type='submit' value='購入' class='btn btn-primary'>";
-                echo "</form>";
-                echo "</div>";
-                echo "</div>";
-            }
-            ?>
+            foreach ($sql as $row): ?>
+                <div class='col-12 col-md-6'>
+                    <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
+                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <div class='card-body p-0 w-100'>
+                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <p class='game_model'><?= $row['game_model'] ?></p>
+                            <p class='card-text'>￥<?= $row['game_price'] ?></p>
+                        </div>
+                        <form action='game.php' method='post'>
+                            <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
+                            <input type='submit' value='購入' class='btn btn-primary'>
+                        </form>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </fieldset>
         <fieldset class="row mt-5 ">
             <legend>格闘</legend>
             <?php
             $sql = $pdo->prepare('select * from game where game_genre = "格闘" limit 4');
             $sql->execute();
-            foreach ($sql as $row) {
-                echo "<div class='col-12 col-md-6'>";
-                echo "<div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>";
-                echo "<img src='./../manager/", $row['game_icon'], "' alt='ゲーム画像' class='game_img'>";
-                echo "<div class='card-body p-0 w-100'>";
-                echo "<h5 class='card-title mb-2'>", $row['game_name'], "</h5>";
-                echo "<p class='game_model'>", $row['game_model'], "</p>";
-                echo "<p class='card-text'>￥", $row['game_price'], "</p>";
-                echo "</div>";
-                echo "<form action='game.php' method='post'>";
-                echo "<input type='hidden' name='game_id' value='" . $row['game_id'] . "'>";
-                echo "<input type='submit' value='購入' class='btn btn-primary'>";
-                echo "</form>";
-                echo "</div>";
-                echo "</div>";
-            }
-            ?>
-        </fieldset>
-        <fieldset class="row mt-5 ">
-            <legend>音楽(リズム)</legend>
-            <?php
-            $sql = $pdo->prepare('select * from game where game_genre = "音楽" limit 4');
-            $sql->execute();
-            foreach ($sql as $row) {
-                echo "<div class='col-12 col-md-6'>";
-                echo "<div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>";
-                echo "<img src='./../manager/", $row['game_icon'], "' alt='ゲーム画像' class='game_img'>";
-                echo "<div class='card-body p-0 w-100'>";
-                echo "<h5 class='card-title mb-2'>", $row['game_name'], "</h5>";
-                echo "<p class='game_model'>", $row['game_model'], "</p>";
-                echo "<p class='card-text'>￥", $row['game_price'], "</p>";
-                echo "</div>";
-                echo "<form action='game.php' method='post'>";
-                echo "<input type='hidden' name='game_id' value='" . $row['game_id'] . "'>";
-                echo "<input type='submit' value='購入' class='btn btn-primary'>";
-                echo "</form>";
-                echo "</div>";
-                echo "</div>";
-            }
-            ?>
+            foreach ($sql as $row): ?>
+                <div class='col-12 col-md-6'>
+                    <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
+                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <div class='card-body p-0 w-100'>
+                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <p class='game_model'><?= $row['game_model'] ?></p>
+                            <p class='card-text'>￥<?= $row['game_price'] ?></p>
+                        </div>
+                        <form action='game.php' method='post'>
+                            <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
+                            <input type='submit' value='購入' class='btn btn-primary'>
+                        </form>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </fieldset>
         <fieldset class="row mt-5 ">
             <legend>その他</legend>
             <?php
             $sql = $pdo->prepare('select * from game where game_genre = "その他" limit 4');
             $sql->execute();
-            foreach ($sql as $row) {
-                echo "<div class='col-12 col-md-6'>";
-                echo "<div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>";
-                echo "<img src='./../manager/", $row['game_icon'], "' alt='ゲーム画像' class='game_img'>";
-                echo "<div class='card-body p-0 w-100'>";
-                echo "<h5 class='card-title mb-2'>", $row['game_name'], "</h5>";
-                echo "<p class='game_model'>", $row['game_model'], "</p>";
-                echo "<p class='card-text'>￥", $row['game_price'], "</p>";
-                echo "</div>";
-                echo "<form action='game.php' method='post'>";
-                echo "<input type='hidden' name='game_id' value='" . $row['game_id'] . "'>";
-                echo "<input type='submit' value='購入' class='btn btn-primary'>";
-                echo "</form>";
-                echo "</div>";
-                echo "</div>";
-            }
-            ?>
+            foreach ($sql as $row): ?>
+                <div class='col-12 col-md-6'>
+                    <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
+                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <div class='card-body p-0 w-100'>
+                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <p class='game_model'><?= $row['game_model'] ?></p>
+                            <p class='card-text'>￥<?= $row['game_price'] ?></p>
+                        </div>
+                        <form action='game.php' method='post'>
+                            <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
+                            <input type='submit' value='購入' class='btn btn-primary'>
+                        </form>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </fieldset>
     </div>
+    <footer></footer>
 </body>
 
 </html>
