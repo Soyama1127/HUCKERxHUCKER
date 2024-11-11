@@ -25,7 +25,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     <img src="./../img/cart.png" alt="Cart">
                 </a>
                 <a href="search.php" class="button">
-                    <img src="./../img/search.webp" alt="Search">
+                    <img src="./../img/serch.png" alt="Search">
                 </a>
                 <a href="account.php" class="button">
                     アカウント
@@ -53,20 +53,23 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         </div>
     </div>
     <div class="container">
-        <fieldset>
-            <div class="col-xxl-2 col-xl-3 col-lg-4 col-sm-6 mb-3">
-                <div>
-                    <?php
-                    $sql = $pdo->prepare('select * from game where game_genre = "action"');
-                    $sql->execute();
-                    foreach ($sql as $row) {
-                        echo "<img src='./../manager/", $row['game_icon'], "' alt='ゲーム画像' width='100'>";
-                        echo $row['game_name'];
-                    }
-                    ?>
-                </div>
-            </div>
-        </fieldset>
+        <div>
+            <?php
+            $sql = $pdo->prepare('select * from game where game_genre = "action"');
+            $sql->execute();
+            foreach ($sql as $row) {
+                echo "<div>";
+                echo "<div class='game-img'>";
+                echo "<img src='./../manager/", $row['game_icon'], "' alt='ゲーム画像' width='100' >";
+                echo "</div>";
+                echo "<div class='card-body'>";
+                echo "<h5 class='card-title'>",$row['game_name'],"</h5>";
+                echo "<p class='card-text'>",$row['game_price'],"</p>";
+                echo "</div>";
+                echo "</div>";
+            }
+            ?>
+        </div>
     </div>
 </body>
 
