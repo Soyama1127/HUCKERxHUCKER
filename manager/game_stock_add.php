@@ -36,6 +36,7 @@
                         echo '<td>' . $row['game_genre'] . '</td>';
                         echo '<td>' . $row['game_model'] . '</td>';
                         echo '<td>' . $row['game_stock'] . '</td>';
+                        echo '<td><button>補充</button></td>';
                         echo '</tr>';
                     }
                 } catch (PDOException $e) {
