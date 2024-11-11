@@ -35,7 +35,7 @@
         <option value='action'>アクション</option>
         <option value='adventure'>アドベンチャー</option>
         <option value='simulation'>シュミレーション</option>
-        <option value='Xdox'>Xbox</option>
+        <option value='格闘'>格闘</option>
         <option value='famicon'>ファミコン</option>
         <option value='other'>その他</option>
         </select>

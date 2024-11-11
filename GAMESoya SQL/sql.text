@@ -4,3 +4,11 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 
     管理者追加
     insert into manager(manager_id,manager_password,manager_name) values(?,?,?)
+
+ユーザーSQL
+    ゲーム表示
+    $sql = $pdo->prepare('select * from game where game_id = 4');
+    $sql->execute();
+    foreach($sql as $row){
+        echo "<img  width='1000px' height='500px' src=./../manager/", $row['game_sample1'], " alt='画像'>";
+    }
