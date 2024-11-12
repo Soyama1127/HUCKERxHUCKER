@@ -57,7 +57,7 @@
                 ジャンル　　　　<?= $row['game_genre'] ?>
             </div>
             <div class="container">
-                機種　　　　<?= $row['game_model'] ?>
+                機種　　　　　<?= $row['game_model'] ?>
             </div>
             <div class="container">
                 <?= $row['game_summary'] ?>

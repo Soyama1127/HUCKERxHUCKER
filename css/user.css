@@ -118,6 +118,7 @@ a {
 
 .container {
     margin-top: 20px;
+    color: white;
 }
 
 .game_img {
@@ -148,4 +149,14 @@ legend {
 
 .err_msg {
     color: red;
+}
+
+.game_main {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
