@@ -12,55 +12,34 @@
     <header>
         GAMESOYA管理者
     </header>
-    <h1>在庫一覧</h1>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>商品ID</th>
-                <th>商品名</th>
-                <th>ジャンル</th>
-                <th>機種</th>
-                <th>在庫数</th>
-            </tr>
-        </thead>
+    <h1>在庫補充</h1>
+    <?
+    $pdo = new PDO(
+                    'mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;',
+                    'LAA1553864',
+                    'Pass1127'
+                );
+                ?>
+    <table >
+        
         <tbody>
             <tr>
-                <td>1</td>
-                <td>太郎の大冒険</td>
-                <td>RPG</td>
-                <td>PS</td>
-                <td>200</td>
+
+                <td><?=$pdo->query('SELECT game_id FROM game where ?')?></td>
+                <td><?=$pdo->query('SELECT game_name FROM game where ?')?></td>
+                <td><?=$pdo->query('SELECT game_genre FROM game where ?')?></td>
+                <td><?=$pdo->query('SELECT game_model FROM game where ?')?></td>
+                <td><?=$pdo->query('SELECT game_price FROM game where ?')?></td>
+                <?=$sql->execute($POST['game_id'])?>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>タロドラ</td>
-                <td>パズル</td>
-                <td>switch</td>
-                <td>20</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>ぼいぼい</td>
-                <td>スポーツ</td>
-                <td>wii</td>
-                <td>35</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>tarobrothers</td>
-                <td>アクション</td>
-                <td>64</td>
-                <td>57</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>tarobrothers</td>
-                <td>アクション</td>
-                <td>wii</td>
-                <td>100</td>
-            </tr>
+                
+                
         </tbody>
     </table>
+            <form action=game_stock_add_complete>
+            <input type=number name=add method=post>
+            <input type=submit value="補充" class="manager_button"><br>
+            </form>
     <script src="./../js/script.js"></script>
 <form action="game_stock_add.php" method="post"><input type="submit" name="1" value="補充"></form>
 </body>
