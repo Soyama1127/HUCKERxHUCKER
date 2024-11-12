@@ -24,8 +24,8 @@
         ?>
         <form action="login.php" method="post">
             <h1>登録完了しました</h1>
-            <input type=submit value=ログイン画面に戻る class="manager_button">
-        </form>
+            <input type=submit value=ログイン画面に戻る class="user_button">
+        </form>ｓ
     </main>
 </body>
 
