@@ -101,6 +101,13 @@ a {
     margin-right: 5px;
 }
 
+.user_icon {
+    background-color: #00ff11;
+    border-color: #00ff11;
+    border-radius: 20%;
+    color: black;
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -115,8 +122,10 @@ a {
 
 .game_img {
     border-radius: 20%;
-    height: 100%;
+    height: 100px;
+    width: 100px;
     margin-right: 10%;
+    object-fit: cover;
 }
 
 .game_model {
@@ -129,6 +138,7 @@ legend {
     padding: 0 10px;
     font-size: 1.2em;
     color: white;
+    margin-bottom: 20px;
 }
 
 .carousel-inner img {

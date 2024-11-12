@@ -6,7 +6,7 @@ $login_id  = $_POST['login_id'];
 $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
 $sql = $pdo->prepare('select user_name from user where login_id = ?');
 $sql->execute([$login_id]);
-foreach($sql as $row){
+foreach ($sql as $row) {
     $_SESSION['user_name'] = $row['user_name'];
 }
 ?>
@@ -37,9 +37,9 @@ foreach($sql as $row){
                 <a href="search.php" class="button">
                     <img src="./../img/serch.png" alt="Search">
                 </a>
-                <a href="account.php" class="button">
-                    <?=$_SESSION['user_name']?>
-                </a>
+                <form action='account.php' method="post">
+                    <button type="submit" class="user_icon" value="send"><?= $_SESSION['user_name'] ?></button>
+                </form>
             </div>
         </div>
     </header>
@@ -95,7 +95,7 @@ foreach($sql as $row){
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
                         <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
-                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
                             <p class='card-text'>￥<?= $row['game_price'] ?></p>
                         </div>
@@ -117,7 +117,7 @@ foreach($sql as $row){
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
                         <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
-                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
                             <p class='card-text'>￥<?= $row['game_price'] ?></p>
                         </div>
@@ -139,7 +139,7 @@ foreach($sql as $row){
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
                         <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
-                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
                             <p class='card-text'>￥<?= $row['game_price'] ?></p>
                         </div>
@@ -161,7 +161,7 @@ foreach($sql as $row){
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
                         <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
-                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
                             <p class='card-text'>￥<?= $row['game_price'] ?></p>
                         </div>
@@ -183,7 +183,7 @@ foreach($sql as $row){
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
                         <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
-                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
                             <p class='card-text'>￥<?= $row['game_price'] ?></p>
                         </div>
@@ -205,7 +205,7 @@ foreach($sql as $row){
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
                         <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
-                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
                             <p class='card-text'>￥<?= $row['game_price'] ?></p>
                         </div>
