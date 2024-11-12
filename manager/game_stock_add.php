@@ -5,56 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/manager.css">
-    <link rel="stylesheet" href="./../css/bootstrap.css">
-    <script src="./../js/bootstrap.js"></script>
-    <title>在庫管理</title>
+    <title>在庫一覧</title>
 </head>
 
 <body>
     <header>
-        GAMESoya管理者
+        GAMESOYA管理者
     </header>
-    <main>
-        <table id="stockTable" class="tablesorter">
-            <thead>
-                <tr>
-                    <th>商品ID</th>
-                    <th>商品名</th>
-                    <th>ジャンル</th>
-                    <th>機種</th>
-                    <th>在庫数</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                try {
-                    // データベース接続設定
-                    $pdo = new PDO(
-                        'mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;',
-                        'LAA1553864',
-                        'Pass1127'
-                    );
-                    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                    // クエリを実行し、結果をテーブル行として出力
-                    foreach ($pdo->query('SELECT * FROM game') as $row) {
-                        echo '<tr>';
-                        echo '<td>' . $row['game_id'] . '</td>';
-                        echo '<td>' . $row['game_name'] . '</td>';
-                        echo '<td>' . $row['game_genre'] . '</td>';
-                        echo '<td>' . $row['game_model'] . '</td>';
-                        echo '<td>' . $row['game_stock'] . '</td>';
-                        echo '<td><button>補充</button></td>';
-                        echo '</tr>';
-                    }
-                } catch (PDOException $e) {
-                    echo 'データベース接続エラー: ' . htmlspecialchars($e->getMessage());
-                }
-                ?>
-            </tbody>
-        </table>
-    </main>
-    <script src="./../js/manager.js"></script>
+    <h1>在庫一覧</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>商品ID</th>
+                <th>商品名</th>
+                <th>ジャンル</th>
+                <th>機種</th>
+                <th>在庫数</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>太郎の大冒険</td>
+                <td>RPG</td>
+                <td>PS</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>タロドラ</td>
+                <td>パズル</td>
+                <td>switch</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>ぼいぼい</td>
+                <td>スポーツ</td>
+                <td>wii</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>tarobrothers</td>
+                <td>アクション</td>
+                <td>64</td>
+                <td>57</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>tarobrothers</td>
+                <td>アクション</td>
+                <td>wii</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="./../js/script.js"></script>
+<form action="game_stock_add.php" method="post"><input type="submit" name="1" value="補充"></form>
 </body>
 
 </html>
