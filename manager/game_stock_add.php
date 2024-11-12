@@ -37,11 +37,11 @@
         </tbody>
     </table>
             <form action=game_stock_add_complete>
+            <input type='hidden' name=game_id value=<?=$row['game_id']?>>
             <input type=number name=add method=post>
             <input type=submit value="補充" class="manager_button"><br>
             </form>
     <script src="./../js/script.js"></script>
-<form action="game_stock_add.php" method="post"><input type="submit" name="1" value="補充"></form>
 </body>
 
 </html>
