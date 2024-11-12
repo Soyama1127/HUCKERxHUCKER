@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/user.css">
+    <script src="./../js/user.js"></script>
     <title>ユーザーログイン</title>
 </head>
 
@@ -13,7 +14,7 @@
 
         <img height="80px" src="./../img/GAMESoya.PNG"><br><br>
 
-        <form action="home.php" method="post">
+        <form id="login" action="home.php" method="post" onsubmit="return logintest();">
 
             <label class="login_label">Login</label><br>
 
@@ -21,8 +22,9 @@
             <input type="text" name="login_id" id="login_id" class="user_text" required><br>
 
             <label>パスワード</label><br>
-            <input type="text" name="pass" id="pass" class="user_text" required><br>
+            <input type="password" name="pass" id="pass" class="user_text" required><br><br>
 
+            <div id="error-message" class="err_msg"></div>
             <input type="submit" value="ログイン" class="user_button"><br>
 
             <a href="home.php" class="user_link">ゲストとしてログイン</a><br>

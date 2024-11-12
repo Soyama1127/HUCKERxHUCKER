@@ -1,13 +1,23 @@
-function kakunin(){
-    const newpass = document.getElementById("newpass").value;
-    const newpass1 = document.getElementById("newpass1").value;
-    const error = document.getElementById("error-message");
+function logintest(){
+    const id = document.getElementById("login_id").value;
+    const pass = document.getElementById("pass").value;
+    const LoginerrorMessage = document.getElementById("error-message");
 
-    error.innerHTML = "";
+    LoginerrorMessage.innerHTML = "";
 
-    if(newpass === newpass1) {
-        error.innerHTML="正しい";
-    }else {
-        error.innerHTML="間違い";
-    }
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "check_user_account.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            if (xhr.responseText === "false") {
+                LoginerrorMessage.innerHTML = "IDまたはパスワードが違います";
+            } else if (xhr.responseText === "true") {
+                document.getElementById("login").submit();
+            }
+        }
+    };
+    xhr.send("user_id=" + encodeURIComponent(id) + "&user_pass=" + encodeURIComponent(pass));
+
+    return false;
 }

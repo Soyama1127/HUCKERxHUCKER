@@ -9,7 +9,7 @@ function logintest() {
     LoginerrorMessage.innerHTML = "";
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "check_account.php", true);
+    xhr.open("POST", "check_manager_account.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onload = function () {
         if (xhr.status === 200) {
@@ -74,30 +74,3 @@ function signuptest() {
     return false;
 
 }
-
-$(document).ready(function() {
-    $("#stockTable").tablesorter({
-        header: {
-            0: {
-                sorter: 'digit'
-            },
-            1: {
-                sorter: 'text'
-            },
-            2: {
-                sorter: 'text'
-            },
-            3: {
-                sorter: 'text'
-            },
-            4: {
-                sorter: 'digit'
-            }
-        },
-        sortList: [
-            [0, 0]
-        ],
-        headerTemplate: '{content} <span class="sort-indicator">↑↓</span>',
-
-    }); // tablesorter を適用
-});
