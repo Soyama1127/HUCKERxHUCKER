@@ -34,7 +34,7 @@
 
         <!-- 商品更新ボタン -->
         <div class="col">
-            <form action="game_update.php" method="post">
+            <form action="all_game.php" method="post">
                 <input type="submit" value="商品更新" class="home_button">
             </form>
         </div>
@@ -62,7 +62,7 @@
 
         <!-- 在庫管理ボタン -->
         <div class="col">
-            <form action="game_stock_add.php" method="post">
+            <form action="game_stock.php" method="post">
                 <input type="submit" value="在庫管理" class="home_button">
             </form>
         </div>
