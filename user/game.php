@@ -14,10 +14,8 @@
     <header>
         <button class='back-btn' onclick='window.history.back();'>＜</button>
         <img src='./../img/GAMESoya.PNG' height="80px">
-
     </header>
     <main class='game_main'>
-
         <?php
         $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
         $game_id = $_POST['game_id'];
@@ -49,22 +47,35 @@
                 </div>
             </div>
             <div class="container">
-                <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲームアイコン' class='game_img'>
-                <?= $row['game_name'] ?>
-                ￥<?= $row['game_price'] ?>
+                <div class="game-details">
+                    <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲームアイコン' class='game_img'>
+                    <div>
+                        <h4><?= $row['game_name'] ?></h4>
+                        <h6>￥<?= $row['game_price'] ?><h6>
+                    </div>
+                </div>
             </div>
-            <div class="container">
-                ジャンル　　　　<?= $row['game_genre'] ?>
-            </div>
-            <div class="container">
+            <hr>
+            <div class="game_info">
+                ジャンル　　　　<?= $row['game_genre'] ?><br><br>
                 機種　　　　　<?= $row['game_model'] ?>
             </div>
-            <div class="container">
-                <?= $row['game_summary'] ?>
-            </div>
-            <input type="submit" value="カートに入れる" clss='cartin_button'><br>
-            <input type="submit" value="購入" clss='cartin_button'><br>
-            <input type="submit" value="ユーザーPR" clss='userpr_button'>
+            <fieldset>
+                <div class="game_summary">
+                    <?= $row['game_summary'] ?>
+                </div>
+            </fieldset>
+            <br>
+            <input type="submit" value="カートに入れる" class='cartin_button'><br>
+            <form action='buy.php' method="post">
+                <input type="hidden" value="<?= $row['game_id'] ?>">
+                <input type="submit" name='only_buy' value="購入" class='cartin_button'><br>
+            </form>
+            <form action="pr.php" method="post">
+                <input type="hidden" value="<?= $row['game_id'] ?>">
+                <input type="submit" value="ユーザーPR" class='userpr_button'>
+            </form>
+
         <?php endforeach; ?>
     </main>
 </body>

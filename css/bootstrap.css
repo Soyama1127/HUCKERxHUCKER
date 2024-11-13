@@ -57,13 +57,13 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-hr {
+/* hr {
   margin: 1rem 0;
   color: inherit;
   background-color: currentColor;
   border: 0;
   opacity: 0.25;
-}
+} */
 
 hr:not([size]) {
   height: 1px;
@@ -406,6 +406,7 @@ fieldset {
   border: 1px solid #66ff2a;
   padding: 10px;
   border-radius: 5px;
+  width: 100%;
 }
 
 /* legend {

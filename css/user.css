@@ -72,6 +72,11 @@ a {
     color: white;
 }
 
+hr {
+    width: 100%;
+    border-color: #00ff11;
+}
+
 .back-btn {
     position: absolute;
     left: 10px;
@@ -118,6 +123,7 @@ a {
 
 .container {
     margin-top: 20px;
+    margin-bottom: 20px;
     color: white;
 }
 
@@ -159,4 +165,35 @@ legend {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+}
+
+.game_info {
+    align-items: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.game-details {
+    display: flex;
+    align-items: center;
+}
+
+.game_summary {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.cartin_button {
+    width: 50%;
+    height: 35px;
+    border: none;
+}
+
+.userpr_button {
+    width: 50%;
+    height: 35px;
+    background-color: #00ff11;
+    color: white;
+    border: none;
 }
