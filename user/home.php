@@ -1,3 +1,7 @@
+<?php
+$pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -25,7 +29,7 @@
                     <img src="./../img/serch.png" alt="Search">
                 </a>
                 <form action='account.php' method="post">
-                    <button type="submit" class="user_icon" value="send"><?= $_SESSION['user_name'] ?></button>
+                    <button type="submit" class="user_icon" value="send">ゲスト</button>
                 </form>
             </div>
         </div>
