@@ -1,16 +1,3 @@
-<?php
-session_start();
-$session_id = session_id();
-$_SESSION['user_name'] = 'ゲスト';
-$login_id  = $_POST['login_id'];
-$pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-$sql = $pdo->prepare('select user_name from user where login_id = ?');
-$sql->execute([$login_id]);
-foreach ($sql as $row) {
-    $_SESSION['user_name'] = $row['user_name'];
-}
-?>
-
 <!DOCTYPE html>
 <html lang="ja">
 
