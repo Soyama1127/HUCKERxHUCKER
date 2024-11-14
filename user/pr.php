@@ -10,7 +10,8 @@
 
 <body>
     <header>
-        ヘッダー
+        <button class='back-btn' onclick='window.history.back();'>＜</button>
+        <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>
         画面
