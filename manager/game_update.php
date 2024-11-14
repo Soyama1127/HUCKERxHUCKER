@@ -13,7 +13,7 @@
         GAMESOYA管理者
     </header>
     <main>
-        <h1>商品登録</h1><br>
+        <h1>商品更新</h1><br>
         <?php
         $game_id = $_POST['game_id'];
         $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
@@ -53,7 +53,7 @@
                 <input type="file" name="sample3" class=game_icon><br>
                 <label>概要</label><br>
                 <textarea name="summary" rows="5" cols="40" class=game_summary required><?= $row['game_summary'] ?></textarea><br>
-                <input type=submit value="登録" class="add_button"><br>
+                <input type=submit value="更新" class="add_button"><br>
             <?php endforeach ?>
             </form>
     </main>
