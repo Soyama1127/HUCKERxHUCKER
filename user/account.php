@@ -10,10 +10,15 @@
 
 <body>
     <header>
-        ヘッダー
+        <button class='back-btn' onclick='window.history.back();'>＜</button>
+        <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>
-        画面
+        <?php
+        $sql = $pdo->prepare('select * from user where login_id = ?');
+        $sql->execute([$_SESSION['login_id']]);
+        foreach ($sql as $row): ?>
+        <?php endforeach; ?>
     </main>
 </body>
 

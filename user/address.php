@@ -9,6 +9,10 @@
 </head>
 
 <body>
+    <header>
+        <button class='back-btn' onclick='window.history.back();'>＜</button>
+        <img src='./../img/GAMESoya.PNG' height="80px">
+    </header>
     <h1>住所</h1>
     <main>
         <br>
@@ -83,7 +87,7 @@
 
         <input type="textbox" name="4" placeholder="例)柳ビル103" style="width:300px;height:20px">
 
-        <form action="" method="post"><input name="1" type="submit" value="登録"style="width:300px;height:50px"></form>
+        <form action="" method="post"><input name="1" type="submit" value="登録" style="width:300px;height:50px"></form>
     </main>
 </body>
 
