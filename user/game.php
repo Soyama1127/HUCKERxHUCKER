@@ -43,7 +43,6 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    </button>
                 </div>
             </div>
             <div class="container">
@@ -51,7 +50,7 @@
                     <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲームアイコン' class='game_img'>
                     <div>
                         <h4><?= $row['game_name'] ?></h4>
-                        <h6>￥<?= $row['game_price'] ?><h6>
+                        <h6>￥<?= $row['game_price'] ?></h6>
                     </div>
                 </div>
             </div>
@@ -68,11 +67,11 @@
             <br>
             <input type="submit" value="カートに入れる" class='cartin_button'><br>
             <form action='buy.php' method="post">
-                <input type="hidden" value="<?= $row['game_id'] ?>">
+                <input type="hidden" name="game_id" value="<?= $row['game_id'] ?>">
                 <input type="submit" name='only_buy' value="購入" class='cartin_button'><br>
             </form>
             <form action="pr.php" method="post">
-                <input type="hidden" value="<?= $row['game_id'] ?>">
+                <input type="hidden" name="game_id" value="<?= $row['game_id'] ?>">
                 <input type="submit" value="ユーザーPR" class='userpr_button'>
             </form>
 

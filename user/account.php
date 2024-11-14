@@ -14,11 +14,22 @@
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>
-        <?php
-        $sql = $pdo->prepare('select * from user where login_id = ?');
-        $sql->execute([$_SESSION['login_id']]);
-        foreach ($sql as $row): ?>
-        <?php endforeach; ?>
+        <label>商品管理</label>
+        <form action="favorite.php" type="post">
+            <input type="submit"  value="お気に入り一覧">
+        </form>
+        <form action="buy_history.php" type="post">
+            <input type="submit"  value="購入履歴">
+        </form>
+        <br>
+        <label>ユーザー管理</label>
+        <form action="account_setting.php" type="post">
+            <input type="submit"  value="アカウント">
+        </form>
+        <br><br>
+        <form action="destroySession.php" type="post">
+            <input type="submit" value="ログアウト">
+        </form>
     </main>
 </body>
 
