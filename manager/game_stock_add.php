@@ -33,7 +33,7 @@
             <?= $row['game_model'] ?>
             <?= $row['game_price'] ?>
       
-            <form action=game_stock_add_complete>
+            <form action=game_stock_add_complete method='post'>
             <input type='hidden' name=game_id value=<?=$row['game_id']?>>
             <input type=number name=add method=post>
             <input type=submit value="補充" class="manager_button"><br>
