@@ -13,6 +13,16 @@
         GAMESOYA管理者
     </header>
     <main>
+        <?php
+    $pdo = new PDO(
+                    'mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;',
+                    'LAA1553864',
+                    'Pass1127'
+                );
+                $user_id = $_POST['user_id'];
+                $sql = $pdo->prepare('delete from user where user_id = ?');
+                $sql->execute([$user_id]);
+                ?>
         <h1>ユーザーを削除しました</h1>
     </main>
     <form action="user_delete.php" method="post"><input name="1" type="submit" value="続けて削除"style="width:300px;height:50px"></form>

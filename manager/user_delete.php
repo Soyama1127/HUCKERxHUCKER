@@ -15,7 +15,9 @@
     <h1>ユーザー削除</h1>
     番号<input type="number" name="1" value="1"><br>
     <main>
-    <form action="user_delete_complete.php" method="post"><input name="1" type="submit" value="削除"style="width:300px;height:50px"></form>
+    <form action="user_delete_complete.php" method="post">
+        <input name="user_id" type="submit" value="削除"style="width:300px;height:50px">
+    </form>
     </main>
 </body>
 
