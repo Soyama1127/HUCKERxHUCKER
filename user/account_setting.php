@@ -10,19 +10,26 @@
 
 <body>
     <header>
-        GAMESOYA
+        <button class='back-btn' onclick='window.history.back();'>＜　アカウント設定</button>
+        <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>
-    <form action="home.php" method="post">
-        ユーザー名<br>
-        <input type="text" name="user_name"><br>
-        ログインID<br>
-        <input type="text" name="user_id"><br>
-        パスワード<br>
-        <input type="text" name="user_password"><br>
-        <input type="submit" value="新規登録">
+        <label>アカウント名</label>
+        <h3>田中　太郎</h3>
+        <form action="update.php" method="post">
+            <input tyoe="submit" value="パスワード/ログインID">
+        </form>
+        <form action="address.php" method="post">
+            <input type="submit" value="住所">
+        </form>
+        <form action="creditcard.php" method="post">
+            <input tyoe="submit" value="クレジットカード情報">
+        </form>
+        <br>
+        <from action="home.php" method="post">
+            <input type="submit" value="更新">
+        </from>
     </main>
-
 </body>
 
 </html>
