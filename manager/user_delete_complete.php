@@ -25,8 +25,12 @@
                 ?>
         <h1>ユーザーを削除しました</h1>
     </main>
-    <form action="user_delete.php" method="post"><input name="1" type="submit" value="続けて削除"style="width:300px;height:50px"></form>
-    <form action="home.php" method="post"><input name="2" type="submit" value="ホームに戻る"style="width:300px;height:50px"></form>
+    <form action="user_delete.php" method="post">
+        <input  type="submit" value="続けて削除"style="width:300px;height:50px">
+    </form>
+    <form action="home.php" method="post">
+        <input  type="submit" value="ホームに戻る"style="width:300px;height:50px">
+    </form>
 </body>
 
 </html>
