@@ -39,7 +39,7 @@
             <input type=submit value="補充" class="manager_button"><br>
             </form>
             <?php endforeach ?>
-    <script src="./../js/script.js"></script>
+    <script src="./../js/manager.js"></script>
 </body>
 
 </html>
