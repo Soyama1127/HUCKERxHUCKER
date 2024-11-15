@@ -18,7 +18,7 @@
         $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
         $game_id = $_POST['game_id'];
         $add = $_POST['add'];
-        $sql = $pdo->prepare('update  game  set  game_stock=? where game_id = ?');
+        $sql = $pdo->prepare('update  game  set  game_stock+=? where game_id = ?');
         $sql->execute([$add, $game_id]);
         ?>
         <form action="game_stock.php" method="post">
