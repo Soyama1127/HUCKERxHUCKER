@@ -16,7 +16,7 @@
     
     <main>
     <form action="user_delete_complete.php" method="post">
-    番号<input type="number" name="user_name" value="1"><br>
+    番号<input type="number" name="user_id" value="1"><br>
         <input  type="submit" value="削除"style="width:300px;height:50px">
     </form>
     </main>
