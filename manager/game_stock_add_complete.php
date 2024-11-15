@@ -22,7 +22,7 @@
                 );
                 $game_id = $_POST['game_id'];
                 $add=$_POST['add'];
-                $sql = $pdo->prepare('updata gamesoya  set  game_stock=? where game_id = ?');
+                $sql = $pdo->prepare('updata  game  set  game_stock=? where game_id = ?');
                 $sql->execute([$add,$game_id]);
                 ?>
                 <form action="game_stock.php" method="post">
