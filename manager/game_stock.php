@@ -48,6 +48,7 @@
                         <form action='game_stock_add.php' method='post'>
                         <input type='hidden' name=game_id value=<?=$row['game_id']?>>
                         <td><button>補充</button></td>
+                        </form>
                     </tr>
                 <?php endforeach ?>
 

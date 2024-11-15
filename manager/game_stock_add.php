@@ -13,34 +13,32 @@
         GAMESOYA管理者
     </header>
     <h1>在庫補充</h1>
-    <?
+    <br>
+    <br>
+    <br>
+    <?php
+    
     $pdo = new PDO(
                     'mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;',
                     'LAA1553864',
                     'Pass1127'
                 );
-                ?>
-    <table >
-        
-        <tbody>
-            <tr>
-
-                <td><?=$pdo->query('SELECT game_id FROM game where ?')?></td>
-                <td><?=$pdo->query('SELECT game_name FROM game where ?')?></td>
-                <td><?=$pdo->query('SELECT game_genre FROM game where ?')?></td>
-                <td><?=$pdo->query('SELECT game_model FROM game where ?')?></td>
-                <td><?=$pdo->query('SELECT game_price FROM game where ?')?></td>
-                <?=$sql->execute($POST['game_id'])?>
-            </tr>
-                
-                
-        </tbody>
-    </table>
+                $game_id = $_POST['game_id'];
+                $sql = $pdo->prepare('select * from game where game_id = ?');
+        $sql->execute([$game_id]);
+        foreach ($sql as $row): ?>
+            <?= $row['game_id'] ?>
+            <?= $row['game_name'] ?>
+            <?= $row['game_genre'] ?>
+            <?= $row['game_model'] ?>
+            <?= $row['game_price'] ?>
+      
             <form action=game_stock_add_complete>
             <input type='hidden' name=game_id value=<?=$row['game_id']?>>
             <input type=number name=add method=post>
             <input type=submit value="補充" class="manager_button"><br>
             </form>
+            <?php endforeach ?>
     <script src="./../js/script.js"></script>
 </body>
 
