@@ -40,7 +40,7 @@
 
                 foreach ($pdo->query('SELECT * FROM game') as $row) : ?>
                     <tr>
-                        <td></td>';
+                        <td><?= $row['game_id'] ?></td>
                         <td> <?= $row['game_name'] ?> </td>
                         <td> <?= $row['game_genre']?> </td>
                         <td> <?=$row['game_model'] ?></td>
