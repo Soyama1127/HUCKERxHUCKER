@@ -214,7 +214,9 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             <?php endforeach; ?>
         </fieldset>
     </div>
-    <footer></footer>
+    <footer>
+        トップページへ
+    </footer>
 </body>
 
 </html>
