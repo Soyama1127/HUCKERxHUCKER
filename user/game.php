@@ -65,7 +65,10 @@
                 </div>
             </fieldset>
             <br>
-            <input type="submit" value="カートに入れる" class='cartin_button'><br>
+            <form action="cartin.php" method="post" onsubmit="return cartin();">
+                <input type="submit" value="<?=$row['game_id']?>" class='cartin_button'><br>
+            </form>
+            
             <form action='buy.php' method="post">
                 <input type="hidden" name="game_id" value="<?= $row['game_id'] ?>">
                 <input type="submit" name='only_buy' value="購入" class='cartin_button'><br>
