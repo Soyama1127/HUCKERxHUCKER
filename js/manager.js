@@ -92,3 +92,35 @@ document.getElementById('searchInput').addEventListener('keyup', function () {
         }
     }
 });
+
+document.getElementById('game_genre').addEventListener('change', function () {
+
+    let genreValue = document.getElementById('game_genre').value.toLowerCase();
+    let tableRows = document.getElementById('gameTable').getElementsByTagName('tr');
+
+    for (let i = 2; i < tableRows.length; i++) {
+        let cells = tableRows[i].getElementsByTagName('td');
+        let cellText = cells[2].textContent.toLowerCase();
+        if (cellText.indexOf(genreValue) > -1) {
+            tableRows[i].style.display = '';
+        } else {
+            tableRows[i].style.display = 'none';
+        }
+    }
+});
+
+document.getElementById('game_model').addEventListener('change', function () {
+
+    let modelValue = document.getElementById('game_model').value.toLowerCase();
+    let tableRows = document.getElementById('gameTable').getElementsByTagName('tr');
+
+    for (let i = 2; i < tableRows.length; i++) {
+        let cells = tableRows[i].getElementsByTagName('td');
+        let cellText = cells[3].textContent.toLowerCase();
+        if (cellText.indexOf(modelValue) > -1) {
+            tableRows[i].style.display = '';
+        } else {
+            tableRows[i].style.display = 'none';
+        }
+    }
+});

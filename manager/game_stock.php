@@ -21,7 +21,7 @@
                     <th></th>
                     <th><input type="text" id="searchInput" placeholder="ゲーム名で検索"></th>
                     <th>
-                        <select name='game_genre'>
+                        <select id='game_genre' name='game_genre'>
                             <option></option>
                             <option value='RPG'>RPG</option>
                             <option value='アクション'>アクション</option>
@@ -33,7 +33,7 @@
                         </select>
                     </th>
                     <th>
-                        <select name='model'>
+                        <select id='game_model' name='model'>
                             <option></option>
                             <option value='Switch'>Switch</option>
                             <option value='PS'>PS(プレイステーション)</option>
