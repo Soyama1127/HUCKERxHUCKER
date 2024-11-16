@@ -72,3 +72,8 @@ function signuptest() {
 
     return false;
 }
+
+//ログアウトポップアップ
+function confirmLogout() {
+    return confirm('ログアウトしますか?');
+}

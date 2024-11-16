@@ -80,7 +80,7 @@ h1 {
     display: inline;
     background-color: rgb(255, 120, 120);
     border-color: rgb(255, 120, 120);
-    border-radius: 15%;
+    border-radius: 15px;
     font-size: 15px;
     width: 130px;
     height: 30px;

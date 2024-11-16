@@ -124,3 +124,8 @@ document.getElementById('game_model').addEventListener('change', function () {
         }
     }
 });
+
+//ログアウトポップアップ
+function confirmLogout() {
+    return confirm('ログアウトしますか?');
+}

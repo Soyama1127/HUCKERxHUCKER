@@ -17,7 +17,7 @@
 
     <h1>ホーム</h1>
 
-    <form action="login.php" method="post" class="logout">
+    <form action="login.php" method="post" class="logout" onsubmit="return confirmLogout();">
 
         <input type="submit" value="ログアウト" class="logout_button">
 
@@ -66,8 +66,8 @@
                 <input type="submit" value="在庫管理" class="home_button">
             </form>
         </div>
-
     </div>
+    <script src="./../js/manager.js"></script>
 </body>
 
 </html>
