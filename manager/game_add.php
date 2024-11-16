@@ -24,6 +24,7 @@
             <select name='model' class=game_list>
                 <option value='Switch'>Switch</option>
                 <option value='PS'>PS(プレイステーション)</option>
+                <option value='3DS/DS'>3DS/DS</option>
                 <option value='wii'>Wii</option>
                 <option value='64'>64</option>
                 <option value='Xbox'>Xbox</option>
