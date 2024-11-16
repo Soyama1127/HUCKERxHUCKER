@@ -67,7 +67,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
@@ -89,7 +89,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
@@ -111,7 +111,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
@@ -133,7 +133,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
@@ -155,7 +155,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
@@ -177,7 +177,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
@@ -199,7 +199,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
