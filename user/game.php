@@ -26,13 +26,13 @@
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src='./../manager/<?= $row['game_sample1'] ?>' alt='ゲーム画像' class="d-block w-100 h-50">
+                            <img src='./../manager/game/<?=$row['game_sample1']?>' alt='ゲーム画像' class="d-block w-100 h-50">
                         </div>
                         <div class="carousel-item">
-                            <img src='./../manager/<?= $row['game_sample2'] ?>' alt='ゲーム画像' class="d-block w-100 h-50">
+                            <img src='./../manager/game/<?=$row['game_sample2']?>' alt='ゲーム画像' class="d-block w-100 h-50">
                         </div>
                         <div class="carousel-item">
-                            <img src='./../manager/<?= $row['game_sample3'] ?>' alt='ゲーム画像' class="d-block w-100 h-50">
+                            <img src='./../manager/game/<?=$row['game_sample3']?>' alt='ゲーム画像' class="d-block w-100 h-50">
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -47,7 +47,7 @@
             </div>
             <div class="container">
                 <div class="game-details">
-                    <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲームアイコン' class='game_img'>
+                    <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲームアイコン' class='game_img'>
                     <div>
                         <h4><?= $row['game_name'] ?></h4>
                         <h6>￥<?= $row['game_price'] ?></h6>
