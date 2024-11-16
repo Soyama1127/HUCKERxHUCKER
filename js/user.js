@@ -77,3 +77,8 @@ function signuptest() {
 function confirmLogout() {
     return confirm('ログアウトしますか?');
 }
+
+//カートインポップアップ
+function cartin() {
+    return confirm('カートに追加しますか？')
+}
