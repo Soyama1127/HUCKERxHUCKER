@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -15,20 +19,12 @@
     </header>
     <main>
         <label>アカウント名</label>
-        <h3>田中　太郎</h3>
-        <form action="update.php" method="post">
-            <input tyoe="submit" value="パスワード/ログインID">
-        </form>
-        <form action="address.php" method="post">
-            <input type="submit" value="住所">
-        </form>
-        <form action="creditcard.php" method="post">
-            <input tyoe="submit" value="クレジットカード情報">
-        </form>
+        <input type="text" value="<?=$_SESSION['user_name']?>" class='account_text'><br><br>
+        <button onclick="location.href='update.php'" class='account_setting_btn'>パスワード/ログインID</button><br>
+        <button onclick="location.href='address.php'" class='account_setting_btn'>住所</button><br>
+        <button onclick="location.href='creditcard.php'" class='account_setting_btn'>クレジットカード情報</button>
         <br>
-        <from action="home.php" method="post">
-            <input type="submit" value="更新">
-        </from>
+        <button onclick="location.href='home.php'" class='account_update'>更新</button>
     </main>
 </body>
 

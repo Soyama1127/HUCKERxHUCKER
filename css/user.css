@@ -216,3 +216,33 @@ legend {
     color: white;
     font-size: large;
 }
+
+.account_text {
+    padding-top: 10px;
+    border: none;
+    outline:none;
+    background-color: transparent;
+    font-size:xx-large;
+    color: white;
+    text-align: center;
+}
+
+.account_setting_btn {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10%;
+    border-radius: 15px;
+    font-size: large;
+    border: none;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.account_update {
+    width: 30%;
+    height: 50px;
+    font-size: large;
+    border: none;
+    background-color: rgb(253, 115, 115);
+    border-radius: 10px;
+}
