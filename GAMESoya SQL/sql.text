@@ -3,12 +3,21 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 管理者SQL
 
     管理者追加
-    insert into manager(manager_id,manager_password,manager_name) values(?,?,?)
+    insert into manager(manager_id,manager_password,manager_name) values(?,?,?);
+
+    ゲーム追加
+    insert into game(game_name,game_price,game_model,game_genre,game_icon,game_sample1,game_sample2,game_sample3,game_summary) values(?,?,?,?,?,?,?,?,?);
+
+    ユーザー削除
+    delete from user where user_id = ?
+
+    在庫追加
+    update  game  set  game_stock = ? where game_id = ?
+
+    ゲーム一覧
+    select * from game
 
 ユーザーSQL
+
     ゲーム表示
-    $sql = $pdo->prepare('select * from game where game_id = 4');
-    $sql->execute();
-    foreach($sql as $row){
-        echo "<img  width='1000px' height='500px' src=./../manager/", $row['game_sample1'], " alt='画像'>";
-    }
+    
