@@ -14,7 +14,7 @@ session_start();
 
 <body>
     <header>
-        <button class='back-btn' onclick='window.history.back();'>＜　アカウント設定</button>
+        <button class='back-btn' onclick='window.history.back();'>＜</button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>

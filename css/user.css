@@ -77,6 +77,11 @@ hr {
     border-color: #00ff11;
 }
 
+p {
+    color: white;
+    font-size: x-large;
+}
+
 .back-btn {
     position: absolute;
     left: 10px;
