@@ -58,8 +58,8 @@
             <tbody>
                 <?php
                 $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-                $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                foreach ($pdo->query('SELECT * FROM game') as $row) : ?>
+                $sql = "select * from game";
+                foreach ($pdo->query($sql) as $row) : ?>
                     <tr>
                         <td><?= $row['game_id'] ?></td>
                         <td> <?= $row['game_name'] ?> </td>
