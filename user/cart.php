@@ -1,5 +1,6 @@
 <?php
 session_start();
+$cart_id = $_SESSION['cart_id'];
 $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
 ?>
 
@@ -20,13 +21,12 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         <button class='back-btn' onclick="location.href='home.php'">＜</button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
-    <fieldset class="row mt-5 ">
-        <legend>RPG</legend>
+    <main>
         <?php
-        $sql = $pdo->prepare('select * from game where game_genre = "RPG" limit 4');
-        $sql->execute();
+        $sql = $pdo->prepare('select game.game_id, game.game_icon, game.game_name, game.game_model, game.game_price from game inner join cart on game.game_id = cart.game_id where cart.cart_id = ?');
+        $sql->execute([$cart_id]);
         foreach ($sql as $row): ?>
-            <div class='col-12 col-md-6'>
+            <div class='col-6 col-md-6'>
                 <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
                     <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                     <div class='card-body p-0 w-100'>
@@ -41,7 +41,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                 </div>
             </div>
         <?php endforeach; ?>
-    </fieldset>
+    </main>
     <script src="./../js/user.js"></script>
 </body>
 
