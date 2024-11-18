@@ -108,3 +108,10 @@ function backPage() {
         alert('不正な値です');
     }
 }
+
+function confirmLogin() {
+    const result = confirm("ログインしますか？");
+    if(result) {
+        window.location.href = "login.php";
+    }
+}

@@ -31,9 +31,9 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                 </a>
                 <form action='account.php' method="post">
                     <?php if (isset($_SESSION['user_name'])): ?>
-                        <button type="submit" class="user_icon" value="send"><?= $_SESSION['user_name'] ?></button>
+                        <button type="submit" class="user_icon"><?= $_SESSION['user_name'] ?></button>
                     <?php else: ?>
-                        <button type="submit" class="user_icon" value="send">ゲスト</button>
+                        <button type="button" class="user_icon" onclick="confirmLogin()">ゲスト</button>
                     <?php endif; ?>
                 </form>
             </div>
