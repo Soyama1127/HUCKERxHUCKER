@@ -4,6 +4,8 @@ body {
     padding: 0;
     height: 100vh;
     background: linear-gradient(180deg, rgb(78, 78, 234), rgb(17, 17, 17));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
@@ -70,6 +72,16 @@ a {
     color: white;
 }
 
+hr {
+    width: 100%;
+    border-color: #00ff11;
+}
+
+p {
+    color: white;
+    font-size: x-large;
+}
+
 .back-btn {
     position: absolute;
     left: 10px;
@@ -99,6 +111,13 @@ a {
     margin-right: 5px;
 }
 
+.user_icon {
+    background-color: #00ff11;
+    border-color: #00ff11;
+    border-radius: 20px;
+    color: black;
+}
+
 .header-content {
     display: flex;
     justify-content: space-between;
@@ -109,4 +128,126 @@ a {
 
 .container {
     margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.game_img {
+    border-radius: 20%;
+    height: 100px;
+    width: 100px;
+    margin-right: 10%;
+    object-fit: cover;
+}
+
+.game_model {
+    color: white;
+}
+
+
+legend {
+    width: auto;
+    padding: 0 10px;
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.carousel-inner img {
+    width: 100px;
+    object-fit: cover;
+}
+
+.err_msg {
+    color: red;
+}
+
+.game_main {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.game_info {
+    align-items: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.game-details {
+    display: flex;
+    align-items: center;
+}
+
+.game_summary {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.cartin_button {
+    width: 50%;
+    height: 35px;
+    border: none;
+}
+
+.userpr_button {
+    width: 50%;
+    height: 35px;
+    background-color: #00ff11;
+    color: white;
+    border: none;
+}
+
+.account_btn {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10%;
+    border-radius: 15px;
+    font-size: large;
+    border: none;
+}
+
+.logout_btn {
+    width: 70%;
+    height: 50px;
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: large;
+}
+
+.account_text {
+    padding-top: 10px;
+    border: none;
+    outline:none;
+    background-color: transparent;
+    font-size:xx-large;
+    color: white;
+    text-align: center;
+}
+
+.account_setting_btn {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10%;
+    border-radius: 15px;
+    font-size: large;
+    border: none;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.account_update {
+    width: 30%;
+    height: 50px;
+    font-size: large;
+    border: none;
+    background-color: rgb(253, 115, 115);
+    border-radius: 10px;
 }

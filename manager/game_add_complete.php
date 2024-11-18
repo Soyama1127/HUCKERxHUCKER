@@ -29,19 +29,22 @@
             is_uploaded_file($_FILES['sample2']['tmp_name']) and
             is_uploaded_file($_FILES['sample3']['tmp_name'])
         ) {
-            if (!file_exists('game')) {
-                mkdir('game');
-            }
-            $image = './../manager/game/' . basename($_FILES['image']['name']);
-            $sample1 = './../manager/game/' . basename($_FILES['sample1']['name']);
-            $sample2 = './../manager/game/' . basename($_FILES['sample2']['name']);
-            $sample3 = './../manager/game/' . basename($_FILES['sample3']['name']);
+            
+            $image_path = './../manager/game/' . basename($_FILES['image']['name']);
+            $sample1_path = './../manager/game/' . basename($_FILES['sample1']['name']);
+            $sample2_path = './../manager/game/' . basename($_FILES['sample2']['name']);
+            $sample3_path = './../manager/game/' . basename($_FILES['sample3']['name']);
+
+            $image = basename($_FILES['image']['name']);
+            $sample1 = basename($_FILES['sample1']['name']);
+            $sample2 = basename($_FILES['sample2']['name']);
+            $sample3 = basename($_FILES['sample3']['name']);
 
             if (
-                move_uploaded_file($_FILES['image']['tmp_name'], $image) and
-                move_uploaded_file($_FILES['sample1']['tmp_name'], $sample1) and
-                move_uploaded_file($_FILES['sample2']['tmp_name'], $sample2) and
-                move_uploaded_file($_FILES['sample3']['tmp_name'], $sample3)
+                move_uploaded_file($_FILES['image']['tmp_name'], $image_path) and
+                move_uploaded_file($_FILES['sample1']['tmp_name'], $sample1_path) and
+                move_uploaded_file($_FILES['sample2']['tmp_name'], $sample2_path) and
+                move_uploaded_file($_FILES['sample3']['tmp_name'], $sample3_path)
             ) {
 
                 $sql = $pdo->prepare('insert into game(game_name,game_price,game_model,game_genre,game_icon,game_sample1,game_sample2,game_sample3,game_summary) values(?,?,?,?,?,?,?,?,?)');

@@ -80,7 +80,7 @@ h1 {
     display: inline;
     background-color: rgb(255, 120, 120);
     border-color: rgb(255, 120, 120);
-    border-radius: 15%;
+    border-radius: 15px;
     font-size: 15px;
     width: 130px;
     height: 30px;
@@ -138,5 +138,12 @@ h1 {
 }
 
 .tablesorter {
+    margin-top: 30px;
     width: 1000px;
+}
+
+.add_btn {
+    background-color: rgb(255, 141, 141);
+    border: none;
+    border-radius: 10px;
 }

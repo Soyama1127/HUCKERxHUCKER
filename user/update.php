@@ -10,18 +10,31 @@
 
 <body>
     <header>
-        パスワード/ログインID
+        <button class='back-btn' onclick='window.history.back();'>＜</button>
+        <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>
-        パスワードの変更<br><br>
+        <p>パスワードの変更</p><br>
         <label>現在のパスワード</label><br>
-        <input type="text"><br>
+        <input type="password" class="user_text" required><br>
         <label>新しいパスワード</label><br>
-        <input type="text" id="newpass"><br>
+        <input type="password" id="newpass" class="user_text" required><br>
         <label>新しいパスワード(確認)</label><br>
-        <input type="text" id="newpass1"><br>
+        <input type="password" id="newpass1" class="user_text" required><br>
         <div id="error-message"></div>
-        <input type="submit" value="変更" onclick="kakunin();">
+        <input type="submit" name="passupdate" value="変更" class="account_update" onclick="kakunin();"><br>
+
+        <hr>
+
+        <p>ログインIDの変更</p><br>
+        <label>現在のログインID</label><br>
+        <input type="text" class="user_text" required><br>
+        <label>新しいログインID</label><br>
+        <input type="text" id="newpass" class="user_text" required><br>
+        <label>新しいログインID(確認)</label><br>
+        <input type="text" id="newpass1" class="user_text" required><br>
+        <div id="error-message"></div>
+        <input type="submit" name="passupdate" value="変更" class="account_update" onclick="kakunin();">
     </main>
     <script src="./../js/user.js"></script>
 </body>

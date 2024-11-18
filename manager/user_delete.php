@@ -13,27 +13,12 @@
         GAMESOYA管理者
     </header>
     <h1>ユーザー削除</h1>
-    番号<input type="number" name="1" value="1"><br>
+    
     <main>
-    <h1>ユーザー削除</h1>
-        <?php
-            $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-            echo '<form action="user_delete_complete.php" method="post">';
-            echo '番号';
-            echo '<select name="user_id">';
-            foreach ($pdo->query('select user_id, user_name from user') as $row) {
-                echo '<option value="', $row['user_id'], '">', $row['user_name'], '</option>';
-            }
-            echo '</select><br><br>';
-            foreach ($pdo->query('select * from user')as $row){
-                echo '<p>';
-                echo $row['user_id'];
-                echo $row['user_name'];
-                echo '</p>';
-            }
-            echo '<input type="submit" value="削除" class="manager_button">';
-        ?>
-        </form>
+    <form action="user_delete_complete.php" method="post">
+    番号<input type="number" name="user_id" value="1"><br>
+        <input  type="submit" value="削除"style="width:300px;height:50px">
+    </form>
     </main>
         <script src="./../js/manager.js"></script>
 </body>

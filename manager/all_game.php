@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./../css/manager.css">
     <link rel="stylesheet" href="./../css/bootstrap.css">
     <script src="./../js/bootstrap.js"></script>
-    <title>在庫管理</title>
+    <title>ゲーム一覧</title>
 </head>
 
 <body>
@@ -15,7 +15,8 @@
         GAMESoya管理者
     </header>
     <main>
-        <table id="gameTable" class="tablesorter">
+        <h3>更新したい商品の選択</h3>
+        <table class="tablesorter">
             <thead>
                 <tr>
                     <th></th>
@@ -58,24 +59,24 @@
             <tbody>
                 <?php
                 $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-                $sql = "select * from game";
-                foreach ($pdo->query($sql) as $row) : ?>
+                $sql = $pdo->query('select * from game');
+                $sql->execute();
+                foreach ($sql as $row): ?>
                     <tr>
-                        <td><?= $row['game_id'] ?></td>
-                        <td> <?= $row['game_name'] ?> </td>
-                        <td> <?= $row['game_genre'] ?> </td>
-                        <td> <?= $row['game_model'] ?></td>
-                        <td> <?= $row['game_stock'] ?> </td>
-                        <form action='game_stock_add.php' method='post'>
+                        <form action='game_update.php' method='post'>
+                            <td> <?= $row['game_id'] ?></td>
+                            <td> <?= $row['game_name'] ?> </td>
+                            <td> <?= $row['game_genre'] ?> </td>
+                            <td> <?= $row['game_model'] ?></td>
+                            <td> <?= $row['game_stock'] ?> </td>
                             <input type='hidden' name=game_id value=<?= $row['game_id'] ?>>
-                            <td><button class="add_btn">補充</button></td>
+                            <td><button type='submit'>選択</button></td>
                         </form>
                     </tr>
                 <?php endforeach ?>
             </tbody>
         </table>
     </main>
-    <script src="./../js/manager.js"></script>
 </body>
 
 </html>
