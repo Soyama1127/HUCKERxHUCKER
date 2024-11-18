@@ -27,7 +27,7 @@
     $sql->execute();
     foreach ($sql as $row){
         echo '<p>';
-        echo '<tb>' $row['game_id'] '</tb>;
+        echo $row['game_id'];
         echo $row['game_name'];
         echo $row['geme_price'];
         echo $row['game_model'];
