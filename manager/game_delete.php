@@ -12,6 +12,9 @@
     <header>
         GAMESOYA管理者
     </header>
+    <h1>商品削除</h1>
+    <h2>ID</h2>
+    <h2>ゲーム一覧</h2>
     <main>
     <?php
     $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
@@ -24,7 +27,7 @@
     $sql->execute();
     foreach ($sql as $row){
         echo '<p>';
-        echo $row['game_id'];
+        echo '<tb>' $row['game_id'] '</tb>;
         echo $row['game_name'];
         echo $row['geme_price'];
         echo $row['game_model'];

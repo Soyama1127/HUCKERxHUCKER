@@ -35,12 +35,13 @@
         <option value='action'>アクション</option>
         <option value='adventure'>アドベンチャー</option>
         <option value='simulation'>シュミレーション</option>
-        <option value='Xdox'>Xbox</option>
+        <option value='格闘'>格闘</option>
         <option value='famicon'>ファミコン</option>
         <option value='other'>その他</option>
         </select>
         
     </main>
+    <form action="game_update_complete.php" method="post"><input name="a" type="submit" value="更新"style="width:300px;height:50px"></form>
     </main>
 </body>
 
