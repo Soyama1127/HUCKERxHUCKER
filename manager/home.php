@@ -34,7 +34,7 @@
 
         <!-- 商品更新ボタン -->
         <div class="col">
-            <form action="all_game.php" method="post">
+            <form action="game_choose.php" method="post">
                 <input type="submit" value="商品更新" class="home_button">
             </form>
         </div>
