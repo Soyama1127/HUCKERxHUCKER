@@ -20,6 +20,7 @@
         <input  type="submit" value="削除"style="width:300px;height:50px">
     </form>
     </main>
+        <script src="./../js/manager.js"></script>
 </body>
 
 </html>
