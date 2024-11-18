@@ -82,3 +82,29 @@ function confirmLogout() {
 function cartin() {
     return confirm('カートに追加しますか？')
 }
+
+let pageNumber = null;
+
+function updateNumber(number) {
+    localStorage.setItem('pageNumber', number);
+}
+
+function getPageNumber() {
+    return localStorage.getItem('pageNumber');
+}
+
+function backPage() {
+    const pageNumber = getPageNumber();
+
+    if (parseInt(pageNumber) === 0) {
+        window.location.href = 'home.php';
+    } else if (parseInt(pageNumber) === 1) {
+        window.location.href = 'buy_history.php';
+    } else if (parseInt(pageNumber) === 2) {
+        window.location.href = 'favorite.php';
+    } else if (parseInt(pageNumber) === 3) {
+        window.location.href = 'cart.php';
+    } else {
+        alert('不正な値です');
+    }
+}
