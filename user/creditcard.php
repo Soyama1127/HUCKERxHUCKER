@@ -10,24 +10,26 @@
 
 <body>
     <header>
-        <button class='back-btn' onclick='window.history.back();'></button>
+        <button class='back-btn' onclick="location.href='home.php'">＜</button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
-    <main>
-    <form action="destroy_card.php" type="post">
-        <h1>カード情報</h1>
-            カード番号<br>
-        <input type=text name=card_id placeholder="0000 0000 0000 000" style="width:300px;height:20px"><br>
-            有効期限<br>
-        <input type=textbox name=card_month placeholder=MM style="width:300px;height:20px">
-        <input type=textbox name=card_year placeholder=YY style="width:300px;height:20px"><br>
-            カード名義<br>
-        <input type=textbox name=card_name style="width:300px;height:20px"><br>
-            セキュリティコード<br>
-        <input type=text name=security style="width:300px;height:20px"><br>
+    <main class="credit_main">
+        <form action="destroy_card.php" type="post" class="credit_form">
+            <h1>カード情報</h1>
+            <label>カード番号</label>
+            <input type=text name=card_id placeholder="0000 0000 0000 000" class="credit_text"><br>
+            <label>有効期限</label>
+            <div>
+                <input type=text name=card_month placeholder=MM class="minitext">
+                <input type=text name=card_year placeholder=YY class="minitext">
+            </div><br>
+            <label>カード名義</label>
+            <input type=text name=card_name class="credit_text"><br>
+            <label>セキュリティコード</label>
+            <input type=text name=security class="minitext"><br>
 
-        <input type=submit value=登録 class="account_btn">
-    </form>
+            <input type=submit value=登録 class="card_entry">
+        </form>
     </main>
 </body>
 

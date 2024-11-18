@@ -251,4 +251,38 @@ legend {
     border: none;
     background-color: rgb(253, 115, 115);
     border-radius: 10px;
+    align-items: center;
+}
+
+.credit_form {
+    display: flex;
+    align-items: flex-start;
+}
+
+.card_entry {
+    width: 30%;
+    height: 50px;
+    font-size: large;
+    border: none;
+    background-color: rgb(253, 115, 115);
+    border-radius: 10px;
+    align-self: center;
+}
+
+.credit_text {
+    width: 95%;
+    height: 35px;
+    background-color: #dad9d9;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 7px;
+}
+
+.minitext {
+    width: 20%;
+    height: 35px;
+    background-color: #dad9d9;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 7px;
 }
