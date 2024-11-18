@@ -1,8 +1,3 @@
-<?php
-session_start();
-$_SESSION['cart_id'] = session_id();
-?>
-
 <!DOCTYPE html>
 <html lang="ja">
 

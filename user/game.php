@@ -29,13 +29,13 @@ session_start();
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src='./../manager/game/<?=$row['game_sample1']?>' alt='ゲーム画像' class="d-block w-100 h-50">
+                            <img src='./../manager/game/<?= $row['game_sample1'] ?>' alt='ゲーム画像' class="d-block w-100 h-50">
                         </div>
                         <div class="carousel-item">
-                            <img src='./../manager/game/<?=$row['game_sample2']?>' alt='ゲーム画像' class="d-block w-100 h-50">
+                            <img src='./../manager/game/<?= $row['game_sample2'] ?>' alt='ゲーム画像' class="d-block w-100 h-50">
                         </div>
                         <div class="carousel-item">
-                            <img src='./../manager/game/<?=$row['game_sample3']?>' alt='ゲーム画像' class="d-block w-100 h-50">
+                            <img src='./../manager/game/<?= $row['game_sample3'] ?>' alt='ゲーム画像' class="d-block w-100 h-50">
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -50,7 +50,7 @@ session_start();
             </div>
             <div class="container">
                 <div class="game-details">
-                    <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲームアイコン' class='game_img'>
+                    <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲームアイコン' class='game_img'>
                     <div>
                         <h4><?= $row['game_name'] ?></h4>
                         <h6>￥<?= $row['game_price'] ?></h6>
@@ -69,10 +69,10 @@ session_start();
             </fieldset>
             <br>
             <form action="cartin.php" method="post" onsubmit="return cartin();">
-            <input type="hidden" name="game_id" value="<?= $row['game_id'] ?>">
+                <input type="hidden" name="game_id" value="<?= $row['game_id'] ?>">
                 <input type="submit" value="カートに入れる" class='cartin_button'><br>
             </form>
-            
+
             <form action='buy.php' method="post">
                 <input type="hidden" name="game_id" value="<?= $row['game_id'] ?>">
                 <input type="submit" name='only_buy' value="購入" class='cartin_button'><br>
