@@ -77,6 +77,7 @@
             </tbody>
         </table>
     </main>
+    <script src="./../js/manager.js"></script>
 </body>
 
 </html>
