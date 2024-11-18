@@ -16,7 +16,7 @@
     </header>
     <main>
         <h3>更新したい商品の選択</h3>
-        <table class="tablesorter">
+        <table id="gameTable" class="tablesorter">
             <thead>
                 <tr>
                     <th></th>
