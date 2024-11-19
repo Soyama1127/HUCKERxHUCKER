@@ -21,11 +21,12 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         <button class='back-btn' onclick="location.href='home.php'">＜</button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
-    <main>
-        <?php
-        $sql = $pdo->prepare('select game.game_id, game.game_icon, game.game_name, game.game_model, game.game_price from game inner join cart on game.game_id = cart.game_id where cart.cart_id = ?');
-        $sql->execute([$cart_id]);
-        foreach ($sql as $row): ?>
+    
+    <?php
+    $sql = $pdo->prepare('select game.game_id, game.game_icon, game.game_name, game.game_model, game.game_price from game inner join cart on game.game_id = cart.game_id where cart.cart_id = ?');
+    $sql->execute([$cart_id]);
+    foreach ($sql as $row): ?>
+        <div class="container">
             <div class='col-6 col-md-6'>
                 <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
                     <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
@@ -36,12 +37,12 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     </div>
                     <form action='game.php' method='post'>
                         <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
-                        <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(3)">
+                        <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(0)">
                     </form>
                 </div>
             </div>
-        <?php endforeach; ?>
-    </main>
+        </div>
+    <?php endforeach; ?>
     <script src="./../js/user.js"></script>
 </body>
 
