@@ -13,8 +13,8 @@
         <button class='back-btn' onclick='window.history.back();'>＜</button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
-    <h1>住所</h1>
     <main>
+    <h1>住所</h1>
         <form action="address_update.php" method="post">
             <br>
             姓(全角)
@@ -87,7 +87,7 @@
             建物名(任意)<br>
             <input type="textbox" name="house" placeholder="例)柳ビル103" style="width:300px;height:20px">
 
-            <input name="registration" type="submit" value="登録" style="width:300px;height:50px">
+            <p><input name="registration" type="submit" value="登録" style="width:300px;height:50px"></p>
         </form>
     </main>
 </body>
