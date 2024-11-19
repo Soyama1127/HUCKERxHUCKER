@@ -9,6 +9,6 @@
     $user_id=$_SESSION['cart_id'] ;
     $sql = $pdo->prepare("UPDATE `creditcard` SET `card_number` = ?, `date_mounth` = ?, `date_year` = ?, `card_name` = ?, `seurity_card` = ? WHERE `creditcard`.`user_id` = ?;
  ");
-    $sql->execute([$user_id,$card_id,$card_month,$card_year,$card_text,$security]);
+    $sql->execute([$card_id,$card_month,$card_year,$card_text,$security,$user_id]);
     header("Location: account_setting.php");
 ?>
