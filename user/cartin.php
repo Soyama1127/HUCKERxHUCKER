@@ -5,7 +5,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 $sql = $pdo->prepare('select * from cart where cart_id =?');
 $sql->execute([$_SESSION['cart_id']]);
 $row_count = $sql->rowCount()+1;
-$sql = $pdo->prepare('insert into cart(cart_no, cart_game_no, cart_id, game_id) values(?,?,?,?)');
-$sql->execute([$_SESSION['cart_id'],$row_count,$_SESSION['cart_id'], $game_id]);
+$sql = $pdo->prepare('insert into cart(cart_id, cart_game_no, game_id) values(?,?,?,?)');
+$sql->execute([$_SESSION['cart_id'],$row_count, $game_id]);
 header("Location: home.php");
 ?>
