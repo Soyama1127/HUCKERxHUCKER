@@ -142,3 +142,11 @@ h1 {
     border: none;
     border-radius: 10px;
 }
+
+.game_img {
+    width: 100px;
+}
+
+.game_sample {
+    width: 200px;
+}
