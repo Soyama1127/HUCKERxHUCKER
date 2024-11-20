@@ -21,6 +21,7 @@
         $sql->execute([$game_id]);
         foreach ($sql as $row): ?>
             <form action="game_add_complete.php" method="post" enctype="multipart/form-data" class=add_game>
+                <input type='hidden' name=game_id value=<?= $row['game_id'] ?>>
                 <label>ゲーム名</label><br>
                 <input type=text name=game_name class=login_text value=<?= $row['game_name'] ?> required><br>
                 <label>料金</label><br>
@@ -47,7 +48,7 @@
                 </select><br>
                 <label>アイコン</label><br>
                 <input type='hidden' name='original_game_icon' value=<?= $row['game_icon'] ?>>
-                <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
+                <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                 <input type="file" name="image" class=game_icon><br>
                 <label>サンプル画像</label><br>
                 <input type='hidden' name='original_game_sample1' value=<?= $row['game_sample1'] ?>>
