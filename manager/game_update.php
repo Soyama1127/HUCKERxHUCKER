@@ -20,7 +20,7 @@
         $sql = $pdo->prepare('select * from game where game_id = ?');
         $sql->execute([$game_id]);
         foreach ($sql as $row): ?>
-            <form action="game_add_complete.php" method="post" enctype="multipart/form-data" class=add_game>
+            <form action="game_update_complete.php" method="post" enctype="multipart/form-data" class=add_game>
                 <input type='hidden' name=game_id value=<?= $row['game_id'] ?>>
                 <label>ゲーム名</label><br>
                 <input type=text name=game_name class=login_text value=<?= $row['game_name'] ?> required><br>
