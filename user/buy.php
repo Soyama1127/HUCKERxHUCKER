@@ -10,12 +10,13 @@
 
 <body>
     <header>
-        <button class='back-btn' onclick='window.history.back();'>＜</button>
+        <button class='back-btn' onclick="backPage()">＜</button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>
         画面
     </main>
+    <script src="./../js/user.js"></script>
 </body>
 
 </html>

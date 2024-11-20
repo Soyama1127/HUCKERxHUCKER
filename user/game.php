@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (isset($_POST['game_id'])) {
+    $_SESSION['game_id'] = $_POST['game_id'];
+} 
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -21,7 +24,7 @@ session_start();
     <main class='game_main'>
         <?php
         $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-        $game_id = $_POST['game_id'];
+        $game_id = $_SESSION['game_id'];
         $sql = $pdo->prepare('select * from game where game_id = ?');
         $sql->execute([$game_id]);
         foreach ($sql as $row): ?>
@@ -75,7 +78,7 @@ session_start();
 
             <form action='buy.php' method="post">
                 <input type="hidden" name="game_id" value="<?= $row['game_id'] ?>">
-                <input type="submit" name='only_buy' value="購入" class='cartin_button'><br>
+                <input type="submit" name='only_buy' value="購入" class='cartin_button' onclick="updateNumber(4)"><br>
             </form>
             <form action="pr.php" method="post">
                 <input type="hidden" name="game_id" value="<?= $row['game_id'] ?>">

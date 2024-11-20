@@ -104,6 +104,12 @@ function backPage() {
         window.location.href = 'favorite.php';
     } else if (parseInt(pageNumber) === 3) {
         window.location.href = 'cart.php';
+    } else if (parseInt(pageNumber) === 4) {
+        window.location.href = 'game.php';
+        localStorage.setItem('pageNumber', 0);
+    } else if (parseInt(pageNumber) === 5) {
+        window.location.href = 'cart.php';
+        localStorage.setItem('pageNumber', 0);
     } else {
         alert('不正な値です');
     }
@@ -186,7 +192,7 @@ function validateForm() {
         error_count++;
     }
 
-    if(houseNumber == "") {
+    if (houseNumber == "") {
         houseNumerrorMessage.innerHTML = "番地は必須項目です";
         error_count++;
     }
