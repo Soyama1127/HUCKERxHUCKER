@@ -14,19 +14,19 @@
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main class="credit_main">
-        <form action="update_card.php" type="post" class="credit_form">
+        <form action="update_card.php" method="post" class="credit_form">
             <h1>カード情報</h1>
             <label>カード番号</label>
-            <input type=text name=card_id placeholder="0000 0000 0000 000" class="credit_text"><br>
+            <input type="tel" name="card_id" placeholder="0000 0000 0000 0000" class="credit_text" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}" title="カード番号は0000 0000 0000 0000の形式で入力してください"><br>
             <label>有効期限</label>
             <div>
-                <input type=text name=card_month placeholder=MM class="minitext">
-                <input type=text name=card_year placeholder=YY class="minitext">
+                <input type="number" name="card_month" placeholder="MM" class="minitext" min="1" max="12" required>
+                <input type="number" name="card_year" placeholder="YY" class="minitext" min="23" max="99" required>
             </div><br>
             <label>カード名義</label>
             <input type=text name=card_name class="credit_text"><br>
             <label>セキュリティコード</label>
-            <input type=text name=security class="minitext"><br>
+            <input type="password" name="security" class="minitext" maxlength="4" minlength="3" pattern="\d{3,4}" title="セキュリティコードは3～4桁の数字で入力してください" required><br>
 
             <input type=submit value=登録 class="card_entry">
         </form>
