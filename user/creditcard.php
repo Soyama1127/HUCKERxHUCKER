@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <button class='back-btn' onclick="location.href='home.php'">＜</button>
+        <button class='back-btn' onclick="location.href='account.php'">＜</button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main class="credit_main">
