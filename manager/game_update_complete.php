@@ -13,10 +13,22 @@
         GAMESOYA管理者
     </header>
     <main>
-        <h1>商品を更新しました</h1>
+        <?php
+        $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
+        $name = $_POST['game_name'];
+        $price = $_POST['game_price'];
+        $model = $_POST['model'];
+        $genre = $_POST['game_genre'];
+        $summary = $_POST['summary'];
+        ?>
     </main>
-    <form action="game_update.php" method="post"><input name="1" type="submit" value="続けて更新"style="width:300px;height:50px"></form>
-    <form action="home.php" method="post"><input name="2" type="submit" value="ホームに戻る"style="width:300px;height:50px"></form>
+    <h1>商品を更新しました</h1>
+    <form action="game_update.php" method="post">
+        <input name="1" type="submit" value="続けて更新">
+    </form>
+    <form action="home.php" method="post">
+        <input name="2" type="submit" value="ホームに戻る">
+    </form>
 </body>
 
 </html>

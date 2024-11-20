@@ -46,9 +46,13 @@
                     <option value='その他' <?= $row['game_genre'] == 'その他' ? 'selected' : '' ?>>その他</option>
                 </select><br>
                 <label>アイコン</label><br>
+                <input type='hidden' name='original_game_icon' value=<?= $row['game_icon'] ?>>
                 <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
-                <input type="file" name="image" class=game_icon required><br>
+                <input type="file" name="image" class=game_icon><br>
                 <label>サンプル画像</label><br>
+                <input type='hidden' name='original_game_sample1' value=<?= $row['game_sample1'] ?>>
+                <input type='hidden' name='original_game_sample2' value=<?= $row['game_sample2'] ?>>
+                <input type='hidden' name='original_game_sample3' value=<?= $row['game_sample3'] ?>>
                 <img src='./../manager/game/<?= $row['game_sample1'] ?>' alt='ゲーム画像' class="game_sample">
                 <input type="file" name="sample1" class=game_icon><br>
                 <img src='./../manager/game/<?= $row['game_sample2'] ?>' alt='ゲーム画像' class="game_sample">
