@@ -14,7 +14,7 @@
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main class="credit_main">
-        <form action="destroy_card.php" type="post" class="credit_form">
+        <form action="update_card.php" type="post" class="credit_form">
             <h1>カード情報</h1>
             <label>カード番号</label>
             <input type=text name=card_id placeholder="0000 0000 0000 000" class="credit_text"><br>
