@@ -11,5 +11,5 @@ $city = $_POST['city'];
 $house_number = $_POST['house_number'];
 $house = $_POST['house'];
 $sql = $pdo->prepare('UPDATE `user` SET `last_name` = ?, `first_name` = ?, `last_namekana` = ?, `first_namekana` = ?, `post_code` = ?, `state` = ?, `city` = ?, `house_number` = ?, `house` = ? WHERE `user`.`user_id` = ?;');
-$sql->execute([$last_name, $first_name, $last_namekana, $first_namekana, $post_code, $state, $city, $house_number, $house, $_SESSION['cart_id']]);
+$sql->execute([$last_name, $first_name, $last_namekana, $first_namekana, $post_code, $state, $city, $house_number, $house, $_SESSION['user_id']]);
 header("Location: account_setting.php");

@@ -19,7 +19,7 @@
 
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = $pdo->prepare('insert into user(login_id,user_name,user_password) values(?,?,?)');
+        $sql = $pdo->prepare('insert into user(user_id,user_name,user_password) values(?,?,?)');
         $sql->execute([$id, $name, $hashedPassword]);
         ?>
         <form action="login.php" method="post">
