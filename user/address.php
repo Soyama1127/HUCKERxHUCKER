@@ -15,24 +15,29 @@
     </header>
     <main>
         <h1 class="login_label">住所</h1>
-        <form action="address_update.php" method="post">
-            
+        <form action="address_update.php" method="post" onsubmit="return validateForm()">
+
             <label>姓(全角)</label>
-            <input type="textbox" name="last_name" placeholder="例)山田" class="user_text"><br>
+            <input type="text" name="last_name" placeholder="例)山田" id="last_name" class="user_text"><br>
+            <div id="error-message-lname" class="err_msg"></div>
             <label>名(全角)</label>
-            <input type="textbox" name="first_name" placeholder="例)太郎" class="user_text"><br>
+            <input type="text" name="first_name" placeholder="例)太郎" id="first_name" class="user_text"><br>
+            <div id="error-message-fname" class="err_msg"></div>
             <label>姓カナ(全角)</label>
-            <input type="textbox" name="last_namekana" placeholder="例)ヤマダ" class="user_text"><br>
+            <input type="text" name="last_namekana" placeholder="例)ヤマダ" id="last_namekana" class="user_text"><br>
+            <div id="error-message-lkana" class="err_msg"></div>
             <label>名カナ(全角)</label>
-            <input type="textbox" name="first_namekana" placeholder="例)タロウ" class="user_text"><br>
+            <input type="text" name="first_namekana" placeholder="例)タロウ" id="first_namekana" class="user_text"><br>
+            <div id="error-message-fkana" class="err_msg"></div>
 
             <hr>
             <label>郵便番号(数字)</label>
-            <input type="textbox" name="post_code" placeholder="例)123-4567" class="user_text"><br>
+            <input type="tel" name="post_code" placeholder="例)123-4567" id="post_code" class="user_text"><br>
+            <div id="error-message-post" class="err_msg"></div>
             <hr>
             <div class="state_container">
                 <label>都道府県</label>
-                <select name="state" class="choose_state">
+                <select name="state" id="state" class="choose_state">
                     <option value="選択してください" selected>選択してください</option>
                     <option value="北海道">北海道</option>
                     <option value="青森県">青森県</option>
@@ -83,16 +88,20 @@
                     <option value="沖縄県">沖縄県</option>
                 </select>
             </div>
+            <div id="error-message-state" class="err_msg"></div>
             <hr>
             <label>市町村</label>
-            <input type="textbox" name="city" placeholder="例)横浜市緑区" class="user_text"><br>
+            <input type="text" name="city" placeholder="例)横浜市緑区" id="city" class="user_text"><br>
+            <div id="error-message-city" class="err_msg"></div>
             <label>番地</label>
-            <input type="textbox" name="house_number" placeholder="例)青山1-1-1" class="user_text"><br>
+            <input type="text" name="house_number" placeholder="例)青山1-1-1" id="house_number" class="user_text"><br>
+            <div id="error-message-houseNum" class="err_msg"></div>
             <label>建物名(任意)</label>
-            <input type="textbox" name="house" placeholder="例)柳ビル103" class="user_text"><br>
+            <input type="text" name="house" placeholder="例)柳ビル103" id="house" class="user_text"><br>
 
             <input name="registration" type="submit" value="登録" class="account_update">
         </form>
+        <script src="./../js/user.js"></script>
     </main>
 </body>
 
