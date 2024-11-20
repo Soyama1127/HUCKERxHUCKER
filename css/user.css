@@ -286,3 +286,16 @@ legend {
     margin-bottom: 20px;
     border-radius: 7px;
 }
+
+.state_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.choose_state {
+    width: 50%;
+    text-align: center;
+}

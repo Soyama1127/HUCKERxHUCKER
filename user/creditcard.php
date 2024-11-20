@@ -10,12 +10,12 @@
 
 <body>
     <header>
-        <button class='back-btn' onclick="location.href='account.php'">＜</button>
+        <button class='back-btn' onclick="location.href='account_setting.php'">＜</button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main class="credit_main">
+        <h1 class="login_label">カード情報</h1>
         <form action="update_card.php" method="post" class="credit_form">
-            <h1>カード情報</h1>
             <label>カード番号</label>
             <input type="tel" name="card_id" placeholder="0000 0000 0000 0000" class="credit_text" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}" title="カード番号は0000 0000 0000 0000の形式で入力してください"><br>
             <label>有効期限</label>
