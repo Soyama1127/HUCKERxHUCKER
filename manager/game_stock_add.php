@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        GAMESOYA管理者
+        GAMESoya管理者
     </header>
     <main>
         <h1>在庫補充</h1>
@@ -24,7 +24,7 @@
         $sql = $pdo->prepare('select * from game where game_id = ?');
         $sql->execute([$game_id]);
         foreach ($sql as $row): ?>
-            <img src='game/<?=$row['game_icon']?>' alt='ゲームアイコン' class='game_img'>
+            <img src='game/<?=$row['game_icon']?>' alt='ゲームアイコン' class='game_stock_icon'>
             <?= $row['game_name'] ?>
             <p>現在の在庫数：<?=$row['game_stock']?></p>
             <form action=game_stock_add_complete method='post'>
