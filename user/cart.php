@@ -47,6 +47,9 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             </div>
         <?php endforeach; ?>
     </div>
+    <form action="buy.php" method="post">
+        <input type="submit" value="レジに進む" class="to_buy" onclick="updateNumber(5)">
+    </form>
     <script src="./../js/user.js"></script>
 </body>
 

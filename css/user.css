@@ -312,3 +312,12 @@ legend {
 .cart_game {
     margin: 0 auto;
 }
+
+.to_buy {
+    width: 30%;
+    background-color: yellow;
+    height: 50px;
+    font-size: xx-large;
+    border: none;
+    border-radius: 30px;
+}
