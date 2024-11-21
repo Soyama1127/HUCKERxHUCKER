@@ -31,13 +31,14 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                 <div class="container">
                     <div class='col-12 col-md-12'>
                         <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                            <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                            <p class="gomi_game_icon"><a class="gomi_icon" href="delete_cart.php"><img src="./../img/gomi.png"></a>
+                            <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'></p>
                             <div class='card-body p-0 w-100'>
                                 <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                                 <p class='game_model'><?= $row['game_model'] ?></p>
                                 <p class='card-text'>￥<?= $row['game_price'] ?></p>
                             </div>
-                            <form action='game.php' method='post'>
+                            <form action='game.php' method='post' class="cart_game_summary">
                                 <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
                                 <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(0)">
                             </form>

@@ -321,3 +321,16 @@ legend {
     border: none;
     border-radius: 30px;
 }
+
+.gomi_icon img {
+    width: 10%;
+    height: fit-content;
+}
+
+.gomi_game_icon {
+    text-align: right;
+}
+
+.cart_game_summary {
+    align-items: start;
+}
