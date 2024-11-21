@@ -308,3 +308,7 @@ legend {
     width: 20%;
     height: fit-content;
 }
+
+.cart_game {
+    margin: 0 auto;
+}
