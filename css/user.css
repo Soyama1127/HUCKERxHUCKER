@@ -299,3 +299,12 @@ legend {
     width: 50%;
     text-align: center;
 }
+
+.back-btn {
+    text-align: left;
+}
+
+.back-btn img{
+    width: 20%;
+    height: fit-content;
+}

@@ -14,7 +14,7 @@ session_start();
 
 <body>
     <header>
-        <button class='back-btn' onclick="location.href='account.php'">＜</button>
+        <button class='back-btn' onclick="location.href='account.php'"><img src='./../img/backbutton.png'></button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>

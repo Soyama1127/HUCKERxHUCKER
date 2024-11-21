@@ -17,7 +17,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 
 <body>
     <header>
-        <button class='back-btn' onclick="location.href='account.php'">＜</button>
+        <button class='back-btn' onclick="location.href='account.php'"><img src='./../img/backbutton.png'></button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <fieldset class="row mt-5 ">
