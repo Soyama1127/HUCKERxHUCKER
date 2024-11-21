@@ -322,9 +322,14 @@ legend {
     border-radius: 30px;
 }
 
+.gomi_icon {
+    background: none;
+    border: none;
+}
+
 .gomi_icon img {
-    width: 10%;
-    height: fit-content;
+    width: 20%;
+    height: 20%;
 }
 
 .gomi_game_icon {
