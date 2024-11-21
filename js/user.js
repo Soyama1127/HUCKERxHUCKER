@@ -202,3 +202,11 @@ function validateForm() {
     }
     return true;
 }
+
+function confirmCartOut() {
+    const result = confirm("カートから削除しますか？");
+    if (result) {
+        return true;
+    }
+    return false;
+}
