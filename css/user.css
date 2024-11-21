@@ -325,6 +325,7 @@ legend {
 .gomi_icon {
     background: none;
     border: none;
+    text-align: right;
 }
 
 .gomi_icon img {
@@ -332,10 +333,15 @@ legend {
     height: 20%;
 }
 
-.gomi_game_icon {
-    text-align: right;
+.cart_game_summary {
+    align-items: center;
 }
 
-.cart_game_summary {
-    align-items: start;
+.cart_label {
+    color: white;
+    text-align: center;
+}
+
+.cart_container {
+    margin-bottom: 50px;
 }

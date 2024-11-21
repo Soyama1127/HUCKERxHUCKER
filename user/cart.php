@@ -21,18 +21,25 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         <button class='back-btn' onclick="location.href='home.php'"><img src='./../img/backbutton.png'></button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
+    <br>
     <h1 class="login_label">カート一覧</h1>
     <div class="cart_container">
         <?php
-        $sql = $pdo->prepare('select game.game_id, game.game_icon, game.game_name, game.game_model, game.game_price from game inner join cart on game.game_id = cart.game_id where cart.cart_id = ?');
+        $sql = $pdo->prepare('select game.game_id, game.game_icon, game.game_name, game.game_model, game.game_price, cart.cart_game_no from game inner join cart on game.game_id = cart.game_id where cart.cart_id = ?');
         $sql->execute([$cart_id]);
+        $row_count = $sql->rowCount();
         foreach ($sql as $row): ?>
             <div class="cart_game">
                 <div class="container">
                     <div class='col-12 col-md-12'>
                         <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                            <p class="gomi_game_icon"><a class="gomi_icon" href="delete_cart.php"><img src="./../img/gomi.png"></a>
-                            <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'></p>
+                            <form action="delete_cart.php" method="post" onsubmit="return confirmCartOut()">
+                                <input type='hidden' name='cart_game_no' value='<?= $row['cart_game_no'] ?>'>
+                                <button type="submit" class="gomi_icon">
+                                    <img src="./../img/gomi.png">
+                                </button>
+                            </form>
+                            <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                             <div class='card-body p-0 w-100'>
                                 <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                                 <p class='game_model'><?= $row['game_model'] ?></p>
@@ -40,17 +47,22 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                             </div>
                             <form action='game.php' method='post' class="cart_game_summary">
                                 <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
-                                <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(0)">
+                                <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(5)">
                             </form>
+                            <form></form>
                         </div>
                     </div>
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
-    <form action="buy.php" method="post">
-        <input type="submit" value="レジに進む" class="to_buy" onclick="updateNumber(5)">
-    </form>
+    <?php if ($row_count > 0) : ?>
+        <form action="buy.php" method="post">
+            <input type="submit" value="レジに進む" class="to_buy" onclick="updateNumber(5)">
+        </form>
+    <?php else : ?>
+        <h1 class="cart_label">カートに商品がありません</h1>
+    <?php endif; ?>
     <script src="./../js/user.js"></script>
 </body>
 
