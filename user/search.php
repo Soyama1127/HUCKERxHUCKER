@@ -10,12 +10,8 @@
 
 <body>
     <header>
-<<<<<<< HEAD
-        検索
-=======
         <button class='back-btn' onclick="location.href='home.php'"><img src='./../img/backbutton.png'></button>
         <img src='./../img/GAMESoya.PNG' height="80px">
->>>>>>> 73dae71c721753c19195d90d82f504d1303cdf1e
     </header>
     
         <input type="textbox" name="1" placeholder="検索" style="width:300px;height:20px"><form action="search_result.php" method="post"><button type="submit">検索</button></form><br>
