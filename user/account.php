@@ -10,11 +10,28 @@
 
 <body>
     <header>
-        ヘッダー
+        <button class='back-btn' onclick="location.href='home.php'"><img src='./../img/backbutton.png'></button>
+        <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>
-        画面
+        <label>商品管理</label>
+        <form action="favorite.php" method="post">
+            <input type="submit" value="お気に入り一覧" class="account_btn">
+        </form>
+        <form action="buy_history.php" method="post">
+            <input type="submit" value="購入履歴" class="account_btn">
+        </form>
+        <br>
+        <label>ユーザー管理</label>
+        <form action="account_setting.php" method="post">
+            <input type="submit" value="アカウント" class="account_btn">
+        </form>
+        <br><br>
+        <form action="destroySession.php" method="post" onsubmit="return confirmLogout();">
+            <input type="submit" value="ログアウト" class="logout_btn">
+        </form>
     </main>
+    <script src="./../js/user.js"></script>
 </body>
 
 </html>

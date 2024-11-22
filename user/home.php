@@ -1,3 +1,8 @@
+<?php
+session_start();
+$pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -9,9 +14,6 @@
     <script src="./../js/bootstrap.js"></script>
     <title>ホーム画面</title>
 </head>
-<?php
-$pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-?>
 
 <body>
     <header>
@@ -27,9 +29,13 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                 <a href="search.php" class="button">
                     <img src="./../img/serch.png" alt="Search">
                 </a>
-                <a href="account.php" class="button">
-                    アカウント
-                </a>
+                <form action='account.php' method="post">
+                    <?php if (isset($_SESSION['user_name'])): ?>
+                        <button type="submit" class="user_icon"><?= $_SESSION['user_name'] ?></button>
+                    <?php else: ?>
+                        <button type="button" class="user_icon" onclick="confirmLogin()">ゲスト</button>
+                    <?php endif; ?>
+                </form>
             </div>
         </div>
     </header>
@@ -61,15 +67,15 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
-                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
                             <p class='card-text'>￥<?= $row['game_price'] ?></p>
                         </div>
                         <form action='game.php' method='post'>
                             <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
-                            <input type='submit' value='購入' class='btn btn-primary'>
+                            <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(0)">
                         </form>
                     </div>
                 </div>
@@ -83,15 +89,15 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
-                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
                             <p class='card-text'>￥<?= $row['game_price'] ?></p>
                         </div>
                         <form action='game.php' method='post'>
                             <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
-                            <input type='submit' value='購入' class='btn btn-primary'>
+                            <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(0)">
                         </form>
                     </div>
                 </div>
@@ -105,15 +111,15 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
-                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
                             <p class='card-text'>￥<?= $row['game_price'] ?></p>
                         </div>
                         <form action='game.php' method='post'>
                             <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
-                            <input type='submit' value='購入' class='btn btn-primary'>
+                            <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(0)">
                         </form>
                     </div>
                 </div>
@@ -127,15 +133,15 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
-                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
                             <p class='card-text'>￥<?= $row['game_price'] ?></p>
                         </div>
                         <form action='game.php' method='post'>
                             <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
-                            <input type='submit' value='購入' class='btn btn-primary'>
+                            <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(0)">
                         </form>
                     </div>
                 </div>
@@ -149,15 +155,37 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
-                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
                             <p class='card-text'>￥<?= $row['game_price'] ?></p>
                         </div>
                         <form action='game.php' method='post'>
                             <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
-                            <input type='submit' value='購入' class='btn btn-primary'>
+                            <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(0)">
+                        </form>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </fieldset>
+        <fieldset class="row mt-5 ">
+            <legend>音楽(リズム)</legend>
+            <?php
+            $sql = $pdo->prepare('select * from game where game_genre = "音楽" limit 4');
+            $sql->execute();
+            foreach ($sql as $row): ?>
+                <div class='col-12 col-md-6'>
+                    <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
+                        <div class='card-body p-0 w-100'>
+                            <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
+                            <p class='game_model'><?= $row['game_model'] ?></p>
+                            <p class='card-text'>￥<?= $row['game_price'] ?></p>
+                        </div>
+                        <form action='game.php' method='post'>
+                            <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
+                            <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(0)">
                         </form>
                     </div>
                 </div>
@@ -171,22 +199,25 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
-                            <h5 class='card-title mb-2'><?= $row['game_name'] ?></h5>
+                            <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
                             <p class='card-text'>￥<?= $row['game_price'] ?></p>
                         </div>
                         <form action='game.php' method='post'>
                             <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
-                            <input type='submit' value='購入' class='btn btn-primary'>
+                            <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(0)">
                         </form>
                     </div>
                 </div>
             <?php endforeach; ?>
         </fieldset>
     </div>
-    <footer></footer>
+    <footer>
+        トップページへ
+    </footer>
+    <script src="./../js/user.js"></script>
 </body>
 
 </html>

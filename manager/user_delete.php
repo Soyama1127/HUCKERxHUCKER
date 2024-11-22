@@ -10,13 +10,17 @@
 
 <body>
     <header>
-        GAMESOYA管理者
+        GAMESoya管理者
     </header>
     <h1>ユーザー削除</h1>
-    番号<input type="number" name="1" value="1"><br>
+    
     <main>
-    <form action="user_delete_complete.php" method="post"><input name="1" type="submit" value="削除"style="width:300px;height:50px"></form>
+    <form action="user_delete_complete.php" method="post">
+    番号<input type="number" name="user_id" value="1"><br>
+        <input  type="submit" value="削除"style="width:300px;height:50px">
+    </form>
     </main>
+        <script src="./../js/manager.js"></script>
 </body>
 
 </html>

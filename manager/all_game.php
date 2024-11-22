@@ -16,7 +16,7 @@
     </header>
     <main>
         <h3>更新したい商品の選択</h3>
-        <table id="gameTable" class="tablesorter">
+        <table class="tablesorter">
             <thead>
                 <tr>
                     <th></th>
@@ -77,7 +77,6 @@
             </tbody>
         </table>
     </main>
-    <script src="./../js/manager.js"></script>
 </body>
 
 </html>

@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/manager.css">
-    <link rel="stylesheet" href="./../css/bootstrap.css">
-    <script src="./../js/bootstrap.js"></script>
-    <title>在庫管理</title>
+    <title>在庫一覧</title>
 </head>
 
 <body>
@@ -15,44 +13,26 @@
         GAMESoya管理者
     </header>
     <main>
-        <table id="stockTable" class="tablesorter">
-            <thead>
-                <tr>
-                    <th>商品ID</th>
-                    <th>商品名</th>
-                    <th>ジャンル</th>
-                    <th>機種</th>
-                    <th>在庫数</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                try {
-                    // データベース接続設定
-                    $pdo = new PDO(
-                        'mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;',
-                        'LAA1553864',
-                        'Pass1127'
-                    );
-                    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        <h1>在庫補充</h1>
+        <br>
+        <br>
+        <br>
+        <?php
 
-                    // クエリを実行し、結果をテーブル行として出力
-                    foreach ($pdo->query('SELECT * FROM game') as $row) {
-                        echo '<tr>';
-                        echo '<td>' . $row['game_id'] . '</td>';
-                        echo '<td>' . $row['game_name'] . '</td>';
-                        echo '<td>' . $row['game_genre'] . '</td>';
-                        echo '<td>' . $row['game_model'] . '</td>';
-                        echo '<td>' . $row['game_stock'] . '</td>';
-                        echo '<td><button>補充</button></td>';
-                        echo '</tr>';
-                    }
-                } catch (PDOException $e) {
-                    echo 'データベース接続エラー: ' . htmlspecialchars($e->getMessage());
-                }
-                ?>
-            </tbody>
-        </table>
+        $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
+        $game_id = $_POST['game_id'];
+        $sql = $pdo->prepare('select * from game where game_id = ?');
+        $sql->execute([$game_id]);
+        foreach ($sql as $row): ?>
+            <img src='game/<?=$row['game_icon']?>' alt='ゲームアイコン' class='game_stock_icon'>
+            <?= $row['game_name'] ?>
+            <p>現在の在庫数：<?=$row['game_stock']?></p>
+            <form action=game_stock_add_complete method='post'>
+                <input type='hidden' name=game_id value=<?= $row['game_id'] ?>>
+                <p><input type=number name=add value=1>個補充</p>
+                <input type=submit value="補充する" class="manager_button"><br>
+            </form>
+        <?php endforeach ?>
     </main>
     <script src="./../js/manager.js"></script>
 </body>

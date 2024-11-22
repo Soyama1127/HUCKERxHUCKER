@@ -80,7 +80,7 @@ h1 {
     display: inline;
     background-color: rgb(255, 120, 120);
     border-color: rgb(255, 120, 120);
-    border-radius: 15%;
+    border-radius: 15px;
     font-size: 15px;
     width: 130px;
     height: 30px;
@@ -96,10 +96,7 @@ h1 {
 
 .add_game {
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
-    width: 100%;
 }
 
 .game_list {
@@ -121,8 +118,8 @@ h1 {
 }
 
 .add_button {
-    width: 200px; /* ボタンの幅 */
-    height: 40px; /* ボタンの高さ */
+    width: 200px;
+    height: 40px;
     background-color: rgb(71, 71, 252);
     border-color: rgb(71, 71, 252);
     color: white;
@@ -131,12 +128,29 @@ h1 {
     cursor: pointer;
     text-align: center;
     margin-top: 20px;
-}
-
-.add_button {
     align-self: center;
 }
 
+
 .tablesorter {
+    margin-top: 30px;
     width: 1000px;
+}
+
+.add_btn {
+    background-color: rgb(255, 141, 141);
+    border: none;
+    border-radius: 10px;
+}
+
+.game_img {
+    width: 100px;
+}
+
+.game_sample {
+    width: 200px;
+}
+
+.game_stock_icon {
+    width: 200px;
 }

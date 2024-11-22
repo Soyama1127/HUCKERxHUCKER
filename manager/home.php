@@ -17,7 +17,7 @@
 
     <h1>ホーム</h1>
 
-    <form action="login.php" method="post" class="logout">
+    <form action="login.php" method="post" class="logout" onsubmit="return confirmLogout();">
 
         <input type="submit" value="ログアウト" class="logout_button">
 
@@ -34,7 +34,7 @@
 
         <!-- 商品更新ボタン -->
         <div class="col">
-            <form action="game_update.php" method="post">
+            <form action="game_choose.php" method="post">
                 <input type="submit" value="商品更新" class="home_button">
             </form>
         </div>
@@ -62,12 +62,12 @@
 
         <!-- 在庫管理ボタン -->
         <div class="col">
-            <form action="game_stock_add.php" method="post">
+            <form action="game_stock.php" method="post">
                 <input type="submit" value="在庫管理" class="home_button">
             </form>
         </div>
-
     </div>
+    <script src="./../js/manager.js"></script>
 </body>
 
 </html>

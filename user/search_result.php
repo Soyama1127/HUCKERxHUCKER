@@ -10,7 +10,8 @@
 
 <body>
     <header>
-        ヘッダー
+        <button class='back-btn' onclick="location.href='search.php'"><img src='./../img/backbutton.png'></button>
+        <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>
         画面

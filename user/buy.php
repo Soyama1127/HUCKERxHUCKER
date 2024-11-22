@@ -10,11 +10,13 @@
 
 <body>
     <header>
-        ヘッダー
+        <button class='back-btn' onclick="backPage()"><img src='./../img/backbutton.png'></button>
+        <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>
         画面
     </main>
+    <script src="./../js/user.js"></script>
 </body>
 
 </html>
