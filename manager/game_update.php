@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        GAMESOYA管理者
+        GAMESoya管理者
     </header>
     <main>
         <h1>商品更新</h1><br>
@@ -20,7 +20,8 @@
         $sql = $pdo->prepare('select * from game where game_id = ?');
         $sql->execute([$game_id]);
         foreach ($sql as $row): ?>
-            <form action="game_add_complete.php" method="post" enctype="multipart/form-data" class=add_game>
+            <form action="game_update_complete.php" method="post" enctype="multipart/form-data" class=add_game>
+                <input type='hidden' name=game_id value=<?= $row['game_id'] ?>>
                 <label>ゲーム名</label><br>
                 <input type=text name=game_name class=login_text value=<?= $row['game_name'] ?> required><br>
                 <label>料金</label><br>
@@ -46,10 +47,18 @@
                     <option value='その他' <?= $row['game_genre'] == 'その他' ? 'selected' : '' ?>>その他</option>
                 </select><br>
                 <label>アイコン</label><br>
-                <input type="file" name="image" class=game_icon required><br>
+                <input type='hidden' name='original_game_icon' value=<?= $row['game_icon'] ?>>
+                <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
+                <input type="file" name="image" class=game_icon><br>
                 <label>サンプル画像</label><br>
-                <input type="file" name="sample1" class=game_icon required><br>
+                <input type='hidden' name='original_game_sample1' value=<?= $row['game_sample1'] ?>>
+                <input type='hidden' name='original_game_sample2' value=<?= $row['game_sample2'] ?>>
+                <input type='hidden' name='original_game_sample3' value=<?= $row['game_sample3'] ?>>
+                <img src='./../manager/game/<?= $row['game_sample1'] ?>' alt='ゲーム画像' class="game_sample">
+                <input type="file" name="sample1" class=game_icon><br>
+                <img src='./../manager/game/<?= $row['game_sample2'] ?>' alt='ゲーム画像' class="game_sample">
                 <input type="file" name="sample2" class=game_icon><br>
+                <img src='./../manager/game/<?= $row['game_sample3'] ?>' alt='ゲーム画像' class="game_sample">
                 <input type="file" name="sample3" class=game_icon><br>
                 <label>概要</label><br>
                 <textarea name="summary" rows="5" cols="40" class=game_summary required><?= $row['game_summary'] ?></textarea><br>

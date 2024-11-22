@@ -19,11 +19,14 @@
 
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = $pdo->prepare('insert into user(login_id,user_name,user_password) values(?,?,?)');
+        $sql = $pdo->prepare('insert into user(user_id,user_name,user_password) values(?,?,?)');
         $sql->execute([$id, $name, $hashedPassword]);
+
+        $sql = $pdo->prepare("insert into creditcard (user_id, card_number, date_month, date_year, card_name, security_card) VALUES (?, '', '', '', '', '')");
+        $sql->execute([$id]);
         ?>
         <form action="login.php" method="post">
-            <h1>登録完了しました</h1>
+            <h1 class="login_label">登録完了しました</h1>
             <input type=submit value=ログイン画面に戻る class="user_button">
         </form>
     </main>

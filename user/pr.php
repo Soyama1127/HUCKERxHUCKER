@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <button class='back-btn' onclick='window.history.back();'>＜</button>
+        <button class='back-btn' onclick="location.href='game.php'"><img src='./../img/backbutton.png'></button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>

@@ -10,11 +10,11 @@
 
 <body>
     <header>
-        <button class='back-btn' onclick='window.history.back();'>＜</button>
+        <button class='back-btn' onclick="location.href='account_setting.php'"><img src='./../img/backbutton.png'></button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>
-        <p>パスワードの変更</p><br>
+        <h1 class="login_label">パスワードの変更</h1>
         <label>現在のパスワード</label><br>
         <input type="password" class="user_text" required><br>
         <label>新しいパスワード</label><br>
@@ -26,7 +26,7 @@
 
         <hr>
 
-        <p>ログインIDの変更</p><br>
+        <h1 class="login_label">ログインIDの変更</h1><br>
         <label>現在のログインID</label><br>
         <input type="text" class="user_text" required><br>
         <label>新しいログインID</label><br>
