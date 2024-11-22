@@ -26,11 +26,11 @@
         $_POST['game_id'];
         $sql = $pdo->prepare('select * from userpr inner join user on user.user_id = userpr.user_id where user_id=?');
         $sql->execute([$_SESSION['user_id']]);
-        foreach ($sql as $row): 
-              $row['pr_crip']?> <br>
-           <? $row['user_name']?><br>
-           <? $row['pr_content']?><br>
-        <?endforeach?>
+        foreach ($sql as $row):?> 
+           <?=$row['pr_crip']?> <br>
+           <?=$row['user_name']?><br>
+           <?=$row['pr_content']?><br>
+        <?php endforeach ?>
 
     </main>
 </body>
