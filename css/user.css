@@ -299,3 +299,49 @@ legend {
     width: 50%;
     text-align: center;
 }
+
+.back-btn {
+    text-align: left;
+}
+
+.back-btn img{
+    width: 20%;
+    height: fit-content;
+}
+
+.cart_game {
+    margin: 0 auto;
+}
+
+.to_buy {
+    width: 30%;
+    background-color: yellow;
+    height: 50px;
+    font-size: xx-large;
+    border: none;
+    border-radius: 30px;
+}
+
+.gomi_icon {
+    background: none;
+    border: none;
+    text-align: right;
+}
+
+.gomi_icon img {
+    width: 20%;
+    height: 20%;
+}
+
+.cart_game_summary {
+    align-items: center;
+}
+
+.cart_label {
+    color: white;
+    text-align: center;
+}
+
+.cart_container {
+    margin-bottom: 50px;
+}

@@ -18,7 +18,7 @@ if (isset($_POST['game_id'])) {
 
 <body>
     <header>
-        <button class='back-btn' onclick="backPage()">＜</button>
+        <button class='back-btn' onclick="backPage()"><img src='./../img/backbutton.png'></button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main class='game_main'>

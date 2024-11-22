@@ -10,11 +10,12 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/user.css">
     <title>住所登録</title>
+    <style>dialog{ width: 300px; padding: 20px; border: 1px solid #ccc; }</style>
 </head>
 
 <body>
     <header>
-        <button class='back-btn' onclick="location.href='account_setting.php'">＜</button>
+        <button class='back-btn' onclick="location.href='account_setting.php'"><img src='./../img/backbutton.png'></button>
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>
@@ -39,6 +40,16 @@ session_start();
                 <input type="text" name="first_namekana" placeholder="例)タロウ" id="first_namekana" class="user_text" value=<?= $row['first_namekana'] ?>><br>
                 <div id="error-message-fkana" class="err_msg"></div>
 
+            <p><input name="registration" type="submit" value="登録" style="width:300px;height:50px"></p>
+            <dialog id="myDialog">
+                住所を登録しました
+                <form method="dialog">
+                    <p><button>OK</button></p>
+                </form>
+            </dialog>
+
+            <script>document.getElementsByName('registration').addEventListener('click',function(){document.getElementById('myDialog').showModal();});</script>
+        </form>
                 <hr>
                 <label>郵便番号(数字)</label>
                 <input type="tel" name="post_code" placeholder="例)123-4567" id="post_code" class="user_text" value=<?= $row['post_code'] ?>><br>

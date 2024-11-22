@@ -202,3 +202,7 @@ function validateForm() {
     }
     return true;
 }
+
+function confirmCartOut() {
+    return confirm("カートから削除しますか？");
+}
