@@ -350,7 +350,7 @@ legend {
     position: absolute;
     width: 10%;
     height: 50px;
-    right: 10px;
+    right: 5%;
     border-radius: 10px;
     top: 50%;
     transform: translateY(-50%);
