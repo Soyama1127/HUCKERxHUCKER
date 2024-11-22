@@ -14,7 +14,7 @@
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>
-    <form action="update_pass.php" method="post" onsubmit="return validateForm()">
+    <form action="update_pass.php" method="post">
         <h1 class="login_label">パスワードの変更</h1>
         <label>現在のパスワード</label><br>
         <input type="password" class="user_text" required><br>
@@ -26,14 +26,14 @@
         <input type="submit" name="passupdate" value="変更" class="account_update" onclick="kakunin();"><br>
     </form>
         <hr>
-    <form action="update_id.php" method="post" onsubmit="return validateForm()">
+    <form action="update_id.php" method="post">
         <h1 class="login_label">ログインIDの変更</h1><br>
         <label>現在のログインID</label><br>
         <input type="text" class="user_text" required><br>
         <label>新しいログインID</label><br>
         <input type="text" id="user_id" name="user_id" class="user_text" required><br>
         <label>新しいログインID(確認)</label><br>
-        <input type="text" id="user_id" name="user_id" class="user_text" required><br>
+        <input type="text" id="user_id" name="user_id2" class="user_text" required><br>
         <div id="error-message"></div>
         <input type="submit" name="passupdate" value="変更" class="account_update" onclick="kakunin();">
     </form>

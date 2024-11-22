@@ -206,3 +206,7 @@ function validateForm() {
 function confirmCartOut() {
     return confirm("カートから削除しますか？");
 }
+
+function kakunin(){
+    return confirm("更新しますか？");
+}
