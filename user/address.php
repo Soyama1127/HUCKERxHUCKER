@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/user.css">
     <title>住所登録</title>
+    <style>dialog{ width: 300px; padding: 20px; border: 1px solid #ccc; }</style>
 </head>
 
 <body>
@@ -88,6 +89,14 @@
             <input type="textbox" name="house" placeholder="例)柳ビル103" style="width:300px;height:20px">
 
             <p><input name="registration" type="submit" value="登録" style="width:300px;height:50px"></p>
+            <dialog id="myDialog">
+                住所を登録しました
+                <form method="dialog">
+                    <p><button>OK</button></p>
+                </form>
+            </dialog>
+
+            <script>document.getElementsByName('registration').addEventListener('click',function(){document.getElementById('myDialog').showModal();});</script>
         </form>
     </main>
 </body>
