@@ -1,3 +1,4 @@
+session_startS
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -16,7 +17,7 @@
     <main>
         <?php
     $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-        $sql = $pdo->prepare('select game_name from game where game_id=?');
+        $sql = $pdo->prepare('select * from game where game_id=?');
         $sql->execute([$_SESSION['game_id']]);
         foreach ($sql as $row):?> 
             <?=$row['game_name']?> <br>
