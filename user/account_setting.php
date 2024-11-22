@@ -19,7 +19,9 @@ session_start();
     </header>
     <main>
         <label>アカウント名</label>
-        <input type="text" value="<?=$_SESSION['user_name']?>" class='account_text'><br><br>
+        <form action="update_name.php" method="post" onsubmit="return validateForm()">
+        <input type="text" name="user_name" value="<?=$_SESSION['user_name']?>" class='account_text'><br><br>
+        </form>
         <button onclick="location.href='update.php'" class='account_setting_btn'>パスワード/ログインID</button><br>
         <button onclick="location.href='address.php'" class='account_setting_btn'>住所</button><br>
         <button onclick="location.href='creditcard.php'" class='account_setting_btn'>クレジットカード情報</button>

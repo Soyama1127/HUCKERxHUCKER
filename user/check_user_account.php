@@ -5,7 +5,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 $login_id = $_POST['user_id'];
 $login_pass = $_POST['user_pass'];
 
-$sql = $pdo->prepare("select user_id, user_name, user_password from user where user_id = ?");
+$sql = $pdo->prepare("select user_id, user_name, user_password from user where login_id = ?");
 $sql->execute([$login_id]);
 foreach ($sql as $row) {
     $id = $row['user_id'];

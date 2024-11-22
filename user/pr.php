@@ -13,13 +13,11 @@
 
 <body>
     <header>
-        <button class='back-btn' onclick="location.href='game.php'"></button>
+        <button class='back-btn' onclick="location.href='game.php'"><img src='./../img/backbutton.png'></button>
         <img src='./../img/GAMESoya.PNG' height="80px">
+        <button class="pr_request_btn" onclick="location.href='pr_request'">PRを作成</button>
     </header>
     <main>
-        <form action="pr_request" method="post">
-            <input type="submit" value="PRを作成">
-        </form>
         <h1>ユーザーPR</h1>
         <?php
         $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');

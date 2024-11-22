@@ -39,17 +39,6 @@ session_start();
                 <label>名カナ(全角)</label>
                 <input type="text" name="first_namekana" placeholder="例)タロウ" id="first_namekana" class="user_text" value=<?= $row['first_namekana'] ?>><br>
                 <div id="error-message-fkana" class="err_msg"></div>
-
-            <p><input name="registration" type="submit" value="登録" style="width:300px;height:50px"></p>
-            <dialog id="myDialog">
-                住所を登録しました
-                <form method="dialog">
-                    <p><button>OK</button></p>
-                </form>
-            </dialog>
-
-            <script>document.getElementsByName('registration').addEventListener('click',function(){document.getElementById('myDialog').showModal();});</script>
-        </form>
                 <hr>
                 <label>郵便番号(数字)</label>
                 <input type="tel" name="post_code" placeholder="例)123-4567" id="post_code" class="user_text" value=<?= $row['post_code'] ?>><br>

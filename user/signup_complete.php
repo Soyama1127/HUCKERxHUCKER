@@ -19,8 +19,8 @@
 
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = $pdo->prepare('insert into user(user_id,user_name,user_password) values(?,?,?)');
-        $sql->execute([$id, $name, $hashedPassword]);
+        $sql = $pdo->prepare('insert into user(user_id,login_id,user_name,user_password) values(?,?,?,?)');
+        $sql->execute([$id, $id, $name, $hashedPassword]);
 
         $sql = $pdo->prepare("insert into creditcard (user_id, card_number, date_month, date_year, card_name, security_card) VALUES (?, '', '', '', '', '')");
         $sql->execute([$id]);
