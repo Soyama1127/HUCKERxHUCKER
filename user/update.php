@@ -31,9 +31,9 @@
         <label>現在のログインID</label><br>
         <input type="text" class="user_text" required><br>
         <label>新しいログインID</label><br>
-        <input type="text" id="user_id" name="user_id" class="user_text" required><br>
+        <input type="text" id="user_id" name="login_id" class="user_text" required><br>
         <label>新しいログインID(確認)</label><br>
-        <input type="text" id="user_id" name="user_id2" class="user_text" required><br>
+        <input type="text" id="user_id" name="login_id" class="user_text" required><br>
         <div id="error-message"></div>
         <input type="submit" name="passupdate" value="変更" class="account_update" onclick="kakunin();">
     </form>
