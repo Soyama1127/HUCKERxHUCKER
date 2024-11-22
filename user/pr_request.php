@@ -19,7 +19,7 @@
         $sql = $pdo->prepare('select game_name from game where game_id=?');
         $sql->execute([$_SESSION['game_id']]);
         foreach ($sql as $row):?> 
-            <?=$row['game_name']?> <br>
+            <h2><?=$row['game_name']?> </h2><br>
             
          <?php endforeach ?>
     <label>PR文</label><br> 
