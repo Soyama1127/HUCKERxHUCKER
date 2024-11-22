@@ -20,7 +20,7 @@
         $sql->execute([$_SESSION['game_id']]);
         ?>
     <label>PR文</label><br>
-    <input type=textarea name=prcontent rows="5" cols="40" required>
+    <textarea name=prcontent rows="5" cols="40" required></textarea>
     <label>サンプル画像</label><br>
     <input type="file" name="pr_movie" required><br>
     <input type=submit value="申請" ><br>
