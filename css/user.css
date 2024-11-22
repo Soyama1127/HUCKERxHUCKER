@@ -359,3 +359,7 @@ legend {
     border: none;
     cursor: pointer;
 }
+
+.pr_request_main {
+    max-width: 600px;
+}
