@@ -18,8 +18,11 @@
     $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
         $sql = $pdo->prepare('select game_name from game where game_id=?');
         $sql->execute([$_SESSION['game_id']]);
-        ?>
-    <label>PR文</label><br>
+        foreach ($sql as $row):?> 
+            <?=$row['game_name']?> <br>
+            
+         <?php endforeach ?>
+    <label>PR文</label><br> 
     <textarea name=prcontent rows="5" cols="40" required></textarea>
     <label>サンプル画像</label><br>
     <input type="file" name="pr_movie" required><br>
