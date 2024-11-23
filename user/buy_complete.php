@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        
+        <img src="./../img/GAMESoya.PNG" class="gamesoya_logo">
     </header>
     <main>
         画面

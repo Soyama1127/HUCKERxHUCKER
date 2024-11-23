@@ -10,7 +10,7 @@
 
 <body>
     <main>
-        <img height="80px" src="./../img/GAMESoya.PNG"><br><br>
+        <img height="80px" src="./../img/GAMESoya.PNG" class="gamesoya_logo"><br><br>
         <?php
         $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
         $name = $_POST['user_name'];

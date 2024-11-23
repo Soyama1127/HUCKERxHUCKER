@@ -11,7 +11,7 @@
 <body>
     <header>
         <button class='back-btn' onclick="location.href='home.php'"><img src='./../img/backbutton.png'></button>
-        <img src='./../img/GAMESoya.PNG' height="80px">
+        <img src='./../img/GAMESoya.PNG' class="gamesoya_logo">
     </header>
     <main>
         <label>商品管理</label>

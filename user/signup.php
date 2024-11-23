@@ -11,7 +11,7 @@
 <body>
     <header>
         <button class='back-btn' onclick="location.href='login.php'"><img src='./../img/backbutton.png'></button>
-        <img height="80px" src="./../img/GAMESoya.PNG"><br>
+        <img src="./../img/GAMESoya.PNG" class="gamesoya_logo"><br>
     </header>
     <main>
 

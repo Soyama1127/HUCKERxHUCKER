@@ -15,7 +15,7 @@ session_start();
 <body>
     <header>
         <button class='back-btn' onclick="location.href='account.php'"><img src='./../img/backbutton.png'></button>
-        <img src='./../img/GAMESoya.PNG' height="80px">
+        <img src='./../img/GAMESoya.PNG' class="gamesoya_logo">
     </header>
     <main>
         <label>アカウント名</label>

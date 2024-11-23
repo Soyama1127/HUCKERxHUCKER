@@ -19,7 +19,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 <body>
     <header>
         <button class='back-btn' onclick="location.href='home.php'"><img src='./../img/backbutton.png'></button>
-        <img src='./../img/GAMESoya.PNG' height="80px">
+        <img src='./../img/GAMESoya.PNG' class="gamesoya_logo">
     </header>
     <br>
     <h1 class="login_label">カート一覧</h1>

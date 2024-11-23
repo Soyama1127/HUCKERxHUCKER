@@ -28,6 +28,11 @@ main {
     margin-top: 20px;
 }
 
+.gamesoya_logo {
+    width: 30vw;
+    transform: translateY(2%);
+}
+
 /*ホーム*/
 /*ホームヘッダー*/
 .home_header {
@@ -124,6 +129,7 @@ p {
 
 .back-btn {
     position: absolute;
+    width: 30vw;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);

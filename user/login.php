@@ -15,7 +15,7 @@ $_SESSION['user_id'] = session_id();
 
 <body>
     <header>
-        <img height="80px" src="./../img/GAMESoya.PNG">
+        <img src="./../img/GAMESoya.PNG"  class="gamesoya_logo">
     </header>
     <main>
 
