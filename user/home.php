@@ -11,6 +11,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/user.css">
     <link rel="stylesheet" href="./../css/bootstrap.css">
+    <script src="./../js/bootstrap.js"></script>
     <title>ホーム画面</title>
 </head>
 
@@ -35,7 +36,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             </form>
         </div>
     </header>
-    <!-- <div class="container">
+    <div class="container">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -52,19 +53,6 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                 </div>
             </div>
             </button>
-        </div>
-    </div> -->
-    <div class="carousel">
-        <div id="items-wrapper">
-            <img class="active" src="./../img/gamesoya home pic.png">
-            <img src="./../img/gamesoya home pic.png">
-            <img src="./../img/gamesoya home pic.png">
-        </div>
-
-        <div id="select-tabs">
-            <button class="active" onclick="changeToSelectItem(0)"></button>
-            <button onclick="changeToSelectItem(1)"></button>
-            <button onclick="changeToSelectItem(2)"></button>
         </div>
     </div>
     <div class="container">
