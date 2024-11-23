@@ -389,3 +389,28 @@ legend {
 .pr_request_main {
     max-width: 600px;
 }
+
+/*購入画面*/
+
+.game_price {
+    color: white;
+}
+
+.address_update {
+    align-items: end;
+}
+
+.address {
+    color: white;
+}
+
+.pay {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy {
+    width: 50%;
+    height: 30px;
+}

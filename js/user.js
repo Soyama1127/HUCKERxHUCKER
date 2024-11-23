@@ -84,17 +84,37 @@ function cartin() {
 }
 
 let pageNumber = null;
+let pageroot = null;
+let cartroot = null;
 
 function updateNumber(number) {
     localStorage.setItem('pageNumber', number);
+}
+
+function updaterootNumber(number) {
+    localStorage.setItem('pageroot', number);
+}
+
+function cartbackNumber(number) {
+    localStorage.setItem('cartroot', number);
 }
 
 function getPageNumber() {
     return localStorage.getItem('pageNumber');
 }
 
+function getPagerootNumber() {
+    return localStorage.getItem('pageroot');
+}
+
+function getCartRoot() {
+    return localStorage.getItem('cartroot');
+}
+
 function backPage() {
     const pageNumber = getPageNumber();
+    const pageroot = getPagerootNumber();
+    const cartroot = getCartRoot();
 
     if (parseInt(pageNumber) === 0) {
         window.location.href = 'home.php';
@@ -106,10 +126,21 @@ function backPage() {
         window.location.href = 'cart.php';
     } else if (parseInt(pageNumber) === 4) {
         window.location.href = 'game.php';
-        localStorage.setItem('pageNumber', 0);
+        if(parseInt(cartroot) === 0) {
+            localStorage.setItem('pageNumber', 3)
+        }else {
+            localStorage.setItem('pageNumber', 0);
+        }
     } else if (parseInt(pageNumber) === 5) {
         window.location.href = 'cart.php';
         localStorage.setItem('pageNumber', 0);
+    } else if (parseInt(pageNumber) === 6) {
+        window.location.href = 'buy.php';
+        if (parseInt(pageroot) === 0) {
+            localStorage.setItem('pageNumber', 4);
+        } else {
+            localStorage.setItem('pageNumber', 5);
+        }
     } else {
         alert('不正な値です');
     }
@@ -207,6 +238,6 @@ function confirmCartOut() {
     return confirm("カートから削除しますか？");
 }
 
-function kakunin(){
+function kakunin() {
     return confirm("更新しますか？");
 }
