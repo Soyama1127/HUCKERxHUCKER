@@ -14,9 +14,12 @@ $_SESSION['user_id'] = session_id();
 </head>
 
 <body>
+    <header>
+        <img height="80px" src="./../img/GAMESoya.PNG">
+    </header>
     <main>
 
-        <img height="80px" src="./../img/GAMESoya.PNG"><br><br>
+        <br>
 
         <form id="login" action="home.php" method="post" onsubmit="return logintest();">
 
@@ -37,7 +40,7 @@ $_SESSION['user_id'] = session_id();
         <form action="signup.php" method="post">
 
             <input type="submit" value="新規登録" class="user_button">
-            
+
         </form>
     </main>
 </body>

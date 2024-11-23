@@ -10,11 +10,10 @@
 
 <body>
     <header>
-        <img src='./../img/backbutton.png'>
+        <button class='back-btn' onclick="location.href='login.php'"><img src='./../img/backbutton.png'></button>
+        <img height="80px" src="./../img/GAMESoya.PNG"><br>
     </header>
     <main>
-
-        <img height="80px" src="./../img/GAMESoya.PNG"><br><br>
 
         <form id="signup" action="signup_complete.php" method="post" onsubmit="return signuptest();">
 
