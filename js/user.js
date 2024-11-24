@@ -85,7 +85,7 @@ function cartin() {
 
 let pageNumber = null;
 let pageroot = null;
-let cartroot = null;
+let cartroot = 1;
 
 function updateNumber(number) {
     localStorage.setItem('pageNumber', number);
@@ -126,11 +126,7 @@ function backPage() {
         window.location.href = 'cart.php';
     } else if (parseInt(pageNumber) === 4) {
         window.location.href = 'game.php';
-        if(parseInt(cartroot) === 0) {
-            localStorage.setItem('pageNumber', 3)
-        }else {
-            localStorage.setItem('pageNumber', 0);
-        }
+        localStorage.setItem('pageNumber', 0);
     } else if (parseInt(pageNumber) === 5) {
         window.location.href = 'cart.php';
         localStorage.setItem('pageNumber', 0);

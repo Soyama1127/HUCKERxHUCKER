@@ -1,3 +1,8 @@
+<?php
+session_start();
+$_SESSION['address_root'] = 1;
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 

@@ -413,4 +413,14 @@ legend {
 .buy {
     width: 50%;
     height: 30px;
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+.cart_buy {
+    width: 20%;
+    height: 30px;
+    background-color: yellow;
+    border: none;
+    border-radius: 10px;
 }
