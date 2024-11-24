@@ -16,26 +16,40 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 </head>
 
 <body>
-    <header class="home_header">
-        <div class="home_logo">
-            <img src='./../img/GAMESoya.PNG'>
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">
+            <img class="navbar-brand" src='./../img/GAMESoya.PNG' style="width: 15vw;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.php">
+                            <img src="./../img/cart.png" alt="Cart">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.php">
+                            <img src="./../img/serch.png" alt="Search">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form action='account.php' method="post" class='user_icon_form'>
+                            <?php if (isset($_SESSION['user_name'])): ?>
+                                <button type="submit" class="user_icon"><?= $_SESSION['user_name'] ?></button>
+                            <?php else: ?>
+                                <button type="button" class="user_icon" onclick="confirmLogin()">ゲスト</button>
+                            <?php endif; ?>
+                        </form>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="right_section">
-            <a href="cart.php" class="home_button">
-                <img src="./../img/cart.png" alt="Cart">
-            </a>
-            <a href="search.php" class="home_button">
-                <img src="./../img/serch.png" alt="Search">
-            </a>
-            <form action='account.php' method="post" class='user_icon_form'>
-                <?php if (isset($_SESSION['user_name'])): ?>
-                    <button type="submit" class="user_icon"><?= $_SESSION['user_name'] ?></button>
-                <?php else: ?>
-                    <button type="button" class="user_icon" onclick="confirmLogin()">ゲスト</button>
-                <?php endif; ?>
-            </form>
-        </div>
-    </header>
+    </nav>
     <div class="container">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">

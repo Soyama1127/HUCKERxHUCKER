@@ -34,42 +34,50 @@ main {
 }
 
 /*ホーム*/
-/*ホームヘッダー*/
-.home_header {
-    height: auto;
-    margin-top: 20px;
+
+.navbar-collapse {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
+}
+
+.navbar {
+    display: flex;
     justify-content: space-between;
-}
-
-.right_section {
-    display: flex;
     align-items: center;
-    margin-right: 10px;
 }
 
-.home_logo img {
+.navbar-brand {
     width: 15vw;
-    margin-left: 10px;
 }
 
-.home_button img {
-    width: 5vw;
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.navbar-nav .nav-item a img {
+    width: 60px;
+    height: auto;
+    display: block;
 }
 
 .user_icon_form {
+    margin-left: auto;
     display: flex;
     align-items: center;
 }
 
 .user_icon {
-    width: 10vw;
     background-color: #00ff11;
-    border-color: #00ff11;
-    border-radius: 20px;
-    color: black;
+    border-radius: 50%;
+    padding: 10px;
     font-size: x-large;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*ホーム終わり*/
