@@ -17,7 +17,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 
 <body>
     <header>
-        <button class='back-btn' onclick="backPage()"><img src='./../img/backbutton.png'></button>
+        <button class='back-btn' onclick="buyBack()"><img src='./../img/backbutton.png'></button>
         <img src='./../img/GAMESoya.PNG' class="gamesoya_logo">
     </header>
     <main class="buy_main">
@@ -42,7 +42,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         <label>請求金額</label>
         <h1 class="game_price">￥<?= $_SESSION['price'] ?></h1>
         <label>住所</label>
-        <form action="address.php" class="address_update" onclick="updateNumber(6);updaterootNumber(<?= $pageroot ?>);">
+        <form action="address.php" class="address_update" onclick="updateAddressBackNumber(0)">
             <button typw="submit" class="btn btn-primary">住所変更</button>
         </form>
         <?php

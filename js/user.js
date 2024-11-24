@@ -83,62 +83,68 @@ function cartin() {
     return confirm('カートに追加しますか？')
 }
 
-let pageNumber = null;
-let pageroot = null;
-let cartroot = 1;
+let gameBackNumber = null;
+let buyBackNumber = null;
+let addressBackNumber = null;
 
-function updateNumber(number) {
-    localStorage.setItem('pageNumber', number);
+function updateGameBackNumber(number) {
+    localStorage.setItem('gameBackNumber', number);
 }
 
-function updaterootNumber(number) {
-    localStorage.setItem('pageroot', number);
+function updateBuyBackNumber(number) {
+    localStorage.setItem('buyBackNumber', number);
 }
 
-function cartbackNumber(number) {
-    localStorage.setItem('cartroot', number);
+function updateAddressBackNumber(number) {
+    localStorage.setItem('addressBackNumber', number);
 }
 
-function getPageNumber() {
-    return localStorage.getItem('pageNumber');
+function getGameBackNumber() {
+    return localStorage.getItem('gameBackNumber');
 }
 
-function getPagerootNumber() {
-    return localStorage.getItem('pageroot');
+function getBuyBackNumber() {
+    return localStorage.getItem('buyBackNumber');
 }
 
-function getCartRoot() {
-    return localStorage.getItem('cartroot');
+function getAddressBackNumber() {
+    return localStorage.getItem('addressBackNumber');
 }
 
-function backPage() {
-    const pageNumber = getPageNumber();
-    const pageroot = getPagerootNumber();
-    const cartroot = getCartRoot();
-
-    if (parseInt(pageNumber) === 0) {
+function gameBack() {
+    const gameBackNumber = getGameBackNumber();
+    if (parseInt(gameBackNumber) === 0) {
         window.location.href = 'home.php';
-    } else if (parseInt(pageNumber) === 1) {
+    } else if (parseInt(gameBackNumber) === 1) {
         window.location.href = 'buy_history.php';
-    } else if (parseInt(pageNumber) === 2) {
+    } else if (parseInt(gameBackNumber) === 2) {
         window.location.href = 'favorite.php';
-    } else if (parseInt(pageNumber) === 3) {
+    } else if (parseInt(gameBackNumber) === 3) {
         window.location.href = 'cart.php';
-    } else if (parseInt(pageNumber) === 4) {
-        window.location.href = 'game.php';
-        localStorage.setItem('pageNumber', 0);
-    } else if (parseInt(pageNumber) === 5) {
-        window.location.href = 'cart.php';
-        localStorage.setItem('pageNumber', 0);
-    } else if (parseInt(pageNumber) === 6) {
-        window.location.href = 'buy.php';
-        if (parseInt(pageroot) === 0) {
-            localStorage.setItem('pageNumber', 4);
-        } else {
-            localStorage.setItem('pageNumber', 5);
-        }
     } else {
-        alert('不正な値です');
+        confirm('不正な値です');
+    }
+}
+
+function buyBack() {
+    const buyBackNumber = getBuyBackNumber();
+    if(parseInt(buyBackNumber) === 0) {
+        window.location.href = 'cart.php';
+    }else if(parseInt(buyBackNumber) === 1) {
+        window.location.href = 'game.php';
+    }else {
+        confirm('不正な値です');
+    }
+}
+
+function addressBack() {
+    const addressBackNumber = getAddressBackNumber();
+    if(parseInt(addressBackNumber) === 0) {
+        window.location.href = 'buy.php';
+    }else if(parseInt(addressBackNumber) === 1) {
+        window.location.href = 'account_setting.php';
+    }else{
+        confirm('不正な値です');
     }
 }
 

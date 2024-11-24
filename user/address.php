@@ -15,7 +15,7 @@ session_start();
 
 <body>
     <header>
-        <button class='back-btn' onclick="backPage()"><img src='./../img/backbutton.png'></button>
+        <button class='back-btn' onclick="addressBack()"><img src='./../img/backbutton.png'></button>
         <img src='./../img/GAMESoya.PNG' class="gamesoya_logo">
     </header>
     <main>

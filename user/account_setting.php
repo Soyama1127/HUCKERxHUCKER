@@ -25,9 +25,10 @@ session_start();
         </form>
         <hr><br>
         <button onclick="location.href='update.php'" class='account_setting_btn'>パスワード/ログインID</button><br>
-        <button onclick="location.href='address.php'" class='account_setting_btn'>住所</button><br>
+        <button onclick="updateAddressBackNumber(1);location.href='address.php'" class='account_setting_btn'>住所</button><br>
         <button onclick="location.href='creditcard.php'" class='account_setting_btn'>クレジットカード情報</button>
     </main>
+    <script src="./../js/user.js"></script>
 </body>
 
 </html>

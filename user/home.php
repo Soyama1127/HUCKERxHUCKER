@@ -86,7 +86,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                         </div>
                         <form action='game.php' method='post'>
                             <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
-                            <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(0)">
+                            <input type='submit' value='詳細' class='btn btn-primary' onclick="updateGameBackNumber(0)">
                         </form>
                     </div>
                 </div>

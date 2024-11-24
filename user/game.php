@@ -18,7 +18,7 @@ if (isset($_POST['game_id'])) {
 
 <body>
     <header>
-        <button class='back-btn' onclick="backPage()"><img src='./../img/backbutton.png'></button>
+        <button class='back-btn' onclick="gameBack()"><img src='./../img/backbutton.png'></button>
         <img src='./../img/GAMESoya.PNG' class="gamesoya_logo">
     </header>
     <main class='game_main'>
@@ -78,7 +78,7 @@ if (isset($_POST['game_id'])) {
 
             <form action='buy.php' method="post">
                 <input type="hidden" name="game_id" value="<?= $row['game_id'] ?>">
-                <input type="submit" name='only_buy' value="購入" class='cartin_button' onclick="updateNumber(4)"><br>
+                <input type="submit" name='only_buy' value="購入" class='cartin_button' onclick="updateBuyBackNumber(1)"><br>
             </form>
             <form action="pr.php" method="post">
                 <input type="hidden" name="game_id" value="<?= $row['game_id'] ?>">
