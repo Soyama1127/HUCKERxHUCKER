@@ -21,12 +21,18 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         if ($_POST['onlyorcart'] === '0') {
             $sql = $pdo->prepare('update game set game_stock = game_stock - 1 where game_id = ?');
             $sql->execute([$_SESSION['game_id']]);
+
+            $insert = $pdo->prepare('insert into bought (game_id, user_id) values (?, ?)');
+            $insert->execute([$_SESSION['game_id'], $_SESSION['user_id']]);
         } else {
             $sql = $pdo->prepare('select game_id from cart where cart_id= ?');
             $sql->execute([$_SESSION['user_id']]);
             foreach ($sql as $row) {
                 $updateStock = $pdo->prepare('update game set game_stock = game_stock - 1 where game_id = ?');
                 $updateStock->execute([$row['game_id']]);
+
+                $insert = $pdo->prepare('insert into bought (game_id, user_id) values (?, ?)');
+                $insert->execute([$row['game_id'], $_SESSION['user_id']]);
             }
 
             $deleteCart = $pdo->prepare('delete from cart where cart_id = ?');
