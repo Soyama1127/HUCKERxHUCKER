@@ -28,6 +28,59 @@ main {
     margin-top: 20px;
 }
 
+.gamesoya_logo {
+    width: 30vw;
+    transform: translateY(2%);
+}
+
+/*ホーム*/
+
+.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    width: 15vw;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.navbar-nav .nav-item a img {
+    width: 60px;
+    height: auto;
+    display: block;
+}
+
+.user_icon_form {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.user_icon {
+    background-color: #00ff11;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: x-large;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*ホーム終わり*/
 .login_label {
     color: #00ff11;
     text-shadow: 0px 0px 10px rgb(156, 252, 111);
@@ -84,6 +137,7 @@ p {
 
 .back-btn {
     position: absolute;
+    width: 30vw;
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
@@ -99,32 +153,12 @@ p {
     align-items: center;
 }
 
-.right-section {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.button img {
-    width: 50px;
-    height: 50px;
-    margin-right: 5px;
-}
-
 .user_icon {
     background-color: #00ff11;
     border-color: #00ff11;
     border-radius: 20px;
     color: black;
     font-size: x-large;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    width: 100%;
 }
 
 .container {
@@ -226,9 +260,9 @@ legend {
 .account_text {
     padding-top: 10px;
     border: none;
-    outline:none;
+    outline: none;
     background-color: transparent;
-    font-size:xx-large;
+    font-size: xx-large;
     color: white;
     text-align: center;
 }
@@ -304,7 +338,7 @@ legend {
     text-align: left;
 }
 
-.back-btn img{
+.back-btn img {
     width: 20%;
     height: fit-content;
 }
@@ -358,4 +392,43 @@ legend {
     background-color: rgb(38, 38, 38);
     border: none;
     cursor: pointer;
+}
+
+.pr_request_main {
+    max-width: 600px;
+}
+
+/*購入画面*/
+
+.game_price {
+    color: white;
+}
+
+.address_update {
+    align-items: end;
+}
+
+.address {
+    color: white;
+}
+
+.pay {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy {
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+.cart_buy {
+    width: 20%;
+    height: 30px;
+    background-color: yellow;
+    border: none;
+    border-radius: 10px;
 }

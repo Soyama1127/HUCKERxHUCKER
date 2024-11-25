@@ -83,35 +83,68 @@ function cartin() {
     return confirm('カートに追加しますか？')
 }
 
-let pageNumber = null;
+let gameBackNumber = null;
+let buyBackNumber = null;
+let addressBackNumber = null;
 
-function updateNumber(number) {
-    localStorage.setItem('pageNumber', number);
+function updateGameBackNumber(number) {
+    localStorage.setItem('gameBackNumber', number);
 }
 
-function getPageNumber() {
-    return localStorage.getItem('pageNumber');
+function updateBuyBackNumber(number) {
+    localStorage.setItem('buyBackNumber', number);
 }
 
-function backPage() {
-    const pageNumber = getPageNumber();
+function updateAddressBackNumber(number) {
+    localStorage.setItem('addressBackNumber', number);
+}
 
-    if (parseInt(pageNumber) === 0) {
+function getGameBackNumber() {
+    return localStorage.getItem('gameBackNumber');
+}
+
+function getBuyBackNumber() {
+    return localStorage.getItem('buyBackNumber');
+}
+
+function getAddressBackNumber() {
+    return localStorage.getItem('addressBackNumber');
+}
+
+function gameBack() {
+    const gameBackNumber = getGameBackNumber();
+    if (parseInt(gameBackNumber) === 0) {
         window.location.href = 'home.php';
-    } else if (parseInt(pageNumber) === 1) {
+    } else if (parseInt(gameBackNumber) === 1) {
         window.location.href = 'buy_history.php';
-    } else if (parseInt(pageNumber) === 2) {
+    } else if (parseInt(gameBackNumber) === 2) {
         window.location.href = 'favorite.php';
-    } else if (parseInt(pageNumber) === 3) {
+    } else if (parseInt(gameBackNumber) === 3) {
         window.location.href = 'cart.php';
-    } else if (parseInt(pageNumber) === 4) {
-        window.location.href = 'game.php';
-        localStorage.setItem('pageNumber', 0);
-    } else if (parseInt(pageNumber) === 5) {
-        window.location.href = 'cart.php';
-        localStorage.setItem('pageNumber', 0);
     } else {
-        alert('不正な値です');
+        confirm('不正な値です');
+    }
+}
+
+function buyBack() {
+    const buyBackNumber = getBuyBackNumber();
+    if(parseInt(buyBackNumber) === 0) {
+        window.location.href = 'cart.php';
+    }else if(parseInt(buyBackNumber) === 1) {
+        window.location.href = 'game.php';
+    }else {
+        confirm('不正な値です');
+    }
+}
+
+function addressBack() {
+    const addressBackNumber = getAddressBackNumber();
+    if(parseInt(addressBackNumber) === 0) {
+        window.location.href = 'buy.php';
+    }else if(parseInt(addressBackNumber) === 1) {
+        window.location.href = 'account_setting.php';
+    }else{
+        confirm('不正な値です');
     }
 }
 
@@ -207,6 +240,6 @@ function confirmCartOut() {
     return confirm("カートから削除しますか？");
 }
 
-function kakunin(){
+function kakunin() {
     return confirm("更新しますか？");
 }

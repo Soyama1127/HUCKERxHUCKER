@@ -15,8 +15,8 @@ session_start();
 
 <body>
     <header>
-        <button class='back-btn' onclick="location.href='account_setting.php'"><img src='./../img/backbutton.png'></button>
-        <img src='./../img/GAMESoya.PNG' height="80px">
+        <button class='back-btn' onclick="addressBack()"><img src='./../img/backbutton.png'></button>
+        <img src='./../img/GAMESoya.PNG' class="gamesoya_logo">
     </header>
     <main>
         <h1 class="login_label">住所</h1>

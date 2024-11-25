@@ -18,7 +18,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 <body>
     <header>
         <button class='back-btn' onclick="location.href='account.php'"><img src='./../img/backbutton.png'></button>
-        <img src='./../img/GAMESoya.PNG' height="80px">
+        <img src='./../img/GAMESoya.PNG' class="gamesoya_logo">
     </header>
     <fieldset class="row mt-5 ">
         <legend>RPG</legend>
@@ -36,7 +36,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     </div>
                     <form action='game.php' method='post'>
                         <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
-                        <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(2)">
+                        <input type='submit' value='詳細' class='btn btn-primary' onclick="updateGameBackNumber(2)">
                     </form>
                 </div>
             </div>

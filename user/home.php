@@ -16,29 +16,40 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 </head>
 
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">
-                <img src='./../img/GAMESoya.PNG' width="200px" alt="Logo">
-            </div>
-
-            <div class="right-section">
-                <a href="cart.php" class="button">
-                    <img src="./../img/cart.png" alt="Cart">
-                </a>
-                <a href="search.php" class="button">
-                    <img src="./../img/serch.png" alt="Search">
-                </a>
-                <form action='account.php' method="post">
-                    <?php if (isset($_SESSION['user_name'])): ?>
-                        <button type="submit" class="user_icon"><?= $_SESSION['user_name'] ?></button>
-                    <?php else: ?>
-                        <button type="button" class="user_icon" onclick="confirmLogin()">ゲスト</button>
-                    <?php endif; ?>
-                </form>
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">
+            <img class="navbar-brand" src='./../img/GAMESoya.PNG' style="width: 30vw;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.php">
+                            <img src="./../img/cart.png" alt="Cart">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.php">
+                            <img src="./../img/serch.png" alt="Search">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form action='account.php' method="post" class='user_icon_form'>
+                            <?php if (isset($_SESSION['user_name'])): ?>
+                                <button type="submit" class="user_icon"><?= $_SESSION['user_name'] ?></button>
+                            <?php else: ?>
+                                <button type="button" class="user_icon" onclick="confirmLogin()">ゲスト</button>
+                            <?php endif; ?>
+                        </form>
+                    </li>
+                </ul>
             </div>
         </div>
-    </header>
+    </nav>
     <div class="container">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -67,7 +78,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
@@ -75,7 +86,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                         </div>
                         <form action='game.php' method='post'>
                             <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
-                            <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(0)">
+                            <input type='submit' value='詳細' class='btn btn-primary' onclick="updateGameBackNumber(0)">
                         </form>
                     </div>
                 </div>
@@ -89,7 +100,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
@@ -111,7 +122,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
@@ -133,7 +144,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
@@ -155,7 +166,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
@@ -177,7 +188,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>
@@ -199,7 +210,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
-                        <img src='./../manager/game/<?=$row['game_icon']?>' alt='ゲーム画像' class='game_img'>
+                        <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_img'>
                         <div class='card-body p-0 w-100'>
                             <h6 class='card-title mb-2'><?= $row['game_name'] ?></h6>
                             <p class='game_model'><?= $row['game_model'] ?></p>

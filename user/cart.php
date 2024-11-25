@@ -19,7 +19,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 <body>
     <header>
         <button class='back-btn' onclick="location.href='home.php'"><img src='./../img/backbutton.png'></button>
-        <img src='./../img/GAMESoya.PNG' height="80px">
+        <img src='./../img/GAMESoya.PNG' class="gamesoya_logo">
     </header>
     <br>
     <h1 class="login_label">カート一覧</h1>
@@ -47,7 +47,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                             </div>
                             <form action='game.php' method='post' class="cart_game_summary">
                                 <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
-                                <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(5)">
+                                <input type='submit' value='詳細' class='btn btn-primary' onclick="updateGameBackNumber(3)">
                             </form>
                             <form></form>
                         </div>
@@ -58,7 +58,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     </div>
     <?php if ($row_count > 0) : ?>
         <form action="buy.php" method="post">
-            <input type="submit" value="レジに進む" class="to_buy" onclick="updateNumber(5)">
+            <input type="submit" value="レジに進む" class="cart_buy" name="cart_buy" onclick="updateBuyBackNumber(0)">
         </form>
     <?php else : ?>
         <h1 class="cart_label">カートに商品がありません</h1>
