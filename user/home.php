@@ -18,7 +18,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 <body>
     <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container">
-            <img class="navbar-brand" src='./../img/GAMESoya.PNG' style="width: 15vw;">
+            <img class="navbar-brand" src='./../img/GAMESoya.PNG' style="width: 30vw;">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-label="Toggle navigation">
