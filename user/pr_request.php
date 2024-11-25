@@ -17,7 +17,7 @@ session_start();
         <img src='./../img/GAMESoya.PNG' height="80px">
     </header>
     <main>
-        <form action="destroy_gamesoya" method="post">
+        <form action="destroy_gamesoya" method="post" enctype="multipart/form-data">
         <?php
         $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
         $sql = $pdo->prepare('select * from game where game_id=?');
@@ -29,7 +29,7 @@ session_start();
     <label>PR文</label><br> 
     <textarea name=pr_content rows="5" cols="40" required></textarea>
     <label>サンプル画像</label><br>
-    <input type="file" name="pr_movie"　enctype="multipart/form-data" required><br>
+    <input type="file" name="pr_movie" required><br>
     <input type=submit value="申請" ><br>
         </form>
     </main>
