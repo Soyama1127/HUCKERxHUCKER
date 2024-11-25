@@ -24,7 +24,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     <h1 class="login_label">購入履歴</h1>
     <div class="buyhistory_container">
         <?php
-        $sql = $pdo->prepare('select * from game inner join bought on game.game_id = bought.game_id where user_id = ?');
+        $sql = $pdo->prepare('select * from game inner join bought on game.game_id = bought.game_id where user_id = ? order by buy_date');
         $sql->execute([$_SESSION['user_id']]);
         foreach ($sql as $row): ?>
             <div class="cart_game">

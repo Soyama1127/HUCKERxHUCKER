@@ -24,14 +24,12 @@
         $sql->execute(['%'.$game_name.'%',$game_model,$game_genre]);
         echo '選択された機種：';
         echo '<br>';
-        echo $model;
+        echo $game_model;
         echo '<br>';
-        echo '選択されたジャンル';
+        echo '選択されたジャンル：';
         echo '<br>';
-        echo $genre;
+        echo $game_genre;
         echo '<br>';
-            $sql = $pdo->prepare('select * from game where game_name = "$game_name" limit 4');
-            $sql->execute();
             foreach ($sql as $row): ?>
                 <div class='col-12 col-md-6'>
                     <div class='card w-100 h-50 d-flex flex-row align-items-center p-2'>
