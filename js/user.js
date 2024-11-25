@@ -121,6 +121,8 @@ function gameBack() {
         window.location.href = 'favorite.php';
     } else if (parseInt(gameBackNumber) === 3) {
         window.location.href = 'cart.php';
+    } else if (parseInt(gameBackNumber) === 4) {
+        window.location.href = 'search_result.php';
     } else {
         confirm('不正な値です');
     }

@@ -1,3 +1,9 @@
+<?php
+session_start();
+$_SESSION['game_name'] = null;
+$_SESSION['game_model'] = null; 
+$_SESSION['game_genre'] = null;
+?>
 <!DOCTYPE html>
 <html lang="ja">
 

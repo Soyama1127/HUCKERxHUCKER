@@ -1,6 +1,16 @@
 <?php
 session_start();
 $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
+if(trim($_POST['game_name'])){
+    $_SESSION['game_name'] = $_POST['game_name'];
+}
+if(isset($_POST['game_model'])){
+    $_SESSION['game_model'] = $_POST['game_model'];
+}
+
+if(isset($_POST['game_genre'])){
+    $_SESSION['game_genre'] = $_POST['game_genre'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -21,14 +31,14 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     <main>
         <?php
         $search = 'select * from game';
-        if (trim($_POST['game_name'])) {
-            $game_name = $_POST['game_name'];
+        if (isset($_SESSION['game_name'])) {
+            $game_name = $_SESSION['game_name'];
             $search .= ' where game_name like ?';
-            if (isset($_POST['game_model'])) {
-                $game_model = $_POST['game_model'];
+            if (isset($_SESSION['game_model'])) {
+                $game_model = $_SESSION['game_model'];
                 $search .= ' and game_model = ?';
-                if (isset($_POST['game_genre'])) {
-                    $game_genre = $_POST['game_genre'];
+                if (isset($_SESSION['game_genre'])) {
+                    $game_genre = $_SESSION['game_genre'];
                     $search .= ' and game_genre = ?';
                     $sql = $pdo->prepare($search);
                     $sql->execute(['%' . $game_name . '%', $game_model, $game_genre]);
@@ -37,8 +47,8 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     $sql->execute(['%' . $game_name . '%', $game_model]);
                 }
             } else {
-                if (isset($_POST['game_genre'])) {
-                    $game_genre = $_POST['game_genre'];
+                if (isset($_SESSION['game_genre'])) {
+                    $game_genre = $_SESSION['game_genre'];
                     $search .= ' and game_genre = ?';
                     $sql = $pdo->prepare($search);
                     $sql->execute(['%' . $game_name . '%', $game_genre]);
@@ -48,11 +58,11 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                 }
             }
         } else {
-            if (isset($_POST['game_model'])) {
-                $game_model = $_POST['game_model'];
+            if (isset($_SESSION['game_model'])) {
+                $game_model = $_SESSION['game_model'];
                 $search .= ' where game_model = ?';
-                if (isset($_POST['game_genre'])) {
-                    $game_genre = $_POST['game_genre'];
+                if (isset($_SESSION['game_genre'])) {
+                    $game_genre = $_SESSION['game_genre'];
                     $search .= ' and game_genre = ?';
                     $sql = $pdo->prepare($search);
                     $sql->execute([$game_model, $game_genre]);
@@ -61,8 +71,8 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     $sql->execute([$game_model]);
                 }
             } else {
-                if (isset($_POST['game_genre'])) {
-                    $game_genre = $_POST['game_genre'];
+                if (isset($_SESSION['game_genre'])) {
+                    $game_genre = $_SESSION['game_genre'];
                     $search .= ' where game_genre = ?';
                     $sql = $pdo->prepare($search);
                     $sql->execute([$game_genre]);
@@ -92,13 +102,13 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     </div>
                     <form action='game.php' method='post'>
                         <input type='hidden' name='game_id' value='<?= $row['game_id'] ?>'>
-                        <input type='submit' value='詳細' class='btn btn-primary' onclick="updateNumber(0)">
+                        <input type='submit' value='詳細' class='btn btn-primary' onclick="updateGameBackNumber(4)">
                     </form>
                 </div>
             </div>
         <?php endforeach; ?>
-
     </main>
+    <script src="./../js/user.js"></script>
 </body>
 
 </html>
