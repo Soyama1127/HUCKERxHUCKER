@@ -20,11 +20,58 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     </header>
     <main>
         <?php
-        $game_name = $_POST['game_name'];
-        $game_model = $_POST['game_model'];
-        $game_genre = $_POST['game_genre'];
-        $sql = $pdo->prepare("SELECT * FROM `game` WHERE `game_name` LIKE ? or `game_model` = ? or `game_genre` = ?");
-        $sql->execute(['%' . $game_name . '%', $game_model, $game_genre]);
+        $search = 'select * from game';
+        if (trim($_POST['game_name'])) {
+            $game_name = $_POST['game_name'];
+            $search .= ' where game_name like ?';
+            if (isset($_POST['game_model'])) {
+                $game_model = $_POST['game_model'];
+                $search .= ' and game_model = ?';
+                if (isset($_POST['game_genre'])) {
+                    $game_genre = $_POST['game_genre'];
+                    $search .= ' and game_genre = ?';
+                    $sql = $pdo->prepare($search);
+                    $sql->execute(['%' . $game_name . '%', $game_model, $game_genre]);
+                } else {
+                    $sql = $pdo->prepare($search);
+                    $sql->execute(['%' . $game_name . '%', $game_model]);
+                }
+            } else {
+                if (isset($_POST['game_genre'])) {
+                    $game_genre = $_POST['game_genre'];
+                    $search .= ' and game_genre = ?';
+                    $sql = $pdo->prepare($search);
+                    $sql->execute(['%' . $game_name . '%', $game_genre]);
+                } else {
+                    $sql = $pdo->prepare($search);
+                    $sql->execute(['%' . $game_name . '%']);
+                }
+            }
+        } else {
+            if (isset($_POST['game_model'])) {
+                $game_model = $_POST['game_model'];
+                $search .= ' where game_model = ?';
+                if (isset($_POST['game_genre'])) {
+                    $game_genre = $_POST['game_genre'];
+                    $search .= ' and game_genre = ?';
+                    $sql = $pdo->prepare($search);
+                    $sql->execute([$game_model, $game_genre]);
+                } else {
+                    $sql = $pdo->prepare($search);
+                    $sql->execute([$game_model]);
+                }
+            } else {
+                if (isset($_POST['game_genre'])) {
+                    $game_genre = $_POST['game_genre'];
+                    $search .= ' where game_genre = ?';
+                    $sql = $pdo->prepare($search);
+                    $sql->execute([$game_genre]);
+                } else {
+                    $sql = $pdo->prepare($search);
+                    $sql->execute();
+                }
+            }
+        }
         echo '選択された機種：';
         echo '<br>';
         echo $game_model;
