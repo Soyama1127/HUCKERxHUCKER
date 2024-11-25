@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/user.css">
+    <link rel="stylesheet" href="./../css/bootstrap.css">
     <title>検索</title>
 </head>
 
@@ -15,8 +16,8 @@
     </header>
     <label>検索</label>
     <form action="search_result.php" method="post">
-        <input type="textbox" name="game_name" placeholder="検索" style="width:300px;height:20px">
-        <button type="submit">検索</button>
+        <input type="text" name="game_name" placeholder="検索" style="width:300px;height:20px">
+        <input type="submit" value="検索" class="btn btn-primary">
         <br>
         機種
         <hr width="500">
