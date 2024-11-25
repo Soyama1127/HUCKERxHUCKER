@@ -1,3 +1,7 @@
+<?php
+session_start();
+$pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
+?>
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -15,8 +19,6 @@
     </header>
     <main>
         <?php
-        session_start();
-        $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
         $game_name = $_POST['game_name'];
         $game_model = $_POST['game_model'];
         $game_genre = $_POST['game_genre'];
