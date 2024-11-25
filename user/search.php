@@ -21,6 +21,7 @@
         <br>
         機種
         <hr width="500">
+        <input type="radio" name="game_model" value="全て">全て
         <input type="radio" name="game_model" value="Switch">Switch
         <input type="radio" name="game_model" value="PS(プレステーション)">PS(プレステーション)<br>
         <input type="radio" name="game_model" value="Wii">Wii
@@ -31,6 +32,7 @@
         <input type="radio" name="game_model" value="ファミコン">ファミコン<br>
         <input type="radio" name="game_model" value="その他">その他<br>
         ジャンル<br>
+        <input type="radio" name="game_genre" value="全て">全て
         <input type="radio" name="game_genre" value="RPG">RPG
         <input type="radio" name="game_genre" value="アクション">アクション<br>
         <input type="radio" name="game_genre" value="アドベンチャー">アドベンチャー
