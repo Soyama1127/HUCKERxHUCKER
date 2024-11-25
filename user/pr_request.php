@@ -29,7 +29,7 @@ session_start();
     <label>PR文</label><br> 
     <textarea name=pr_content rows="5" cols="40" required></textarea>
     <label>サンプル画像</label><br>
-    <input type="file" name="pr_movie" required><br>
+    <input type="file" name="pr_movie"　enctype="multipart/form-data" required><br>
     <input type=submit value="申請" ><br>
         </form>
     </main>
