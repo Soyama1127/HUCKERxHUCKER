@@ -82,6 +82,10 @@ if(isset($_POST['game_genre'])){
                 }
             }
         }
+        echo '検索';
+        echo '<br>';
+        echo $game_name;
+        echo '<br>';
         echo '選択された機種：';
         echo '<br>';
         echo $game_model;
