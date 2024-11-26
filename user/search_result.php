@@ -82,7 +82,7 @@ if(isset($_POST['game_genre'])){
                 }
             }
         }
-        echo '検索ワード';
+        echo '検索ワード：';
         echo '<br>';
         echo $game_name;
         echo '<br>';
