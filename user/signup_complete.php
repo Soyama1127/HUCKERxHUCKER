@@ -9,8 +9,10 @@
 </head>
 
 <body>
+    <header class="login_header">
+        <img src="./../img/GAMESoya.PNG" class="gamesoya_logo">
+    </header>
     <main>
-        <img height="80px" src="./../img/GAMESoya.PNG" class="gamesoya_logo"><br><br>
         <?php
         $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
         $name = $_POST['user_name'];
@@ -25,9 +27,11 @@
         $sql = $pdo->prepare("insert into creditcard (user_id, card_number, date_month, date_year, card_name, security_card) VALUES (?, '', '', '', '', '')");
         $sql->execute([$id]);
         ?>
-        <form action="login.php" method="post">
-            <h1 class="login_label">登録完了しました</h1>
-            <input type=submit value=ログイン画面に戻る class="user_button">
+        <form action="login.php" method="post" class="signup_complete_form">
+            <div>
+                <h1 class="login_label">登録完了しました</h1>
+                <input type=submit value=ログイン画面に戻る class="user_button">
+            </div>
         </form>
     </main>
 </body>

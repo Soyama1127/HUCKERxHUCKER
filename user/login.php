@@ -9,40 +9,37 @@ $_SESSION['user_id'] = session_id();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/user.css">
-    <script src="./../js/user.js"></script>
     <title>ユーザーログイン</title>
 </head>
 
 <body>
-    <header>
-        <img src="./../img/GAMESoya.PNG"  class="gamesoya_logo">
+    <header class="login_header">
+        <img src="./../img/GAMESoya.PNG" class="gamesoya_logo">
     </header>
-    <main>
+    <main class="login_main">
+        <label class="login_label">Login</label><br>
 
-        <br>
+        <form id="login" action="home.php" method="post" onsubmit="return logintest();" class="login_form">
 
-        <form id="login" action="home.php" method="post" onsubmit="return logintest();">
-
-            <label class="login_label">Login</label><br>
-
-            <label>ログインID</label><br>
+            <label>ログインID</label>
             <input type="text" name="login_id" id="login_id" class="user_text" required><br>
 
-            <label>パスワード</label><br>
+            <label>パスワード</label>
             <input type="password" name="pass" id="pass" class="user_text" required><br><br>
 
             <div id="error-message" class="err_msg"></div>
-            <input type="submit" value="ログイン" class="user_button"><br>
+            <input type="submit" value="ログイン" class="user_button"><br><br>
 
-            <a href="home.php" class="user_link">ゲストとしてログイン</a><br>
+            <a href="home.php" class="user_link">ゲストとしてログイン</a><br><br>
 
         </form>
-        <form action="signup.php" method="post">
+        <form action="signup.php" method="post" class="login_form">
 
             <input type="submit" value="新規登録" class="user_button">
 
         </form>
     </main>
+    <script src="./../js/user.js"></script>
 </body>
 
 </html>

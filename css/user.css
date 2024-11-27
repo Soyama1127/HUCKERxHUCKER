@@ -8,86 +8,6 @@ body {
     background-attachment: fixed;
 }
 
-header {
-    display: flex;
-    font-size: 45px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-top: 10px;
-}
-
-main {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.gamesoya_logo {
-    width: 30vw;
-    transform: translateY(2%);
-}
-
-/*ホーム*/
-
-.navbar-collapse {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-brand {
-    width: 15vw;
-}
-
-.navbar-nav {
-    margin-left: auto;
-    display: flex;
-    justify-content: flex-end;
-}
-
-
-.navbar-nav .nav-item a img {
-    width: 60px;
-    height: auto;
-    display: block;
-}
-
-.user_icon_form {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-}
-
-.user_icon {
-    background-color: #00ff11;
-    border-radius: 50%;
-    padding: 10px;
-    font-size: x-large;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/*ホーム終わり*/
-.login_label {
-    color: #00ff11;
-    text-shadow: 0px 0px 10px rgb(156, 252, 111);
-    text-align: center;
-    font-size: 30px;
-}
-
 label {
     color: white;
     font-weight: bold;
@@ -98,11 +18,78 @@ label {
     width: 100%;
 }
 
-form {
-    width: 100%;
+hr {
+    border-color: #00ff11;
+}
+
+/*戻るボタンデザイン*/
+.back-btn {
+    position: absolute;
+    background: none;
+    border: none;
+    left: 10px;
+}
+
+/*戻るボタン大きさ*/
+.back-btn img {
+    height: 50px;
+}
+
+/*戻るボタンの位置*/
+.logoback_header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+/*ロゴ画像*/
+.gamesoya_logo {
+    width: 30vw;
+    margin: 10px;
+}
+
+/*ログイン画面///////////////////////////////////////*/
+
+/*ログインヘッダー///////////////////////////////////*/
+.login_header {
+    text-align: center;
+}
+
+.login_main {
+    margin-top: 20px;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+.login_form {
+    width: 350px;
+    text-align: center;
+}
+
+.login_label {
+    color: #00ff11;
+    text-shadow: 0px 0px 10px rgb(156, 252, 111);
+    text-align: center;
+    font-size: 30px;
+}
+
+.user_text {
+    width: 100%;
+    height: 35px;
+    background-color: #dad9d9;
+    border-color: #dad9d9;
+    margin-bottom: 20px;
+}
+
+.err_msg {
+    color: red;
+}
+
+.user_link {
+    color: white;
 }
 
 .user_button {
@@ -114,140 +101,681 @@ form {
     color: white;
 }
 
-.user_text {
-    width: 100%;
-    height: 35px;
-    background-color: #dad9d9;
-    border-color: #dad9d9;
+/*新規登録//////////////////////////////////////// */
+
+.signup_header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    justify-content: center;
 }
 
-a {
-    color: white;
+.signup_main {
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
-hr {
-    width: 100%;
-    border-color: #00ff11;
+.signup_form {
+    width: 350px;
+    text-align: center;
 }
 
-p {
-    color: white;
-    font-size: x-large;
+/*新規登録完了///////////////////////////////////// */
+
+.signup_complete_form {
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-.back-btn {
-    position: absolute;
-    width: 30vw;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    color: white;
-    font-size: 50px;
-    cursor: pointer;
+
+
+/*ホーム画面////////////////////////////////////// */
+
+/* ホームヘッダー///////////////////////////////// */
+.home_header {
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.logo {
+.right_section {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.home_logo img {
+    width: 20vw;
+    margin-left: 10px;
+}
+
+.home_button img {
+    width: 5vw;
+}
+
+.user_icon_form {
     display: flex;
     align-items: center;
 }
 
 .user_icon {
+    width: 10vw;
+    height: 50px;
     background-color: #00ff11;
     border-color: #00ff11;
     border-radius: 20px;
     color: black;
-    font-size: x-large;
 }
 
-.container {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: white;
+/* ホーム画面のカルーセル/////////////////////////// */
+.carousel {
+    margin: 0 auto;
+    --carousel-width: 90vw;
+    --carousel-height: 25vw;
+    width: var(--carousel-width);
+    height: var(--carousel-height);
+    position: relative;
 }
 
-.game_img {
-    border-radius: 20%;
-    height: 100px;
-    width: 100px;
-    margin-right: 10%;
-    object-fit: cover;
+/* items----------------------------------- */
+.carousel #items-wrapper {
+    margin: 0 auto;
+    width: calc(var(--carousel-width) - 100px);
+    height: var(--carousel-height);
+    position: relative;
+    overflow: hidden;
 }
 
-.game_model {
-    color: white;
+.carousel #items-wrapper img {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    opacity: 0;
+}
+
+.carousel #items-wrapper img.active {
+    opacity: 1;
+}
+
+.carousel #items-wrapper img.fadeRightIn {
+    animation-name: fadeRightIn;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+.carousel #items-wrapper img.fadeLeftOut {
+    animation-name: fadeLeftOut;
+    animation-duration: 1s;
+}
+
+.carousel #items-wrapper img.fadeLeftIn {
+    animation-name: fadeLeftIn;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+.carousel #items-wrapper img.fadeRightOut {
+    animation-name: fadeRightOut;
+    animation-duration: 1s;
+}
+
+@keyframes fadeRightIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeLeftOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes fadeLeftIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeRightOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
 }
 
 
-legend {
-    width: auto;
-    padding: 0 10px;
-    font-size: 1.2em;
-    color: white;
-    margin-bottom: 50px;
+/* select-tabs----------------------------- */
+#select-tabs {
+    width: var(--carousel-width);
+    text-align: center;
+    position: absolute;
+    top: 90%;
+    left: 0;
 }
 
-.carousel-inner img {
-    width: 100px;
-    object-fit: cover;
+#select-tabs button {
+    margin: 0 3px;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
 }
 
-.err_msg {
-    color: red;
+#select-tabs button.active {
+    background-color: #888;
 }
 
-.game_main {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
+@media screen and (max-width: 600px) {
+    #select-tabs button {
+        margin: 0 2px;
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/* change-buttons-------------------------- */
+#change-buttons {
+    width: var(--carousel-width);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 45%;
+    left: 0;
+}
+
+#change-buttons button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    --arrow-size: 10px;
+    --arrow-design: 3px solid black;
+    --arrow-rotate: -45deg;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-top: 20px;
+}
+
+/* 前へボタン */
+#change-buttons button:nth-child(1)::after {
+    content: "";
+    width: var(--arrow-size);
+    height: var(--arrow-size);
+    display: block;
+    border-top: var(--arrow-design);
+    border-left: var(--arrow-design);
+    transform: rotate(var(--arrow-rotate));
+}
+
+/* 次へボタン */
+#change-buttons button:nth-child(2)::after {
+    content: "";
+    width: var(--arrow-size);
+    height: var(--arrow-size);
+    display: block;
+    border-bottom: var(--arrow-design);
+    border-right: var(--arrow-design);
+    transform: rotate(var(--arrow-rotate));
+}
+
+/* ホームゲーム/////////////////////////////////// */
+.home_fieldset {
+    color: white;
+    border-color: #00ff11;
+    border-radius: 10px;
+    margin: 4%;
+}
+
+.game_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.game_card {
+    display: flex;
+    width: 45%;
+    height: 100px;
+    margin: 20px;
+}
+
+.game_icon {
+    width: 100px;
+    border-radius: 15px;
+    margin-right: 30px;
+}
+
+.game_title {
+    display: flex;
+    align-items: center;
+    color: white;
+    width: 60%;
+}
+
+.detail_form {
+    display: flex;
+    align-items: center;
+}
+
+.detail_btn {
+    background-color: rgb(0, 115, 255);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    width: 70px;
+    height: 40px;
+}
+
+/*ホーム画面終わり/////////////////////////////////////*/
+
+/*ゲーム詳細画面css///////////////////////////////////*/
+
+/*ゲーム詳細カルーセル*/
+.game_detail_img {
+    margin: 0 auto;
+    --carousel-width: 50vw;
+    --carousel-height: 40vw;
+    width: var(--carousel-width);
+    height: var(--carousel-height);
+    position: relative;
+}
+
+/* items----------------------------------- */
+.game_detail_img #items-wrapper {
+    margin: 0 auto;
+    width: calc(var(--carousel-width) - 100px);
+    height: var(--carousel-height);
+    position: relative;
+    overflow: hidden;
+}
+
+.game_detail_img #items-wrapper img {
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    opacity: 0;
+}
+
+.game_detail_img #items-wrapper img.active {
+    opacity: 1;
+}
+
+.game_detail_img #items-wrapper img.fadeRightIn {
+    animation-name: fadeRightIn;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+.game_detail_img #items-wrapper img.fadeLeftOut {
+    animation-name: fadeLeftOut;
+    animation-duration: 1s;
+}
+
+.game_detail_img #items-wrapper img.fadeLeftIn {
+    animation-name: fadeLeftIn;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+.game_detail_img #items-wrapper img.fadeRightOut {
+    animation-name: fadeRightOut;
+    animation-duration: 1s;
+}
+
+.game_hr {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+.game_icon_card {
+    display: flex;
+    justify-content: center;
+}
+
+.game_detail {
+    width: 45%;
+    display: flex;
+    color: white;
+}
+
+.favorite_btn_area {
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-left: auto;
+}
+
+.favorite_btn {
+    height: 30px;
 }
 
 .game_info {
-    align-items: center;
+    display: flex;
+    justify-content: center;
     color: white;
-    margin-bottom: 20px;
 }
 
-.game-details {
+.genmode {
+    width: 30%;
+}
+
+.game_genre {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.game_model {
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary_box {
+    display: flex;
+    justify-content: center;
 }
 
 .game_summary {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    border-color: #00ff11;
     color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+    margin-bottom: 20px;
 }
 
-.cartin_button {
-    width: 50%;
+.game_btn_area {
+    display: flex;
+    justify-content: center;
+}
+
+.game_btn {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.cartin_btn {
+    width: 100%;
     height: 35px;
     border: none;
+    margin-bottom: 20px;
 }
 
-.userpr_button {
-    width: 50%;
+.userpr_btn {
+    width: 100%;
     height: 35px;
     background-color: #00ff11;
     color: white;
     border: none;
+}
+
+/*カート画面css*/
+
+.gomi_form {
+    display: flex;
+    align-items: center;
+}
+
+.gomi_icon {
+    background: none;
+    border: none;
+}
+
+.gomi_icon img {
+    width: 50px;
+}
+
+.cart_card {
+    display: flex;
+    width: 40%;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.cart_buy_form {
+    display: flex;
+    justify-content: center;
+}
+
+.cart_buy {
+    display: flex;
+    width: 20%;
+    height: 30px;
+    background-color: yellow;
+    border: none;
+    border-radius: 10px;
+}
+
+/*検索画面/////////////////////////////////////////////////////*/
+
+.search_box {
+    display: flex;
+    justify-content: center;
+}
+
+.search_container {
+    width: 30%;
+}
+
+.search_text_container {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.search_textbox {
+    width: 80%;
+    height: 30px;
+}
+
+.search_btn {
+    width: 20%;
+    height: 35px;
+    color: white;
+    background-color: rgb(0, 98, 255);
+    border: none;
+}
+
+.search_model {
+    width: 100%;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.search_model_area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search_genre {
+    width: 100%;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.search_genre_area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.radio_btn {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+/*検索結果//////////////////////////////////////////////////////*/
+
+.search_result_main {
+    display: flex;
+    justify-content: center;
+}
+
+.search_result_container {
+    width: 80%;
+}
+
+.game_search {
+    color: white;
+    font-size: larger;
+}
+
+.notfound {
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+
+.search_card {
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.search_game_title {
+    width: 70%;
+    color: white;
+    margin-right: 10px;
+}
+
+.search_h3 {
+    margin: 0;
+    margin-top: 5px;
+}
+
+.search_game_detail {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search_detail_form {
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.search_detail_btn {
+    width: 100%;
+    height: 35px;
+    color: white;
+    background-color: rgb(0, 98, 255);
+    border: none;
+    border-radius: 10px;
+}
+
+/*購入画面/////////////////////////////////////////////////////*/
+
+.buy_main {
+    display: flex;
+    justify-content: center;
+}
+
+.buy_field {
+    width: 25%;
+}
+
+.game_price_aria {
+    display: flex;
+}
+
+.game_price {
+    text-align: center;
+    color: white;
+    font: bold;
+}
+
+.buy_address {
+    margin-top: 2px;
+    color: white;
+    margin-bottom: 2px;
+}
+
+.state_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pay {
+    display: flex;
+    justify-content: space-between;
+}
+
+.buy_form {
+    display: flex;
+    justify-content: center;
+}
+
+.buy {
+    display: flex;
+    width: 50%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: yellow;
+    margin-bottom: 30px;
+}
+
+/*アカウント///////////////////////////////////////////*/
+
+.account_main {
+    display: flex;
+    justify-content: center;
+}
+
+.account_container {
+    margin-top: 5%;
+    width: 30%;
 }
 
 .account_btn {
     width: 100%;
     height: 50px;
-    margin-bottom: 10%;
+    margin-bottom: 20px;
     border-radius: 15px;
-    font-size: large;
-    border: none;
+}
+
+.logout_form {
+    display: flex;
+    justify-content: center;
 }
 
 .logout_btn {
+    display: flex;
     width: 70%;
     height: 50px;
     background-color: red;
@@ -257,9 +785,27 @@ legend {
     font-size: large;
 }
 
+/*アカウント更新/////////////////////////////////////////////*/
+
+.account_setting_main {
+    display: flex;
+    justify-content: center;
+}
+
+.account_setting_container {
+    margin-top: 5%;
+    width: 30%;
+}
+
+.accountname_form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
 .account_text {
+    width: 90%;
     padding-top: 10px;
-    border: none;
     outline: none;
     background-color: transparent;
     font-size: xx-large;
@@ -267,18 +813,7 @@ legend {
     text-align: center;
 }
 
-.account_setting_btn {
-    width: 100%;
-    height: 50px;
-    margin-bottom: 10%;
-    border-radius: 15px;
-    font-size: large;
-    border: none;
-    text-align: left;
-    padding-left: 20px;
-}
-
-.account_update {
+.accountname_update_btn {
     width: 30%;
     height: 50px;
     font-size: large;
@@ -288,9 +823,59 @@ legend {
     align-items: center;
 }
 
-.credit_form {
+/*パスワード・ログインID////////////////////////////*/
+.update_main {
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
+}
+
+.update_container {
+    width: 30%;
+}
+
+.update_form {
+    text-align: center;
+}
+
+.update_btn {
+    width: 30%;
+    height: 50px;
+    font-size: large;
+    border: none;
+    background-color: rgb(253, 115, 115);
+    border-radius: 10px;
+}
+
+/*クレジットカード/////////////////////////////////*/
+.credit_main {
+    display: flex;
+    justify-content: center;
+}
+
+.credit_container {
+    width: 25%;
+}
+
+.credit_text {
+    width: 100%;
+    height: 35px;
+    background-color: #dad9d9;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 7px;
+}
+
+.minitext {
+    width: 20%;
+    height: 35px;
+    background-color: #dad9d9;
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 7px;
+}
+
+.card_entry_area {
+    text-align: center;
 }
 
 .card_entry {
@@ -300,135 +885,30 @@ legend {
     border: none;
     background-color: rgb(253, 115, 115);
     border-radius: 10px;
-    align-self: center;
-}
-
-.credit_text {
-    width: 95%;
-    height: 35px;
-    background-color: #dad9d9;
-    border: none;
-    margin-bottom: 20px;
-    border-radius: 7px;
-}
-
-.minitext {
-    width: 40%;
-    height: 35px;
-    background-color: #dad9d9;
-    border: none;
-    margin-bottom: 20px;
-    border-radius: 7px;
-}
-
-.state_container {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    margin-bottom: 10px;
 }
 
-.choose_state {
-    width: 50%;
-    text-align: center;
+/*住所//////////////////////////////////////////*/
+
+.address_main {
+    display: flex;
+    justify-content: center;
 }
 
-.back-btn {
-    text-align: left;
-}
-
-.back-btn img {
-    width: 20%;
-    height: fit-content;
-}
-
-.cart_game {
-    margin: 0 auto;
-}
-
-.to_buy {
+.address_container {
     width: 30%;
-    background-color: yellow;
-    height: 50px;
-    font-size: xx-large;
-    border: none;
-    border-radius: 30px;
 }
 
-.gomi_icon {
-    background: none;
-    border: none;
-    text-align: right;
-}
-
-.gomi_icon img {
-    width: 20%;
-    height: 20%;
-}
-
-.cart_game_summary {
-    align-items: center;
-}
-
-.cart_label {
-    color: white;
+.address_form {
     text-align: center;
 }
 
-.cart_container {
-    margin-bottom: 50px;
-}
-
-.pr_request_btn {
-    position: absolute;
-    width: 10%;
+.address_update_btn {
+    width: 30%;
     height: 50px;
-    right: 5%;
-    border-radius: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    background-color: rgb(38, 38, 38);
+    font-size: large;
     border: none;
-    cursor: pointer;
-}
-
-.pr_request_main {
-    max-width: 600px;
-}
-
-/*購入画面*/
-
-.game_price {
-    color: white;
-}
-
-.address_update {
-    align-items: end;
-}
-
-.address {
-    color: white;
-}
-
-.pay {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.buy {
-    width: 50%;
-    height: 30px;
+    background-color: rgb(253, 115, 115);
     border-radius: 10px;
-    background-color: yellow;
-}
-
-.cart_buy {
-    width: 20%;
-    height: 30px;
-    background-color: yellow;
-    border: none;
-    border-radius: 10px;
+    align-items: center;
 }
