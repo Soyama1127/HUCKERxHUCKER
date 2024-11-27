@@ -49,7 +49,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                         <td><?= $game_name ?></td>
                         <td><?= $user_name ?></td>
                         <td>
-                            <form action="pr_cheack" method="post">
+                            <form action="pr_check" method="post">
                                 <input type=submit name=agree value="詳細">
                             </form>
                         </td>
