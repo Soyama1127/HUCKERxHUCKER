@@ -13,10 +13,10 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 </head>
 
 <body>
-    <header>
+    <header class="login_header">
         <img src="./../img/GAMESoya.PNG" class="gamesoya_logo">
     </header>
-    <main>
+    <main class="buy_complete_main">
         <?php
         if ($_POST['onlyorcart'] === '0') {
             $sql = $pdo->prepare('update game set game_stock = game_stock - 1 where game_id = ?');
@@ -39,8 +39,8 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             $deleteCart->execute([$_SESSION['user_id']]);
         }
         ?>
-        <h1>購入が完了しました</h1>
-        <a href="home.php">ホーム画面に戻る</a>
+        <h1 class="login_label">購入が完了しました</h1>
+        <a href="home.php" class="buy_complete_link">ホーム画面に戻る</a>
     </main>
 </body>
 

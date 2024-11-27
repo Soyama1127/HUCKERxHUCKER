@@ -57,7 +57,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">
                     <div class="game_title">
                         <div>
-                            <h5><?= $row['game_name'] ?></h5>
+                            <h5 class="home_h5"><?= $row['game_name'] ?></h5>
                             <?= $row['game_model'] ?><br>
                             ￥<?= $row['game_price'] ?>
                         </div>
@@ -81,7 +81,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">
                     <div class="game_title">
                         <div>
-                            <h5><?= $row['game_name'] ?></h5>
+                            <h5 class="home_h5"><?= $row['game_name'] ?></h5>
                             <?= $row['game_model'] ?><br>
                             ￥<?= $row['game_price'] ?>
                         </div>
@@ -105,7 +105,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">
                     <div class="game_title">
                         <div>
-                            <h5><?= $row['game_name'] ?></h5>
+                            <h5 class="home_h5"><?= $row['game_name'] ?></h5>
                             <?= $row['game_model'] ?><br>
                             ￥<?= $row['game_price'] ?>
                         </div>
@@ -129,7 +129,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">
                     <div class="game_title">
                         <div>
-                            <h5><?= $row['game_name'] ?></h5>
+                            <h5 class="home_h5"><?= $row['game_name'] ?></h5>
                             <?= $row['game_model'] ?><br>
                             ￥<?= $row['game_price'] ?>
                         </div>
@@ -153,7 +153,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">
                     <div class="game_title">
                         <div>
-                            <h5><?= $row['game_name'] ?></h5>
+                            <h5 class="home_h5"><?= $row['game_name'] ?></h5>
                             <?= $row['game_model'] ?><br>
                             ￥<?= $row['game_price'] ?>
                         </div>
@@ -177,7 +177,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">
                     <div class="game_title">
                         <div>
-                            <h5><?= $row['game_name'] ?></h5>
+                            <h5 class="home_h5"><?= $row['game_name'] ?></h5>
                             <?= $row['game_model'] ?><br>
                             ￥<?= $row['game_price'] ?>
                         </div>
@@ -201,7 +201,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">
                     <div class="game_title">
                         <div>
-                            <h5><?= $row['game_name'] ?></h5>
+                            <h5 class="home_h5"><?= $row['game_name'] ?></h5>
                             <?= $row['game_model'] ?><br>
                             ￥<?= $row['game_price'] ?>
                         </div>

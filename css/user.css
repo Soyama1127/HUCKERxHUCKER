@@ -468,6 +468,11 @@ hr {
     justify-content: center;
 }
 
+.home_h5 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
 .game_detail {
     width: 45%;
     display: flex;
@@ -748,6 +753,16 @@ hr {
     border-radius: 10px;
     background-color: yellow;
     margin-bottom: 30px;
+}
+
+/*購入完了//////////////////////////////////////////////*/
+
+.buy_complete_main {
+    text-align: center;
+}
+
+.buy_complete_link {
+    color: white;
 }
 
 /*アカウント///////////////////////////////////////////*/
