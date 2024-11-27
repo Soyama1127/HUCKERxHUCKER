@@ -20,8 +20,8 @@ session_start();
     <?php
 
     $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-    $sql = $pdo->prepare('select * from userpr where game_id=?');
-    $sql->execute([$_SESSION['game_id']]);
+    $sql = $pdo->prepare('select * from userpr where approval=null');
+    $sql->execute([]);
     foreach ($sql as $row): ?>
         <?= $row['pr_clip'] ?> <br>
         <?= $row['pr_content'] ?> <br>
@@ -33,7 +33,6 @@ session_start();
         <input type=submit name=disagree value="却下">
         </form>
     <?php endforeach ?>
-    ?>
     </main>
 </body>
 
