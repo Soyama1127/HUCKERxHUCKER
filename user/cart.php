@@ -52,7 +52,9 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             <input type="submit" value="レジに進む" class="cart_buy" name="cart_buy" onclick="updateBuyBackNumber(0)">
         </form>
     <?php else : ?>
-        <h1 class="cart_label">カートに商品がありません</h1>
+        <div class="cart_nogame">
+            <h1 class="cart_label">カートに商品がありません</h1>
+        </div>
     <?php endif; ?>
     <script src="./../js/user.js"></script>
 </body>

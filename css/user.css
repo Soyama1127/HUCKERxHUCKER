@@ -587,6 +587,11 @@ hr {
     border-radius: 10px;
 }
 
+.cart_nogame {
+    color: white;
+    text-align: center;
+}
+
 /*検索画面/////////////////////////////////////////////////////*/
 
 .search_box {

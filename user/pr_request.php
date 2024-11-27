@@ -34,6 +34,7 @@ session_start();
             </div>
         </form>
     </main>
+    <script src="./../js/user.js"></script>
 </body>
 
 </html>
