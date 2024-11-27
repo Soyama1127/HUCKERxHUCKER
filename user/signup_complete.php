@@ -24,8 +24,6 @@
         $sql = $pdo->prepare('insert into user(login_id,user_name,user_password) values(?,?,?)');
         $sql->execute([$id, $name, $hashedPassword]);
 
-        $sql = $pdo->prepare("insert into creditcard (user_id, card_number, date_month, date_year, card_name, security_card) VALUES (?, '', '', '', '', '')");
-        $sql->execute([$id]);
         ?>
         <form action="login.php" method="post" class="signup_complete_form">
             <div>

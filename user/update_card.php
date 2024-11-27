@@ -7,7 +7,7 @@ $card_year = $_POST['card_year'];
 $card_text = $_POST['card_name'];
 $security = $_POST['security'];
 $user_id = $_SESSION['user_id'];
-$sql = $pdo->prepare("UPDATE `creditcard` SET `card_number` = ?, `date_month` = ?, `date_year` = ?, `card_name` = ?, `security_card` = ? WHERE `creditcard`.`user_id` = ?;");
+$sql = $pdo->prepare("update user set card_number = ?, date_month = ?, date_year = ?, card_name = ?, security_card = ? where user_id = ?");
 $sql->execute([$card_id, $card_month, $card_year, $card_text, $security, $user_id]);
 header("Location: account_setting.php");
 ?>
