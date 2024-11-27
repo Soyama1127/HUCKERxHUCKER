@@ -951,4 +951,35 @@ hr {
     justify-content: center;
 }
 
-.pr_container {}
+/*PRリクエスト////////////////////////////////*/
+
+.request_h2 {
+    color: white;
+}
+
+.pr_request_main {
+    display: flex;
+    justify-content: center;
+}
+
+.pr_content {
+    width: 100%;
+    margin: 20px;
+}
+
+.pr_movie {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.request_btn_area {
+    text-align: center;
+}
+
+.request_btn {
+    width: 50%;
+    height: 40px;
+    background-color: rgb(41, 41, 255);
+    color: white;
+    border: none;
+}

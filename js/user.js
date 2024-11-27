@@ -376,3 +376,7 @@ function confirmCartOut() {
 function kakunin() {
     return confirm("更新しますか？");
 }
+
+function confirmRequest() {
+    return confirm("申請してよろしいですか？");
+}
