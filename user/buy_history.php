@@ -10,8 +10,6 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/user.css">
-    <link rel="stylesheet" href="./../css/bootstrap.css">
-    <script src="./../js/bootstrap.js"></script>
     <title>購入履歴</title>
 </head>
 
@@ -24,7 +22,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     <h1 class="login_label">購入履歴</h1>
     <div class="cart_box">
         <?php
-        $sql = $pdo->prepare('select * from game inner join bought on game.game_id = bought.game_id where user_id = ? order by buy_date');
+        $sql = $pdo->prepare('select * from game inner join bought on game.game_id = bought.game_id where user_id = ? order by buy_date desc');
         $sql->execute([$_SESSION['user_id']]);
         foreach ($sql as $row): ?>
             <div class="cart_card">
