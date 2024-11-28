@@ -1,10 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-header {
+.login_header {
     background-color: rgb(71, 71, 252);
     font-size: 90px;
     text-align: center;
@@ -12,43 +11,49 @@ header {
     padding: 10px;
 }
 
-main {
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
+.back-btn {
+    position: absolute;
+    background: none;
+    border: none;
+    left: 10px;
+}
+
+.back-btn img {
+    height: 50px;
+}
+
+.logoback_header {
     display: flex;
-    flex-direction: column;
+    text-align: center;
     align-items: center;
-}
-
-label {
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 2px;
-    display: block;
-    text-align: left;
-    width: 100%;
-}
-
-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-h1 {
-    display: inline;
-    padding-left: 20px;
-}
-
-.manager_button {
-    width: 80%;
-    height: 35px;
-    margin-top: 10px;
+    position: relative;
+    justify-content: center;
+    background-color: blue;
     background-color: rgb(71, 71, 252);
-    border-color: rgb(71, 71, 252);
-    color: white;
+    font-size: 90px;
+    padding: 10px;
+}
+
+.err_msg {
+    color: red;
+}
+
+/*ログイン*/
+.login_main {
+    display: flex;
+    justify-content: center;
+}
+
+.login_container {
+    width: 30%;
+}
+
+.login_h1 {
+    text-align: center;
+}
+
+.login_form {
+    text-align: center;
 }
 
 .login_text {
@@ -56,6 +61,28 @@ h1 {
     height: 35px;
     background-color: #dad9d9;
     border-color: #dad9d9;
+    margin-bottom: 20px;
+}
+
+.manager_btn {
+    width: 80%;
+    height: 35px;
+    margin-top: 10px;
+    background-color: rgb(71, 71, 252);
+    border-color: rgb(71, 71, 252);
+    color: white;
+    margin-bottom: 20px;
+}
+
+/*新規登録*/
+
+.signup_main {
+    display: flex;
+    justify-content: center;
+}
+
+.signup_container {
+    width: 30%;
 }
 
 .signup_text {
@@ -63,40 +90,87 @@ h1 {
     height: 35px;
     background-color: #dad9d9;
     border-color: #dad9d9;
+    margin-bottom: 20px;
 }
 
-.err_msg {
-    color: red;
+.manager_btn_area {
+    text-align: center;
+}
+
+/*ホーム*/
+
+.home_header {
+    background-color: rgb(71, 71, 252);;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.logout_container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.home_h1 {
+    margin: 0;
+}
+
+.logout_form {
+    display: flex;
+    width: 40%;
+}
+
+.logout_btn {
+    width: 100%;
+    height: 40px;
+    background-color: #ff8181;
+    border: none;
+    color: black;
+    border-radius: 15px;
+}
+
+.home_main {
+    display: flex;
+    justify-content: center;
+}
+
+.home_container {
+    margin-top: 10%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.home_btn_area {
+    display: flex;
+    width: 33%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.home_form {
+    width: 95%;
 }
 
 .home_button {
-    width: 300px;
-    height: 50px;
-    padding: auto;
-    font-size: 25px;
-}
-
-.logout_button {
-    display: inline;
-    background-color: rgb(255, 120, 120);
-    border-color: rgb(255, 120, 120);
-    border-radius: 15px;
-    font-size: 15px;
-    width: 130px;
-    height: 30px;
-    position: absolute;
-    right: 20px;
-}
-
-.logout {
-    position: relative;
     width: 100%;
-    padding: 10px 0;
+    height: 50px;
+    font-size: larger;
 }
 
-.add_game {
+.gameadd_main {
     display: flex;
-    align-items: flex-start;
+    justify-content: center;
+}
+
+.gameadd_container {
+    width: 30%;
 }
 
 .game_list {
@@ -105,16 +179,21 @@ h1 {
     background-color: #dad9d9;
     border-color: #dad9d9;
     text-align: start;
+    margin-bottom: 20px;
 }
 
 .game_icon {
-    text-align: left;
     margin-bottom: 10px;
 }
 
 .game_summary {
     width: 100%;
     height: 80px;
+    margin-bottom: 20px;
+}
+
+.add_btn_area {
+    text-align: center;
 }
 
 .add_button {
@@ -123,25 +202,43 @@ h1 {
     background-color: rgb(71, 71, 252);
     border-color: rgb(71, 71, 252);
     color: white;
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    margin-top: 20px;
-    align-self: center;
+    border-radius: 15px;
+    margin-bottom: 10px;
 }
 
+.complete_main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.complete_container {
+    width: 70%;
+}
+
+.complete_btn_area {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20%;
+}
+
+.complete_form {
+    width: 100%;
+}
+
+/*ゲーム更新選択画面*/
+
+.game_choose_main {
+    display: flex;
+    justify-content: center;
+}
 
 .tablesorter {
     margin-top: 30px;
     width: 1000px;
 }
 
-.add_btn {
-    background-color: rgb(255, 141, 141);
-    border: none;
-    border-radius: 10px;
-}
+/*ゲーム更新*/
 
 .game_img {
     width: 100px;
@@ -151,6 +248,63 @@ h1 {
     width: 200px;
 }
 
+/*ゲーム補充*/
+
+.add_btn {
+    background-color: rgb(255, 141, 141);
+    border: none;
+    border-radius: 10px;
+}
+
+/*在庫補充*/
+.gamestock_container {
+    width: 30%;
+}
+
+.game_stock_container {
+    display: flex;
+    justify-content: center;
+}
+
 .game_stock_icon {
     width: 200px;
 }
+
+.game_stock_btn {
+    text-align: center;
+}
+
+.userpr_container {
+    width: 1000px;
+}
+
+/*PR承認画面*/
+.pr_clip {
+    width: 400px;
+}
+
+.approval_btn_area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.approval_form {
+    width: 30%;
+}
+
+.disagree_btn {
+    background-color: #ff8181;
+    border: none;
+    width: 100%;
+    height: 30px;
+}
+
+.agree_btn {
+    background-color: #00c3ff;
+    border: none;
+    width: 100%;
+    height: 30px;
+}
+
+/*ユーザー削除*/
+

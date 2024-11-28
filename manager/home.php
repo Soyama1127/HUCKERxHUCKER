@@ -9,57 +9,50 @@
 </head>
 
 <body>
-    <header>
+    <header class="login_header">
         GAMESoya管理者
     </header>
-    <main>
-        <h1>ホーム</h1>
-
-        <form action="login.php" method="post" class="logout" onsubmit="return confirmLogout();">
-
-            <input type="submit" value="ログアウト" class="logout_button">
-
+    <div class="logout_container">
+        <h1 class="home_h1">ホーム</h1>
+        <form action="login.php" method="post" class="logout" onsubmit="return confirmLogout();" class="logout_form">
+            <input type="submit" value="ログアウト" class="logout_btn">
         </form>
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 mt-5">
-
+    </div>
+    <main class="home_main">
+        <div class="home_container">
             <!-- 商品登録ボタン -->
-            <div class="col">
-                <form action="game_add.php" method="post">
+            <div class="home_btn_area">
+                <form action="game_add.php" method="post" class="home_form">
                     <input type="submit" value="商品登録" class="home_button">
                 </form>
             </div>
-
             <!-- 商品更新ボタン -->
-            <div class="col">
-                <form action="game_choose.php" method="post">
+            <div class="home_btn_area">
+                <form action="game_choose.php" method="post" class="home_form">
                     <input type="submit" value="商品更新" class="home_button">
                 </form>
             </div>
-
             <!-- 商品削除ボタン -->
-            <div class="col">
-                <form action="game_delete.php" method="post">
+            <div class="home_btn_area">
+                <form action="game_delete.php" method="post" class="home_form">
                     <input type="submit" value="商品削除" class="home_button">
                 </form>
             </div>
-
             <!-- ユーザー削除ボタン -->
-            <div class="col">
-                <form action="user_delete.php" method="post">
+            <div class="home_btn_area">
+                <form action="user_delete.php" method="post" class="home_form">
                     <input type="submit" value="ユーザー削除" class="home_button">
                 </form>
             </div>
-
             <!-- ユーザーPRボタン -->
-            <div class="col">
-                <form action="pr_approval.php" method="post">
+            <div class="home_btn_area">
+                <form action="pr_approval.php" method="post" class="home_form">
                     <input type="submit" value="ユーザーPR" class="home_button">
                 </form>
             </div>
-
             <!-- 在庫管理ボタン -->
-            <div class="col">
-                <form action="game_stock.php" method="post">
+            <div class="home_btn_area">
+                <form action="game_stock.php" method="post" class="home_form">
                     <input type="submit" value="在庫管理" class="home_button">
                 </form>
             </div>

@@ -129,3 +129,8 @@ document.getElementById('game_model').addEventListener('change', function () {
 function confirmLogout() {
     return confirm('ログアウトしますか?');
 }
+
+//ユーザー削除ポップアップ
+function confirmUserDelete() {
+    return confirm('削除してもよろしいですか？')
+}

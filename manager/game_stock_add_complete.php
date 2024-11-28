@@ -9,29 +9,33 @@
 </head>
 
 <body>
-    <header>
+    <header class="login_header">
         GAMESoya管理者
     </header>
-    <main>
-        <h1>在庫を補充しました</h1>
-        <?php
-        $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-        $game_id = $_POST['game_id'];
-        $add = $_POST['add'];
-        $sql = $pdo->prepare('select game_stock from game where game_id = ?');
-        $sql->execute([$game_id]);
-        foreach($sql as $row) {
-            $stock = $row['game_stock'] + $add;
-        }
-        $sql = $pdo->prepare('update  game  set  game_stock = ? where game_id = ?');
-        $sql->execute([$stock, $game_id]);
-        ?>
-        <form action="game_stock.php" method="post">
-            <input name="1" type="submit" value="続けて補充" style="width:300px;height:50px">
-        </form>
-        <form action="home.php" method="post">
-            <input name="2" type="submit" value="ホームに戻る" style="width:300px;height:50px">
-        </form>
+    <main class="complete_main">
+        <div class="complete_container">
+            <h1>在庫を補充しました</h1>
+            <?php
+            $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
+            $game_id = $_POST['game_id'];
+            $add = $_POST['add'];
+            $sql = $pdo->prepare('select game_stock from game where game_id = ?');
+            $sql->execute([$game_id]);
+            foreach ($sql as $row) {
+                $stock = $row['game_stock'] + $add;
+            }
+            $sql = $pdo->prepare('update  game  set  game_stock = ? where game_id = ?');
+            $sql->execute([$stock, $game_id]);
+            ?>
+            <div class="complete_btn_area">
+                <form action="game_stock.php" method="post" class="complete_form">
+                    <input name="1" type="submit" value="続けて補充" class="manager_btn">
+                </form>
+                <form action="home.php" method="post" class="complete_form">
+                    <input name="2" type="submit" value="ホームに戻る" class="manager_btn">
+                </form>
+            </div>
+        </div>
     </main>
 
 </body>

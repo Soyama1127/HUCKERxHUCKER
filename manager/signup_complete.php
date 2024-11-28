@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="login_header">
         GAMESoya管理者
     </header>
     <main>
