@@ -90,7 +90,6 @@ if (isset($_POST['game_id'])) {
                         <input type="submit" name='only_buy' value="購入" class='cartin_btn' onclick="updateBuyBackNumber(1)"><br>
                     </form>
                     <form action="pr.php" method="post">
-                        <input type="hidden" name="game_id" value="<?= $row['game_id'] ?>">
                         <input type="submit" value="ユーザーPR" class='userpr_btn'>
                     </form>
                 </div>

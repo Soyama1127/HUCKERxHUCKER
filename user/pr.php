@@ -24,9 +24,8 @@ session_start();
             <h1 class="login_label">ユーザーPR</h1>
             <?php
             $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-            $_POST['game_id'];
-            $sql = $pdo->prepare('select * from userpr inner join user on user.user_id = userpr.user_id where userpr.pr_approval=1');
-            $sql->execute();
+            $sql = $pdo->prepare('select * from userpr inner join user on user.user_id = userpr.user_id where userpr.game_id = ? and userpr.pr_approval=1');
+            $sql->execute([$_SESSION['game_id']]);
             $row_count = $sql->rowCount();
             if(!$row_count){
                 echo '<h1>このゲームのユーザーPRはありません。<h1>';
