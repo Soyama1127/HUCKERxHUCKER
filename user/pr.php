@@ -27,13 +27,17 @@ session_start();
             $sql = $pdo->prepare('select * from userpr inner join user on user.user_id = userpr.user_id where userpr.game_id = ? and userpr.pr_approval=1');
             $sql->execute([$_SESSION['game_id']]);
             $row_count = $sql->rowCount();
-            if(!$row_count){
+            if (!$row_count) {
                 echo '<h1>このゲームのユーザーPRはありません。<h1>';
             }
             foreach ($sql as $row): ?>
-                <?= $row['pr_crip'] ?> <br>
-                <?= $row['user_name'] ?><br>
-                <?= $row['pr_content'] ?><br>
+                <div class="pr_area">
+                    <img src="./../manager/pr_movie/<?=$row['pr_clip']?>" class="pr_clip">
+                    <div class="pr_detail">
+                        投稿者：<?= $row['user_name'] ?><br>
+                        PRポイント：<br><?= $row['pr_content'] ?>
+                    </div>
+                </div>
             <?php endforeach ?>
         </div>
     </main>

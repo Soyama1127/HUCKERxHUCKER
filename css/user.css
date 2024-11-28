@@ -956,6 +956,23 @@ hr {
     justify-content: center;
 }
 
+.pr_container {
+    width: 70%;
+}
+
+.pr_area {
+    display: flex;
+    width: 100%;
+}
+
+.pr_clip {
+    width: 300px;
+    margin-right: 10px;
+}
+
+.pr_detail {
+    color: white;
+}
 /*PRリクエスト////////////////////////////////*/
 
 .request_h2 {
