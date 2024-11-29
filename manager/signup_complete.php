@@ -12,23 +12,25 @@
     <header class="login_header">
         GAMESoya管理者
     </header>
-    <main>
-        <?php
+    <main class="login_main">
+        <div class="signup_container">
+            <?php
 
-        $id = $_POST['manager_id'];
-        $password = $_POST['manager_password'];
-        $name = $_POST['manager_name'];
+            // $id = $_POST['manager_id'];
+            // $password = $_POST['manager_password'];
+            // $name = $_POST['manager_name'];
 
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+            // $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-        $sql = $pdo->prepare('insert into manager(manager_id,manager_password,manager_name) values(?,?,?)');
-        $sql->execute([$id, $hashedPassword, $name]);
-        ?>
-        <form action="login.php" method="post">
+            // $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
+            // $sql = $pdo->prepare('insert into manager(manager_id,manager_password,manager_name) values(?,?,?)');
+            // $sql->execute([$id, $hashedPassword, $name]);
+            ?>
             <h1>登録完了しました</h1>
-            <input type=submit value=完了 class="manager_button">
-        </form>
+            <form action="login.php" method="post">
+                <input type=submit value=完了 class="manager_btn">
+            </form>
+        </div>
     </main>
 </body>
 
