@@ -15,16 +15,15 @@
     <main class="login_main">
         <div class="signup_container">
             <?php
+            $id = $_POST['manager_id'];
+            $password = $_POST['manager_password'];
+            $name = $_POST['manager_name'];
 
-            // $id = $_POST['manager_id'];
-            // $password = $_POST['manager_password'];
-            // $name = $_POST['manager_name'];
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-            // $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-            // $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-            // $sql = $pdo->prepare('insert into manager(manager_id,manager_password,manager_name) values(?,?,?)');
-            // $sql->execute([$id, $hashedPassword, $name]);
+            $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
+            $sql = $pdo->prepare('insert into manager(manager_id,manager_password,manager_name) values(?,?,?)');
+            $sql->execute([$id, $hashedPassword, $name]);
             ?>
             <h1>登録完了しました</h1>
             <form action="login.php" method="post">
