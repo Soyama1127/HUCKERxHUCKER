@@ -56,9 +56,11 @@ if (isset($_POST['game_id'])) {
                         <h3><?= $row['game_name'] ?></h3>
                         <h3>￥<?= $row['game_price'] ?></h3>
                     </div>
+                    <?php if(isset($_SESSION['user_name'])): ?>
                     <div class="favorite_btn_area">
                         <button class="favorite_btn">お気に入り</button>
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
             <hr class="game_hr">
