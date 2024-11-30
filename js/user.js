@@ -380,3 +380,31 @@ function kakunin() {
 function confirmRequest() {
     return confirm("申請してよろしいですか？");
 }
+
+function PassUpdate() {
+    const password = document.getElementById("user_password").value;
+    const repassword = document.getElementById("user_repassword").value;
+
+    const PasserrorMessage = document.getElementById("error-message-pass");
+    const RePasserrorMessage = document.getElementById("error-message-repass");
+
+    PasserrorMessage = '';
+    RePasserrorMessage = '';
+
+    let error_count = 0;
+
+    const check_pass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/; //少なくとも1つの小文字、少なくとも1つの大文字、少なくとも1つの数字、8文字以上
+    if (!check_pass.test(password)) {
+        PasserrorMessage.innerHTML = "小文字、大文字のアルファベットと数字を含む8文字以上で入力してください";
+        error_count++;
+    }
+
+    if(password !== repassword) {
+        RePasserrorMessage.innerHTML = "パスワードが一致しません";
+        error_count++;
+    }
+
+    if (error_count > 0) {
+        return false;
+    }
+}
