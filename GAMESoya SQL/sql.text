@@ -17,7 +17,46 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     ゲーム一覧
     select * from game
 
+    特定の管理者を表示
+    select * from manager where manager_id = ?
+
+    特定のゲームを表示
+    select * from game where game_id = ?
+
+    ユーザーPRを承認
+    update userpr set pr_approval=1 where pr_id=?
+
+    確認されていないユーザーPRを表示
+    select * from userpr where pr_approval is null
+
+    ユーザーPRの情報を表示
+    select user.user_name as user_name from user inner join userpr on user.user_id = userpr.user_id where user.user_id = ?'
+
+    特定のユーザーPRを表示
+    select * from userpr where pr_id = ?
+
+
+
 ユーザーSQL
 
-    ゲーム表示
+    ユーザー情報更新
+    UPDATE `user` SET `last_name` = ?, `first_name` = ?, `last_namekana` = ?, `first_namekana` = ?, `post_code` = ?, `state` = ?, `city` = ?, `house_number` = ?, `house` = ? WHERE `user`.`user_id` = ?
+
+    特定のユーザーを表示
+    select * from user where user_id = ?
+
+    ゲーム購入後の在庫処理
+    update game set game_stock = game_stock - 1 where game_id = ?
+
+    購入履歴の追加
+    insert into bought (game_id, user_id) values (?, ?)
+
+    購入履歴の表示
+    select * from game inner join bought on game.game_id = bought.game_id where user_id = ? order by buy_date desc
+
+    カートに入ってるゲームを表示
+    select game.game_id, game.game_icon, game.game_name, game.game_model, game.game_price, cart.cart_game_no from game inner join cart on game.game_id = cart.game_id where cart.cart_id = ?
+    
+    
+
     
