@@ -37,19 +37,20 @@ foreach ($sql as $row) {
                 <label>新しいパスワード(確認)</label><br>
                 <input type="password" id="user_repassword" name="user_repassword" class="user_text" required><br>
                 <div id="error-message-repass" class="err_msg"></div>
-                <div id="error-message"></div>
                 <input type="submit" name="passupdate" value="変更" class="update_btn"><br>
             </form>
             <hr>
-            <form action="update_id.php" method="post" class="update_form">
+            <form action="update_id.php" method="post" class="update_form" id="update" onsubmit="return IdUpdate();">
                 <h1 class="login_label">ログインIDの変更</h1><br>
                 <label>現在のログインID</label><br>
                 <input type="text" class="user_text" id="currentid" required><br>
+                <div id="error-message-currentid" class="err_msg"></div>
                 <label>新しいログインID</label><br>
                 <input type="text" id="user_id" name="login_id" class="user_text" required><br>
+                <div id="error-message-userid" class="err_msg"></div>
                 <label>新しいログインID(確認)</label><br>
                 <input type="text" id="reuser_id" name="login_id" class="user_text" required><br>
-                <div id="error-message"></div>
+                <div id="error-message-reuserid" class="err_msg"></div>
                 <input type="submit" name="passupdate" value="変更" class="update_btn">
             </form>
         </div>

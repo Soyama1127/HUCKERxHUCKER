@@ -19,7 +19,7 @@ function logintest() {
             }
         }
     };
-    xhr.send("user_id=" + encodeURIComponent(id) + "&user_pass=" + encodeURIComponent(pass));
+    xhr.send("login_id=" + encodeURIComponent(id) + "&user_pass=" + encodeURIComponent(pass));
 
     return false;
 }
@@ -67,7 +67,7 @@ function signuptest() {
             }
         }
     };
-    xhr.send("user_id=" + encodeURIComponent(id));
+    xhr.send("login_id=" + encodeURIComponent(id));
 
     return false;
 }
@@ -388,8 +388,8 @@ function PassUpdate() {
     const PasserrorMessage = document.getElementById("error-message-pass");
     const RePasserrorMessage = document.getElementById("error-message-repass");
 
-    PasserrorMessage = '';
-    RePasserrorMessage = '';
+    PasserrorMessage.innerHTML = '';
+    RePasserrorMessage.innerHTML = '';
 
     let error_count = 0;
 
@@ -407,4 +407,50 @@ function PassUpdate() {
     if (error_count > 0) {
         return false;
     }
+
+    return true;
+}
+
+function IdUpdate() {
+    const userId = document.getElementById("user_id").value;
+    const reUserId = document.getElementById("reuser_id").value;
+
+    const UserIdErrorMessage = document.getElementById("error-message-userid");
+    const ReUserIdErrorMessage = document.getElementById("error-message-reuserid");
+
+    UserIdErrorMessage.innerHTML = "";
+    ReUserIdErrorMessage.innerHTML = "";
+
+    let error_count = 0;
+
+    const check_id = /^\d{7,}$/; //7桁以上10桁以内の数値
+    if (!check_id.test(userId)) {
+        UserIdErrorMessage.innerHTML = "7桁以上の数字を入力してください";
+        error_count++;
+    }
+
+    if (userId !== reUserId) {
+        ReUserIdErrorMessage.innerHTML = "新しいログインIDが一致しません";
+        error_count++;
+    }
+
+    if(error_count > 0) {
+        return false;
+    }
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "check_id.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            if (xhr.responseText === "exists") {
+                UserIdErrorMessage.innerHTML = "このIDは使用されています";
+            } else {
+                document.getElementById("update").submit();
+            }
+        }
+    };
+    xhr.send("login_id=" + encodeURIComponent(userId));
+
+    return false;
 }
