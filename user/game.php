@@ -1,9 +1,16 @@
 <?php
 session_start();
 $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
+
 if (isset($_POST['game_id'])) {
     $_SESSION['game_id'] = $_POST['game_id'];
 }
+
+$sql = $pdo->prepare('select * from favorite where user_id = ? and game_id = ?');
+$sql->execute([$_SESSION['user_id'], $_SESSION['game_id']]);
+$favorite_num = $sql->rowCount();
+$favorite = $sql->rowCount() > 0;
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -58,7 +65,9 @@ if (isset($_POST['game_id'])) {
                     </div>
                     <?php if(isset($_SESSION['user_name'])): ?>
                     <div class="favorite_btn_area">
-                        <button class="favorite_btn">お気に入り</button>
+                        <button class="favorite_btn <?php echo $favorite ? 'favorite' : 'not_favorite'; ?>" onclick="Favorite(<?=$favorite_num?>);">
+                            <?php echo $favorite ? 'お気に入り済み' : 'お気に入り'; ?>
+                        </button>
                     </div>
                     <?php endif; ?>
                 </div>

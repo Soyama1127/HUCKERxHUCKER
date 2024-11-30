@@ -95,13 +95,13 @@ let intervalId = setInterval(changeToNextItem, intervalTime); //itemの自動切
 //■以降の処理で使いまわす関数
 
 //select-tab,change-buttonが押された時に、自動切り替えのタイマーをリセットする
-function resetInterval(){
+function resetInterval() {
     clearInterval(intervalId);
     intervalId = setInterval(changeToNextItem, intervalTime);
 }
 
 //itemの切り替えに伴うtabの切り替え処理
-function changeActiveTab(fromActiveNum, toActiveNum){
+function changeActiveTab(fromActiveNum, toActiveNum) {
     let fromTab = tabElements.children[fromActiveNum];
     fromTab.classList.remove('active');
 
@@ -112,14 +112,14 @@ function changeActiveTab(fromActiveNum, toActiveNum){
 
 
 // select-tabsでのitemの切り替え処理 ---------------------------
-function changeToSelectItem(i){
+function changeToSelectItem(i) {
     resetInterval();
-    
+
     let fromActiveNum = activeNum;
     let toActiveNum = i;
 
     //アクティブなitemが選択されたら何もせず処理を終了する
-    if(fromActiveNum == toActiveNum){return;}
+    if (fromActiveNum == toActiveNum) { return; }
 
     let fromItem = itemElements.children[fromActiveNum];
     fromItem.classList.remove('active');
@@ -128,11 +128,11 @@ function changeToSelectItem(i){
     let toItem = itemElements.children[toActiveNum];
     toItem.classList.remove('fadeLeftOut');
     toItem.classList.remove('fadeRightOut');
-    if(activeNum < toActiveNum){
+    if (activeNum < toActiveNum) {
         //次のスライドへ移動する時
         fromItem.classList.add('fadeLeftOut')
         toItem.classList.add('fadeRightIn');
-    }else{
+    } else {
         //前のスライドへ移動する時
         fromItem.classList.add('fadeRightOut')
         toItem.classList.add('fadeLeftIn');
@@ -145,9 +145,9 @@ function changeToSelectItem(i){
 
 
 // change-buttonでのitemの切り替え処理 ---------------------
-function changeToPrevItem(){
+function changeToPrevItem() {
     resetInterval();
-    
+
     let fromActiveNum = activeNum;
 
     let fromItem = itemElements.children[activeNum];
@@ -155,9 +155,9 @@ function changeToPrevItem(){
     fromItem.classList.remove('fadeRightIn');
     fromItem.classList.remove('fadeLeftIn');
 
-    if(activeNum == 0){
+    if (activeNum == 0) {
         activeNum = itemNum;
-    }else{
+    } else {
         --activeNum;
     }
 
@@ -173,9 +173,9 @@ function changeToPrevItem(){
 
     changeActiveTab(fromActiveNum, toActiveNum)
 }
-function changeToNextItem(){
+function changeToNextItem() {
     resetInterval();
-    
+
     let fromActiveNum = activeNum;
 
     let fromItem = itemElements.children[activeNum];
@@ -183,12 +183,12 @@ function changeToNextItem(){
     fromItem.classList.remove('fadeRightIn');
     fromItem.classList.remove('fadeLeftIn');
 
-    if(activeNum == itemNum){
+    if (activeNum == itemNum) {
         activeNum = 0;
-    }else{
+    } else {
         ++activeNum;
     }
-    
+
     let toActiveNum = activeNum;
 
     let toItem = itemElements.children[activeNum];
@@ -261,22 +261,22 @@ function gameBack() {
 
 function buyBack() {
     const buyBackNumber = getBuyBackNumber();
-    if(parseInt(buyBackNumber) === 0) {
+    if (parseInt(buyBackNumber) === 0) {
         window.location.href = 'cart.php';
-    }else if(parseInt(buyBackNumber) === 1) {
+    } else if (parseInt(buyBackNumber) === 1) {
         window.location.href = 'game.php';
-    }else {
+    } else {
         confirm('不正な値です');
     }
 }
 
 function addressBack() {
     const addressBackNumber = getAddressBackNumber();
-    if(parseInt(addressBackNumber) === 0) {
+    if (parseInt(addressBackNumber) === 0) {
         window.location.href = 'buy.php';
-    }else if(parseInt(addressBackNumber) === 1) {
+    } else if (parseInt(addressBackNumber) === 1) {
         window.location.href = 'account_setting.php';
-    }else{
+    } else {
         confirm('不正な値です');
     }
 }
@@ -399,7 +399,7 @@ function PassUpdate() {
         error_count++;
     }
 
-    if(password !== repassword) {
+    if (password !== repassword) {
         RePasserrorMessage.innerHTML = "パスワードが一致しません";
         error_count++;
     }
@@ -434,7 +434,7 @@ function IdUpdate() {
         error_count++;
     }
 
-    if(error_count > 0) {
+    if (error_count > 0) {
         return false;
     }
 
@@ -453,4 +453,19 @@ function IdUpdate() {
     xhr.send("login_id=" + encodeURIComponent(userId));
 
     return false;
+}
+
+function Favorite($num) {
+    if ($num === 0) {
+        const result = confirm("お気に入りに追加しますか？");
+        if (result) {
+            window.location.href = 'add_favorite.php';
+        }
+    } else {
+        const result = confirm("お気に入りから外しますか？");
+        if (result) {
+            window.location.href = 'delete_favorite.php';
+        }
+    }
+
 }
