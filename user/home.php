@@ -50,8 +50,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         <legend>RPG</legend>
         <div class="game_box">
             <?php
-            $sql = $pdo->prepare('select * from game where game_genre = "RPG" limit 4');
-            $sql->execute();
+            $sql = $pdo->query('select * from game where game_genre = "RPG" and game_stock > 0 limit 4 ');
             foreach ($sql as $row): ?>
                 <div class="game_card">
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">
@@ -74,8 +73,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         <legend>アクション</legend>
         <div class="game_box">
             <?php
-            $sql = $pdo->prepare('select * from game where game_genre = "アクション" limit 4');
-            $sql->execute();
+            $sql = $pdo->query('select * from game where game_genre = "アクション" and game_stock > 0 limit 4');
             foreach ($sql as $row): ?>
                 <div class="game_card">
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">
@@ -98,8 +96,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         <legend>アドベンチャー</legend>
         <div class="game_box">
             <?php
-            $sql = $pdo->prepare('select * from game where game_genre = "アドベンチャー" limit 4');
-            $sql->execute();
+            $sql = $pdo->query('select * from game where game_genre = "アドベンチャー" and game_stock > 0 limit 4');
             foreach ($sql as $row): ?>
                 <div class="game_card">
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">
@@ -122,8 +119,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         <legend>シュミレーション</legend>
         <div class="game_box">
             <?php
-            $sql = $pdo->prepare('select * from game where game_genre = "シュミレーション" limit 4');
-            $sql->execute();
+            $sql = $pdo->query('select * from game where game_genre = "シュミレーション" and game_stock > 0 limit 4');
             foreach ($sql as $row): ?>
                 <div class="game_card">
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">
@@ -146,8 +142,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         <legend>格闘</legend>
         <div class="game_box">
             <?php
-            $sql = $pdo->prepare('select * from game where game_genre = "格闘" limit 4');
-            $sql->execute();
+            $sql = $pdo->query('select * from game where game_genre = "格闘" and game_stock > 0 limit 4');
             foreach ($sql as $row): ?>
                 <div class="game_card">
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">
@@ -170,8 +165,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         <legend>音楽(リズム)</legend>
         <div class="game_box">
             <?php
-            $sql = $pdo->prepare('select * from game where game_genre = "音楽" limit 4');
-            $sql->execute();
+            $sql = $pdo->query('select * from game where game_genre = "音楽" and game_stock > 0 limit 4');
             foreach ($sql as $row): ?>
                 <div class="game_card">
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">
@@ -194,8 +188,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         <legend>その他</legend>
         <div class="game_box">
             <?php
-            $sql = $pdo->prepare('select * from game where game_genre = "その他" limit 4');
-            $sql->execute();
+            $sql = $pdo->query('select * from game where game_genre = "その他" and game_stock > 0 limit 4');
             foreach ($sql as $row): ?>
                 <div class="game_card">
                     <img src="./../manager/game/<?= $row['game_icon'] ?>" class="game_icon">

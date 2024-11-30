@@ -40,11 +40,11 @@ if (isset($_POST['game_genre'])) {
                     if (isset($_SESSION['game_genre'])) {
                         $game_genre = $_SESSION['game_genre'];
                         $search .= ' and game_genre = ?';
-                        $sql = $pdo->prepare($search);
+                        $sql = $pdo->prepare($search.' and game_stock > 0');
                         $sql->execute(['%' . $game_name . '%', $game_model, $game_genre]);
                     } else {
                         $game_genre = 'なし';
-                        $sql = $pdo->prepare($search);
+                        $sql = $pdo->prepare($search.' and game_stock > 0');
                         $sql->execute(['%' . $game_name . '%', $game_model]);
                     }
                 } else {
@@ -52,11 +52,11 @@ if (isset($_POST['game_genre'])) {
                     if (isset($_SESSION['game_genre'])) {
                         $game_genre = $_SESSION['game_genre'];
                         $search .= ' and game_genre = ?';
-                        $sql = $pdo->prepare($search);
+                        $sql = $pdo->prepare($search.' and game_stock > 0');
                         $sql->execute(['%' . $game_name . '%', $game_genre]);
                     } else {
                         $game_genre = 'なし';
-                        $sql = $pdo->prepare($search);
+                        $sql = $pdo->prepare($search.' and game_stock > 0');
                         $sql->execute(['%' . $game_name . '%']);
                     }
                 }
@@ -68,11 +68,11 @@ if (isset($_POST['game_genre'])) {
                     if (isset($_SESSION['game_genre'])) {
                         $game_genre = $_SESSION['game_genre'];
                         $search .= ' and game_genre = ?';
-                        $sql = $pdo->prepare($search);
+                        $sql = $pdo->prepare($search.' and game_stock > 0');
                         $sql->execute([$game_model, $game_genre]);
                     } else {
                         $game_genre = 'なし';
-                        $sql = $pdo->prepare($search);
+                        $sql = $pdo->prepare($search.' and game_stock > 0');
                         $sql->execute([$game_model]);
                     }
                 } else {
@@ -80,11 +80,11 @@ if (isset($_POST['game_genre'])) {
                     if (isset($_SESSION['game_genre'])) {
                         $game_genre = $_SESSION['game_genre'];
                         $search .= ' where game_genre = ?';
-                        $sql = $pdo->prepare($search);
+                        $sql = $pdo->prepare($search.' and game_stock > 0');
                         $sql->execute([$game_genre]);
                     } else {
                         $game_genre = 'なし';
-                        $sql = $pdo->prepare($search);
+                        $sql = $pdo->prepare($search.' where game_stock > 0');
                         $sql->execute();
                     }
                 }
