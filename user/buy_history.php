@@ -14,7 +14,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 </head>
 
 <body>
-    <header class="signup_header">
+    <header class="logoback_header">
         <button class='back-btn' onclick="location.href='account.php'"><img src='./../img/backbutton.png'></button>
         <img src="./../img/GAMESoya.PNG" class="gamesoya_logo">
     </header>

@@ -464,6 +464,7 @@ hr {
 }
 
 .game_icon_card {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -474,20 +475,43 @@ hr {
 }
 
 .game_detail {
-    width: 45%;
+    width: 50%;
     display: flex;
     color: white;
+    justify-content: space-between;
+}
+
+.icondetail {
+    display: flex;
+}
+
+.game_detail_icon {
+    display: flex;
+    align-items: center;
 }
 
 .favorite_btn_area {
     display: flex;
     align-items: center;
-    float: right;
-    margin-left: auto;
+    justify-content: end;
 }
 
 .favorite_btn {
-    height: 30px;
+    font-size: 50px;
+}
+
+.not_favorite {
+    text-align: right;
+    color: rgb(103, 103, 103);
+    background: none;
+    border: none;
+}
+
+.favorite {
+    text-align: right;
+    color: rgb(225, 255, 0);
+    background: none;
+    border: none;
 }
 
 .game_info {
@@ -1004,4 +1028,23 @@ hr {
     background-color: rgb(41, 41, 255);
     color: white;
     border: none;
+}
+
+/*お気に入り//////////////////////////////////////////////*/
+
+.favorite_main {
+    margin: 20px;
+}
+
+.favorite_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.favorite_card {
+    width: 45%;
+    display: flex;
+    margin: 5px;
 }

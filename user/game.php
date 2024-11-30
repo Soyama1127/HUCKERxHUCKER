@@ -56,19 +56,21 @@ $favorite = $sql->rowCount() > 0;
             </div>
             <div class="game_icon_card">
                 <div class="game_detail">
-                    <div class="game_detail_icon">
-                        <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲームアイコン' class='game_icon'>
+                    <div class="icondetail">
+                        <div class="game_detail_icon">
+                            <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲームアイコン' class='game_icon'>
+                        </div>
+                        <div class="game_name">
+                            <h3><?= $row['game_name'] ?></h3>
+                            <h3>￥<?= $row['game_price'] ?></h3>
+                        </div>
                     </div>
-                    <div>
-                        <h3><?= $row['game_name'] ?></h3>
-                        <h3>￥<?= $row['game_price'] ?></h3>
-                    </div>
-                    <?php if(isset($_SESSION['user_name'])): ?>
-                    <div class="favorite_btn_area">
-                        <button class="favorite_btn <?php echo $favorite ? 'favorite' : 'not_favorite'; ?>" onclick="Favorite(<?=$favorite_num?>);">
-                            <?php echo $favorite ? 'お気に入り済み' : 'お気に入り'; ?>
-                        </button>
-                    </div>
+                    <?php if (isset($_SESSION['user_name'])): ?>
+                        <div class="favorite_btn_area">
+                            <button class="favorite_btn <?php echo $favorite ? 'favorite' : 'not_favorite'; ?>" onclick="Favorite(<?= $favorite_num ?>);">
+                                <?php echo $favorite ? '★' : '★'; ?>
+                            </button>
+                        </div>
                     <?php endif; ?>
                 </div>
             </div>
