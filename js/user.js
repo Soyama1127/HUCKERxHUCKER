@@ -298,6 +298,7 @@ function validateForm() {
     const state = document.getElementById("state").value;
     const city = document.getElementById("city").value;
     const houseNumber = document.getElementById("house_number").value;
+    const pay = document.getElementById("pay").value;
     const lNameerrorMessage = document.getElementById("error-message-lname");
     const fNameerrorMessage = document.getElementById("error-message-fname");
     const lKanaerrorMessage = document.getElementById("error-message-lkana");
@@ -306,6 +307,7 @@ function validateForm() {
     const stateerrorMessage = document.getElementById("error-message-state");
     const cityerrorMessage = document.getElementById("error-message-city");
     const houseNumerrorMessage = document.getElementById("error-message-houseNum");
+    const payErrorMessage = document.getElementById("error-message-pay");
 
     lNameerrorMessage.innerHTML = "";
     fNameerrorMessage.innerHTML = "";
@@ -315,6 +317,7 @@ function validateForm() {
     stateerrorMessage.innerHTML = "";
     cityerrorMessage.innerHTML = "";
     houseNumerrorMessage.innerHTML = "";
+    payErrorMessage.innerHTML = "";
 
     let error_count = 0; //エラー数の初期化
 
@@ -360,6 +363,11 @@ function validateForm() {
 
     if (houseNumber == "") {
         houseNumerrorMessage.innerHTML = "番地は必須項目です";
+        error_count++;
+    }
+
+    if (pay == "選択してください") {
+        payErrorMessage.innerHTML = "お支払方法を選択してください。";
         error_count++;
     }
 
