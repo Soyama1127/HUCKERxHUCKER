@@ -56,7 +56,47 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
 
     カートに入ってるゲームを表示
     select game.game_id, game.game_icon, game.game_name, game.game_model, game.game_price, cart.cart_game_no from game inner join cart on game.game_id = cart.game_id where cart.cart_id = ?
+
+    特定のユーザーid,名前,パスワードを表示
+    select user_id, user_name, user_password from user where login_id = ?
+
+    連番降り直し
+    update cart set cart_game_no = cart_game_no + 1000 where cart_no = ?
+
+    お気に入りの削除
+    delete from favorite where user_id = ? and game_id = ?
+
+    ユーザーPR登録
+    insert into userpr (user_id, game_id, pr_content, pr_clip) values (?,?,?,?)'
+
+    gameとfavoriteの内部結合
+    select * from favorite inner join game on favorite.game_id = game.game_id where user_id = ?
+
+    在庫がある時表示
+    select * from game where game_genre = "アドベンチャー" and game_stock > 0 limit 4
+
+    ユーザーPRで認証されたものを表示
+    select * from userpr inner join user on user.user_id = userpr.user_id where userpr.game_id = ? and userpr.pr_approval=1
+
+    検索絞り込み
+    select * from game　where game_name like ?　　and game_model = ?　and game_genre = ?　　and game_genre = ?　and game_genre = ?　where game_genre = ?
+
+    ユーザー作成
+    insert into user(login_id,user_name,user_password) values(?,?,?)
+
+    カード情報の更新
+    update user set card_number = ?, date_month = ?, date_year = ?, card_name = ?, security_card = ? where user_id = ?
+
+    ユーザーの名前を変更
+    UPDATE `user` SET `user_name` = ? WHERE `user`.`user_id` = ?;
+
+    パスワードを変更
+    UPDATE `user` SET `user_password` = ? WHERE `user`.`user_id` = ?
     
+
+
+    
+
     
 
     
