@@ -288,6 +288,10 @@ body {
     width: 400px;
 }
 
+.prcheck_video {
+    width: 400px;
+}
+
 .approval_btn_area {
     display: flex;
     justify-content: space-between;
