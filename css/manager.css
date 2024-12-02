@@ -97,6 +97,11 @@ body {
     text-align: center;
 }
 
+.signup_form {
+    display: flex;
+    justify-content: center;
+}
+
 /*ホーム*/
 
 .home_header {
