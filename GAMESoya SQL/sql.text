@@ -79,7 +79,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     select * from userpr inner join user on user.user_id = userpr.user_id where userpr.game_id = ? and userpr.pr_approval=1
 
     検索絞り込み
-    select * from game　where game_name like ?　　and game_model = ?　and game_genre = ?　　and game_genre = ?　and game_genre = ?　where game_genre = ?
+    select * from game　where game_name like ?　and game_model = ?　and game_genre = ?
 
     ユーザー作成
     insert into user(login_id,user_name,user_password) values(?,?,?)
