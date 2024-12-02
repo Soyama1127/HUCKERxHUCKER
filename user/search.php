@@ -24,12 +24,12 @@ $_SESSION['game_genre'] = null;
         <div class="search_container">
             <form action="search_result.php" method="post">
                 <div class="search_text_container">
-                    <input type="text" name="game_name" placeholder="検索" class="search_textbox">
+                    <input type="text" name="game_name" placeholder="キーワード検索" class="search_textbox">
                     <input type="submit" value="検索" class="search_btn">
                 </div>
                 <br>
                 <div class="search_model">
-                    <label>機種</label>
+                    <label>機種(選択しない場合は全選択になります。)</label>
                     <hr>
                     <div class="search_model_area">
                         <div class="radio_btn">
@@ -62,7 +62,7 @@ $_SESSION['game_genre'] = null;
                     </div>
                 </div>
                 <div class="search_genre">
-                    <label>ジャンル</label>
+                    <label>ジャンル(選択しない場合は全選択になります。)</label>
                     <hr>
                     <div class="search_genre_area">
                         <div class="radio_btn">
