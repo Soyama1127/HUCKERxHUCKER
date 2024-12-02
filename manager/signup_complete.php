@@ -25,8 +25,10 @@
             $sql = $pdo->prepare('insert into manager(manager_id,manager_password,manager_name) values(?,?,?)');
             $sql->execute([$id, $hashedPassword, $name]);
             ?>
-            <h1>登録完了しました</h1>
-            <form action="login.php" method="post">
+            <div class="login_h1">
+                <h1>登録完了しました</h1>
+            </div>
+            <form action="login.php" method="post" class="signup_form">
                 <input type=submit value=完了 class="manager_btn">
             </form>
         </div>
