@@ -496,3 +496,12 @@ function Favorite($num) {
     }
 
 }
+
+function change() {
+    const selectPay =  document.getElementById("select_pay").value;
+    if(selectPay == "credit") {
+        document.getElementById("creditCardInfo").style.display = "block";
+    }else {
+        document.getElementById("creditCardInfo").style.display = "none";
+    }
+}

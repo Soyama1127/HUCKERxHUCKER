@@ -786,6 +786,10 @@ hr {
     margin-bottom: 30px;
 }
 
+.card_deadline {
+    color: white;
+}
+
 /*購入完了//////////////////////////////////////////////*/
 
 .buy_complete_main {
