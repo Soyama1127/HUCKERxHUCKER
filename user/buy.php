@@ -163,12 +163,13 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             <div class="pay">
                 <label>お支払方法</label>
                 <select id="select_pay" onchange="change();">
-                    <option value="">選択してください</option>
+                    <option value="選択してください">選択してください</option>
                     <option value="paypay">PayPay</option>
                     <option value="credit">クレジットカード</option>
                     <option value="convenience">コンビニ払い</option>
                 </select>
             </div>
+            <div id="error-message-pay" class="err_msg"></div>
             <div id="creditCardInfo" style="display: none;">
                 <label>カード番号</label>
                 <input type="tel" name="card_id" placeholder="0000 0000 0000 0000" class="credit_text" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}" title="カード番号は0000 0000 0000 0000の形式で入力してください" value="<?= $user['card_number'] ?>" required>
@@ -183,7 +184,6 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                 <input type="password" name="security" class="minitext" maxlength="4" minlength="3" pattern="\d{3,4}" title="セキュリティコードは3～4桁の数字で入力してください" value="<?= $user['security_card'] ?>" required>
                 <br>
             </div>
-            <div id="error-message-pay" class="err_msg"></div>
             <br><br>
             <form action="buy_complete.php" method="post" class="buy_form" onsubmit="return validateForm()">
                 <input type='hidden' name='onlyorcart' value='<?= $pageroot ?>'>

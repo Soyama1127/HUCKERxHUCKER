@@ -298,7 +298,7 @@ function validateForm() {
     const state = document.getElementById("state").value;
     const city = document.getElementById("city").value;
     const houseNumber = document.getElementById("house_number").value;
-    const pay = document.getElementById("pay").value;
+    const pay = document.getElementById("select_pay").value;
     const lNameerrorMessage = document.getElementById("error-message-lname");
     const fNameerrorMessage = document.getElementById("error-message-fname");
     const lKanaerrorMessage = document.getElementById("error-message-lkana");
