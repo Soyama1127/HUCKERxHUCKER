@@ -56,6 +56,12 @@
                     <input type="submit" value="在庫管理" class="home_button">
                 </form>
             </div>
+            <!-- ユーザー一覧 -->
+            <div class="home_btn_area">
+                <form action="all_user.php" method="post" class="home_form">
+                    <input type="submit" value="パワハラ上司曾山" class="home_button">
+                </form>
+            </div>
         </div>
     </main>
     <script src="./../js/manager.js"></script>
