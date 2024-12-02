@@ -390,8 +390,7 @@ function confirmRequest() {
 }
 
 function PassUpdate() {
-    const password = document.getElementById("user_password").value;
-    const repassword = document.getElementById("user_repassword").value;
+    const password = document.getElementById("user_currentpass").value;
 
     const PasserrorMessage = document.getElementById("error-message-pass");
     const RePasserrorMessage = document.getElementById("error-message-repass");
@@ -407,29 +406,49 @@ function PassUpdate() {
         error_count++;
     }
 
-    if (password !== repassword) {
-        RePasserrorMessage.innerHTML = "パスワードが一致しません";
-        error_count++;
-    }
-
     if (error_count > 0) {
         return false;
     }
 
-    return true;
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "check_user_currentpass.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            if (xhr.responseText === "false") {
+                RePasserrorMessage.innerHTML = "パスワードが一致しません";
+            } else if (xhr.responseText === "true") {
+                document.getElementById("updatepass").submit();
+            }
+        }
+    };
+    xhr.send("pass=" + encodeURIComponent(password));
+
+    return false;
+
 }
 
 function IdUpdate() {
+    const inputid = document.getElementById("input_currentid").value;
+    const currentid = document.getElementById("currentid").value;
     const userId = document.getElementById("user_id").value;
     const reUserId = document.getElementById("reuser_id").value;
 
+    const CurrentIdErrorMessage = document.getElementById("error-message-currentid");
     const UserIdErrorMessage = document.getElementById("error-message-userid");
     const ReUserIdErrorMessage = document.getElementById("error-message-reuserid");
 
+    CurrentIdErrorMessage.innerHTML = "";
     UserIdErrorMessage.innerHTML = "";
     ReUserIdErrorMessage.innerHTML = "";
 
     let error_count = 0;
+
+
+    if (inputid !== currentid) {
+        CurrentIdErrorMessage.innerHTML = "ログインIDが違います。";
+        error_count++;
+    }
 
     const check_id = /^\d{7,}$/; //7桁以上10桁以内の数値
     if (!check_id.test(userId)) {
