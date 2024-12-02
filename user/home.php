@@ -36,7 +36,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     <div class="carousel">
         <div id="items-wrapper">
             <img class="active" src="./../img/gamesoya home pic.png">
-            <img src="./../img/gamesoya home pic.png">
+            <img src="./../img/bigsale.png">
             <img src="./../img/gamesoya home pic.png">
         </div>
 
