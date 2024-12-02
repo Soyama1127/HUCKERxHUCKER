@@ -206,7 +206,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                 </div>
             <?php endforeach; ?>
         </div>
-    </fieldset>
+    </fieldset><br><br>
     <script src="./../js/user.js"></script>
 </body>
 
