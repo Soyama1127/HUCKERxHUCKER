@@ -1,5 +1,7 @@
 <?php
 $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
+$sql = $pdo->query('select sum(game_price) as game_price from bought inner join game on bought.game_id = game.game_id');
+$price = $sql->fetch();
 ?>
 
 <!DOCTYPE html>
@@ -20,10 +22,6 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
         </header>
         <main class="game_choose_main">
             <div class="game_choose_container">
-                <?php
-                $sql = $pdo->query('select sum(game_price) as game_price from bought inner join game on bought.game_id = game.game_id');
-                $price = $sql->fetch();
-                ?>
                 <h1>総利益: <?= $price['game_price'] ?></h1>
                 <table border="1" class="salestable">
                     <thead>
@@ -40,8 +38,10 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     </thead>
                     <tbody>
                         <?php
-                        $sql = $pdo->query('select * from bought inner join game on bought.game_id = game.game_id inner join user on user.user_id = bought.user_id');
-                        foreach ($sql as $row): ?>
+                        $sql = $pdo->query('select * from bought inner join game on bought.game_id = game.game_id left join user on user.user_id = bought.user_id');
+                        foreach ($sql as $row):
+                            $userName = $row['user_name'] ?? 'ゲスト';
+                        ?>
                             <tr>
                                 <td> <?= $row['game_id'] ?></td>
                                 <td> <?= $row['game_name'] ?> </td>
@@ -49,7 +49,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                                 <td> <?= $row['game_model'] ?></td>
                                 <td> <?= $row['game_stock'] ?> </td>
                                 <td> <?= $row['game_price'] ?> </td>
-                                <td> <?= $row['user_name'] ?> </td>
+                                <td> <?= $userName ?> </td>
                                 <td> <?= $row['buy_date'] ?> </td>
                                 <input type='hidden' name=game_id value=<?= $row['game_id'] ?>>
                             </tr>

@@ -1,6 +1,17 @@
 <?php
 session_start();
-$_SESSION['user_id'] = session_id();
+function generateRandomString($length = 16) {
+    $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    
+    return $randomString;
+}
+$_SESSION['user_id'] = generateRandomString(16);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
