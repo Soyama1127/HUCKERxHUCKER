@@ -68,7 +68,7 @@
                     <input type="submit" value="商品一覧" class="home_button">
                 </form>
             </div>
-            <!-- 売り上げ-->
+            <!-- 売り上げ　-->
             <div class="home_btn_area">
                 <form action="money.php" method="post" class="home_form">
                     <input type="submit" value="売り上げ" class="home_button">

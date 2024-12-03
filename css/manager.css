@@ -241,6 +241,7 @@ body {
 .tablesorter {
     margin-top: 30px;
     width: 1000px;
+    border-collapse: collapse;
 }
 
 /*ゲーム更新*/
@@ -342,4 +343,11 @@ body {
 .usertable {
     width: 100%;
     border-collapse: collapse;
+}
+
+/*商品一覧*/
+
+.allgame_main {
+    display: flex;
+    justify-content: center;
 }
