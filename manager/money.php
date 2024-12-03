@@ -38,7 +38,7 @@ $price = $sql->fetch();
                     </thead>
                     <tbody>
                         <?php
-                        $sql = $pdo->query('select * from bought inner join game on bought.game_id = game.game_id left join user on user.user_id = bought.user_id');
+                        $sql = $pdo->query('select * from bought inner join game on bought.game_id = game.game_id left join user on user.user_id = bought.user_id order by buy_date desc');
                         foreach ($sql as $row):
                             $userName = $row['user_name'] ?? 'ゲスト';
                         ?>
