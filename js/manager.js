@@ -112,7 +112,7 @@ document.getElementById('game_genre').addEventListener('change', function () {
 document.getElementById('game_model').addEventListener('change', function () {
 
     let modelValue = document.getElementById('game_model').value.toLowerCase();
-    let tableRows = document.getElementById('gameTable').getElementsByTagName('tr');
+    let tableRows = document.getElementsByClassName('gameTable').getElementsByTagName('tr');
 
     for (let i = 2; i < tableRows.length; i++) {
         let cells = tableRows[i].getElementsByTagName('td');
@@ -134,3 +134,95 @@ function confirmLogout() {
 function confirmUserDelete() {
     return confirm('削除してもよろしいですか？')
 }
+
+function ChangeTable(num) {
+    if(num === 0) {
+        document.getElementById("stock_asc").style.display = "table";
+        document.getElementById("stock_desc").style.display = "none";
+    } else {
+        document.getElementById("stock_asc").style.display = "none";
+        document.getElementById("stock_desc").style.display = "table";
+    }
+}
+
+document.getElementById('searchInput').addEventListener('keyup', function () {
+    let searchValue = this.value.toLowerCase();
+    
+    // 昇順と降順のテーブルをそれぞれ取得
+    let stockAscRows = document.getElementById('stock_asc').getElementsByTagName('tr');
+    let stockDescRows = document.getElementById('stock_desc').getElementsByTagName('tr');
+
+    // 昇順のテーブル行を検索
+    for (let i = 1; i < stockAscRows.length; i++) {
+        let cells = stockAscRows[i].getElementsByTagName('td');
+        let cellText = cells[1].textContent.toLowerCase();
+        if (cellText.indexOf(searchValue) > -1) {
+            stockAscRows[i].style.display = '';
+        } else {
+            stockAscRows[i].style.display = 'none';
+        }
+    }
+
+    // 降順のテーブル行を検索
+    for (let i = 1; i < stockDescRows.length; i++) {
+        let cells = stockDescRows[i].getElementsByTagName('td');
+        let cellText = cells[1].textContent.toLowerCase();
+        if (cellText.indexOf(searchValue) > -1) {
+            stockDescRows[i].style.display = '';
+        } else {
+            stockDescRows[i].style.display = 'none';
+        }
+    }
+});
+
+document.getElementById('game_genre').addEventListener('change', function () {
+    let genreValue = this.value.toLowerCase();
+    let stockAscRows = document.getElementById('stock_asc').getElementsByTagName('tr');
+    let stockDescRows = document.getElementById('stock_desc').getElementsByTagName('tr');
+
+    for (let i = 1; i < stockAscRows.length; i++) {
+        let cells = stockAscRows[i].getElementsByTagName('td');
+        let cellText = cells[2].textContent.toLowerCase();
+        if (cellText.indexOf(genreValue) > -1) {
+            stockAscRows[i].style.display = '';
+        } else {
+            stockAscRows[i].style.display = 'none';
+        }
+    }
+
+    for (let i = 1; i < stockDescRows.length; i++) {
+        let cells = stockDescRows[i].getElementsByTagName('td');
+        let cellText = cells[2].textContent.toLowerCase();
+        if (cellText.indexOf(genreValue) > -1) {
+            stockDescRows[i].style.display = '';
+        } else {
+            stockDescRows[i].style.display = 'none';
+        }
+    }
+});
+
+document.getElementById('game_model').addEventListener('change', function () {
+    let modelValue = this.value.toLowerCase();
+    let stockAscRows = document.getElementById('stock_asc').getElementsByTagName('tr');
+    let stockDescRows = document.getElementById('stock_desc').getElementsByTagName('tr');
+
+    for (let i = 1; i < stockAscRows.length; i++) {
+        let cells = stockAscRows[i].getElementsByTagName('td');
+        let cellText = cells[3].textContent.toLowerCase();
+        if (cellText.indexOf(modelValue) > -1) {
+            stockAscRows[i].style.display = '';
+        } else {
+            stockAscRows[i].style.display = 'none';
+        }
+    }
+
+    for (let i = 1; i < stockDescRows.length; i++) {
+        let cells = stockDescRows[i].getElementsByTagName('td');
+        let cellText = cells[3].textContent.toLowerCase();
+        if (cellText.indexOf(modelValue) > -1) {
+            stockDescRows[i].style.display = '';
+        } else {
+            stockDescRows[i].style.display = 'none';
+        }
+    }
+});
