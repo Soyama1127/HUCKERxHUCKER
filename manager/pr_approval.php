@@ -23,7 +23,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             <div class="login_h1">
                 <h1>ユーザーPR認証</h1>
             </div>
-            <table class="tablesorter">
+            <table border="1" class="tablesorter">
                 <thead>
                     <tr>
                         <th>PRID</th>

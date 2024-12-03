@@ -18,7 +18,7 @@
             <div class="login_h1">
                 <h3>在庫一覧</h3>
             </div>
-            <table id="gameTable" class="tablesorter">
+            <table border="1" id="gameTable" class="tablesorter">
                 <thead>
                     <tr>
                         <th></th>
