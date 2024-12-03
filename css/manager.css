@@ -327,3 +327,19 @@ body {
 .salestable {
     width: 1300px;
 }
+
+/*ユーザー一覧*/
+
+.alluser_main {
+    display: flex;
+    justify-content: center;
+}
+
+.alluser_container {
+    width: 500px;
+}
+
+.usertable {
+    width: 100%;
+    border-collapse: collapse;
+}

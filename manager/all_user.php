@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/manager.css">
-    <title>ユーザー削除</title>
+    <title>ユーザー一覧</title>
 </head>
 
 <body>
@@ -14,11 +14,11 @@
         GAMESoya管理者
     </header>
     <div class="login_h1">
-        <h1>ユーザー削除</h1>
+        <h1>ユーザー一覧</h1>
     </div>
-    <main class="game_choose_main">
-        <div class="game_choose_container">
-            <table class="tablesorter">
+    <main class="alluser_main">
+        <div class="alluser_container">
+            <table border="1" class="usertable">
                 <thead>
                     <tr>
                         <th>ユーザーID</th>
