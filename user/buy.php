@@ -30,7 +30,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     $pageroot = 0;
                 }
             } else if (isset($_POST['cart_buy'])) {
-                $sql = $pdo->prepare('select sum(game.game_price) as allgame from game inner join cart on game.game_id = cart.game_id where cart_id = ?');
+                $sql = $pdo->prepare('select sum(game.game_price) as allgame from game inner join cart on game.game_id = cart.game_id where cart_no = ?');
                 $sql->execute([$_SESSION['user_id']]);
                 foreach ($sql as $row) {
                     $_SESSION['price'] = $row['allgame'];

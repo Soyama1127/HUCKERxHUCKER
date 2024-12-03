@@ -21,7 +21,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     <h1 class="login_label">カート一覧</h1>
     <div class="cart_box">
         <?php
-        $sql = $pdo->prepare('select game.game_id, game.game_icon, game.game_name, game.game_model, game.game_price, cart.cart_game_no from game inner join cart on game.game_id = cart.game_id where cart.cart_id = ?');
+        $sql = $pdo->prepare('select game.game_id, game.game_icon, game.game_name, game.game_model, game.game_price, cart.cart_game_no from game inner join cart on game.game_id = cart.game_id where cart.cart_no = ?');
         $sql->execute([$cart_id]);
         $row_count = $sql->rowCount();
         foreach ($sql as $row): ?>

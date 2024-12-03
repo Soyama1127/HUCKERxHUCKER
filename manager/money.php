@@ -25,38 +25,8 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                 $price = $sql->fetch();
                 ?>
                 <h1>総利益: <?= $price['game_price'] ?></h1>
-                <table class="salestable">
+                <table border="1" class="salestable">
                     <thead>
-                        <tr>
-                            <th></th>
-                            <th><input type="text" id="searchInput" placeholder="ゲーム名で検索"></th>
-                            <th>
-                                <select id='game_genre' name='game_genre'>
-                                    <option></option>
-                                    <option value='RPG'>RPG</option>
-                                    <option value='アクション'>アクション</option>
-                                    <option value='アドベンチャー'>アドベンチャー</option>
-                                    <option value='シュミレーション'>シュミレーション</option>
-                                    <option value='格闘'>格闘</option>
-                                    <option value='音楽'>音楽(リズム)</option>
-                                    <option value='その他'>その他</option>
-                                </select>
-                            </th>
-                            <th>
-                                <select id='game_model' name='model'>
-                                    <option></option>
-                                    <option value='Switch'>Switch</option>
-                                    <option value='PS'>PS(プレイステーション)</option>
-                                    <option value='3DS'>3DS</option>
-                                    <option value='DS'>DS</option>
-                                    <option value='wii'>Wii</option>
-                                    <option value='64'>64</option>
-                                    <option value='Xbox'>Xbox</option>
-                                    <option value='ファミコン'>ファミコン</option>
-                                    <option value='その他'>その他</option>
-                                </select>
-                            </th>
-                        </tr>
                         <tr>
                             <th>商品ID</th>
                             <th>商品名</th>
@@ -71,7 +41,6 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     <tbody>
                         <?php
                         $sql = $pdo->query('select * from bought inner join game on bought.game_id = game.game_id inner join user on user.user_id = bought.user_id');
-                        $sql->execute();
                         foreach ($sql as $row): ?>
                             <tr>
                                 <td> <?= $row['game_id'] ?></td>
@@ -89,6 +58,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                 </table>
             </div>
         </main>
+        <script src="./../js/manager.js"></script>
 </body>
 
 </html>
