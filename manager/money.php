@@ -64,7 +64,7 @@
             <tbody>
                 <?php
                 $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;', 'LAA1553864', 'Pass1127');
-                $sql = $pdo->query('select game.game_id,game.game_name,game.game_genre,game.game_model,game.game_stock,game.game_price,bought.game_id,bought.buy_data,bought.user_id,user.user_id from game inner join bought on game.game_id = bought.game_id inner join bought on user.user_id = bought.user_id where user_id = ?');
+                $sql = $pdo->query('select * from bought inner join game on bought.game_id = game.game_id inner join user on user.user_id = bought.user_id');
                 $sql->execute();
                 foreach ($sql as $row): ?>
                     <tr>
