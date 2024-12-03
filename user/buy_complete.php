@@ -39,8 +39,10 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             $deleteCart->execute([$_SESSION['user_id']]);
         }
         ?>
-        <h1 class="login_label">購入が完了しました</h1>
-        <a href="home.php" class="buy_complete_link">ホーム画面に戻る</a>
+        <div class="buy_complete">
+            <h1 class="login_label">購入が完了しました</h1>
+            <button onclick="location.href='home.php'" class='back_home_btn'>ホーム画面に戻る</button>
+        </div>
     </main>
 </body>
 

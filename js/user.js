@@ -374,7 +374,9 @@ function validateForm() {
     if (error_count > 0) {
         return false;
     }
-    return true;
+
+
+    return confirm("購入してもよろしいですか？");
 }
 
 function confirmCartOut() {
