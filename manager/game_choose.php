@@ -16,9 +16,9 @@
     <main class="game_choose_main">
         <div class="game_choose_container">
             <div class="login_h1">
-                <h3>更新したい商品の選択</h3>
+                <h1>更新したい商品の選択</h1>
             </div>
-            <table id="gameTable" class="tablesorter">
+            <table border="1" id="gameTable" class="tablesorter">
                 <thead>
                     <tr>
                         <th></th>
@@ -78,6 +78,7 @@
                     <?php endforeach ?>
                 </tbody>
             </table>
+            <br>
         </div>
     </main>
     <script src="./../js/manager.js"></script>
