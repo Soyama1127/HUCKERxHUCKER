@@ -18,12 +18,12 @@
             <div class="login_h1">
                 <h1>更新したい商品の選択</h1>
             </div>
-            <table border="1" id="gameTable" class="tablesorter">
+            <table class="tablesorter">
                 <thead>
                     <tr>
-                        <th></th>
-                        <th><input type="text" id="searchInput" placeholder="ゲーム名で検索"></th>
+                        <th>ワード検索：<input type="text" id="searchInput" placeholder="ゲーム名で検索"></th>
                         <th>
+                            ジャンル：
                             <select id='game_genre' name='game_genre'>
                                 <option></option>
                                 <option value='RPG'>RPG</option>
@@ -36,6 +36,7 @@
                             </select>
                         </th>
                         <th>
+                            機種：
                             <select id='game_model' name='model'>
                                 <option></option>
                                 <option value='Switch'>Switch</option>
@@ -50,6 +51,10 @@
                             </select>
                         </th>
                     </tr>
+                </thead>
+            </table>
+            <table border="1" id="gameTable" class="tablesorter">
+                <thead>
                     <tr>
                         <th>商品ID</th>
                         <th>商品名</th>

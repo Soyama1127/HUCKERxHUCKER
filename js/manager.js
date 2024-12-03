@@ -82,7 +82,7 @@ document.getElementById('searchInput').addEventListener('keyup', function () {
     // テーブルの行を取得
     let tableRows = document.getElementById('gameTable').getElementsByTagName('tr');
 
-    for (let i = 2; i < tableRows.length; i++) {
+    for (let i = 1; i < tableRows.length; i++) {
         let cells = tableRows[i].getElementsByTagName('td');
         let cellText = cells[1].textContent.toLowerCase();
         if (cellText.indexOf(searchValue) > -1) {
@@ -98,7 +98,7 @@ document.getElementById('game_genre').addEventListener('change', function () {
     let genreValue = document.getElementById('game_genre').value.toLowerCase();
     let tableRows = document.getElementById('gameTable').getElementsByTagName('tr');
 
-    for (let i = 2; i < tableRows.length; i++) {
+    for (let i = 1; i < tableRows.length; i++) {
         let cells = tableRows[i].getElementsByTagName('td');
         let cellText = cells[2].textContent.toLowerCase();
         if (cellText.indexOf(genreValue) > -1) {
@@ -114,7 +114,7 @@ document.getElementById('game_model').addEventListener('change', function () {
     let modelValue = document.getElementById('game_model').value.toLowerCase();
     let tableRows = document.getElementsByClassName('gameTable').getElementsByTagName('tr');
 
-    for (let i = 2; i < tableRows.length; i++) {
+    for (let i = 1; i < tableRows.length; i++) {
         let cells = tableRows[i].getElementsByTagName('td');
         let cellText = cells[3].textContent.toLowerCase();
         if (cellText.indexOf(modelValue) > -1) {
