@@ -18,7 +18,7 @@
             <div class="login_h1">
                 <h3>削除する商品の選択</h3>
             </div>
-            <table id="gameTable" class="tablesorter">
+            <table border="1" id="gameTable" class="tablesorter">
                 <tr>
                     <th></th>
                     <th><input type="text" id="searchInput" placeholder="ゲーム名で検索"></th>
@@ -55,6 +55,7 @@
                     <th>ジャンル</th>
                     <th>機種</th>
                     <th>在庫数</th>
+                    <th></th>
                 </tr>
                 <tbody>
                     <?php
@@ -74,7 +75,7 @@
                         </tr>
                     <?php endforeach ?>
                 </tbody>
-            </table>
+            </table><br><br>
         </div>
     </main>
     <script src="./../js/manager.js"></script>
