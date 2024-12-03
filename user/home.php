@@ -36,8 +36,8 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     <div class="carousel">
         <div id="items-wrapper">
             <img class="active" src="./../img/gamesoya home pic.png">
-            <img src="./../img/gamesoya home pic.png">
-            <img src="./../img/gamesoya home pic.png">
+            <img src="./../img/bigsale.png">
+            <img src="./../img/PR.png">
         </div>
 
         <div id="select-tabs">
@@ -206,7 +206,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                 </div>
             <?php endforeach; ?>
         </div>
-    </fieldset>
+    </fieldset><br><br>
     <script src="./../js/user.js"></script>
 </body>
 

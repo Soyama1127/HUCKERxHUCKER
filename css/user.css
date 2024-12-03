@@ -786,6 +786,10 @@ hr {
     margin-bottom: 30px;
 }
 
+.card_deadline {
+    color: white;
+}
+
 /*購入完了//////////////////////////////////////////////*/
 
 .buy_complete_main {
@@ -989,10 +993,16 @@ hr {
 .pr_area {
     display: flex;
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .pr_clip {
-    width: 300px;
+    width: 500px;
+    margin-right: 10px;
+}
+
+.pr_video {
+    width: 500px;
     margin-right: 10px;
 }
 

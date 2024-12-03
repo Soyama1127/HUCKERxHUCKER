@@ -60,6 +60,10 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                     'city' => '',
                     'house_number' => '',
                     'house' => '',
+                    'card_number' => '',
+                    'date_month' => '',
+                    'date_year' => '',
+                    'security_card' => ''
                 ];
             }
             ?>
@@ -158,14 +162,28 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             <hr>
             <div class="pay">
                 <label>お支払方法</label>
-                <select id="pay">
-                    <option>選択してください</option>
-                    <option>PayPay</option>
-                    <option>クレジットカード</option>
-                    <option>コンビニ払い</option>
+                <select id="select_pay" onchange="change();">
+                    <option value="選択してください">選択してください</option>
+                    <option value="paypay">PayPay</option>
+                    <option value="credit">クレジットカード</option>
+                    <option value="convenience">コンビニ払い</option>
                 </select>
             </div>
             <div id="error-message-pay" class="err_msg"></div>
+            <div id="creditCardInfo" style="display: none;">
+                <label>カード番号</label>
+                <input type="tel" name="card_id" placeholder="0000 0000 0000 0000" class="credit_text" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}" title="カード番号は0000 0000 0000 0000の形式で入力してください" value="<?= $user['card_number'] ?>" required>
+                <br>
+                <label>有効期限</label>
+                <div class="card_deadline">
+                    <input type="number" name="card_month" placeholder="MM" class="minitext" min="1" max="12" value="<?= $user['date_month'] ?>" required>月
+                    <input type="number" name="card_year" placeholder="YY" class="minitext" min="23" max="99" value="<?= $user['date_year'] ?>" required>年
+                </div>
+                <br>
+                <label>セキュリティ番号</label>
+                <input type="password" name="security" class="minitext" maxlength="4" minlength="3" pattern="\d{3,4}" title="セキュリティコードは3～4桁の数字で入力してください" value="<?= $user['security_card'] ?>" required>
+                <br>
+            </div>
             <br><br>
             <form action="buy_complete.php" method="post" class="buy_form" onsubmit="return validateForm()">
                 <input type='hidden' name='onlyorcart' value='<?= $pageroot ?>'>

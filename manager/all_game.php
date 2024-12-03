@@ -12,10 +12,12 @@
 
 <body>
     <header>
+    <header class="logoback_header">
+    <button class='back-btn' onclick="location.href='home.php'"><img src='./../img/backbutton.png'></button>
         GAMESoya管理者
     </header>
     <main>
-        <h3>更新したい商品の選択</h3>
+        <h3>ゲーム一覧</h3>
         <table class="tablesorter">
             <thead>
                 <tr>

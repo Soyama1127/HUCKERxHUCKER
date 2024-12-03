@@ -25,22 +25,41 @@
             foreach ($sql as $row): ?>
                 <h2><?= $user_name ?>さん</h2>
                 <h2><?= $game_name ?></h2>
-                <img src="pr_movie/<?= $row['pr_clip'] ?>" class="pr_clip"><br><br>
-                <fieldset>
-                    <?= $row['pr_content'] ?>
-                </fieldset><br><br>
-                <div class="approval_btn_area">
-                    <form action="pr_disagree.php" method="post" class="approval_form">
-                        <input type="hidden" value="<?= $pr_id ?>" name="pr_id">
-                        <input type="submit" class="disagree_btn" value="却下">
-                    </form>
-                    <form action="pr_agree.php" method="post" class="approval_form">
-                        <input type="hidden" value="<?= $pr_id ?>" name="pr_id">
-                        <input type="submit" class="agree_btn" value="承認">
-                    </form>
+                <?php
+                $filePath = './../manager/pr_movie/' . $row['pr_clip'];
+                // ファイルタイプを判定
+                $fileType = mime_content_type($filePath);
+                // MIMEタイプを取得
+                $finfo = finfo_open(FILEINFO_MIME_TYPE);
+                $fileType = finfo_file($finfo, $filePath);
+                finfo_close($finfo);
+                ?>
+                <div class="pr_area">
+                    <?php
+                    if (in_array($fileType, ['image/jpeg', 'image/png', 'image/gif'])) : ?>
+                        <img src="<?= $filePath ?>" class="pr_clip">
+                    <?php elseif (in_array($fileType, ['video/mp4', 'video/webm', 'video/ogg'])): ?>
+                        <video controls class="prcheck_video">
+                            <source src="<?= $filePath ?>" type='video/mp4' class="pr_clip">
+                        </video>
+                    <?php else : ?>
+                        echo "サポートされていないファイルタイプです。";
+                    <?php endif; ?><br><br>
+                    <fieldset>
+                        <?= $row['pr_content'] ?>
+                    </fieldset><br><br>
+                    <div class="approval_btn_area">
+                        <form action="pr_disagree.php" method="post" class="approval_form">
+                            <input type="hidden" value="<?= $pr_id ?>" name="pr_id">
+                            <input type="submit" class="disagree_btn" value="却下">
+                        </form>
+                        <form action="pr_agree.php" method="post" class="approval_form">
+                            <input type="hidden" value="<?= $pr_id ?>" name="pr_id">
+                            <input type="submit" class="agree_btn" value="承認">
+                        </form>
+                    </div>
+                <?php endforeach; ?>
                 </div>
-            <?php endforeach; ?>
-        </div>
     </main>
 </body>
 

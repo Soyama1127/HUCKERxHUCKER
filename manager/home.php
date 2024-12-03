@@ -59,13 +59,13 @@
             <!-- ユーザー一覧 -->
             <div class="home_btn_area">
                 <form action="all_user.php" method="post" class="home_form">
-                    <input type="submit" value="パワハラ上司曾山" class="home_button">
+                    <input type="submit" value="ユーザー一覧" class="home_button">
                 </form>
             </div>
             <!-- 商品一覧　-->
             <div class="home_btn_area">
                 <form action="all_game.php" method="post" class="home_form">
-                    <input type="submit" value="訴えます" class="home_button">
+                    <input type="submit" value="商品一覧" class="home_button">
                 </form>
             </div>
             <!-- 売り上げ-->

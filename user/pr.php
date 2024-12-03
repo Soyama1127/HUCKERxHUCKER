@@ -16,7 +16,11 @@ session_start();
         <button class='back-btn' onclick="location.href='game.php'"><img src='./../img/backbutton.png'></button>
         <img src="./../img/GAMESoya.PNG" class="gamesoya_logo">
         <form action="pr_request.php" class="pr_form">
-            <button type="submit" class="pr_btn">PRを作成</button>
+            <?php if (isset($_SESSION['user_name'])): ?>
+                <button type="submit" class="pr_btn">PRを作成</button>
+            <?php else: ?>
+                <button type="button" class="pr_btn" onclick="confirmLogin()">PRを作成</button>
+            <?php endif; ?>
         </form>
     </header>
     <main class="pr_main">
@@ -31,8 +35,26 @@ session_start();
                 echo '<h1>このゲームのユーザーPRはありません。<h1>';
             }
             foreach ($sql as $row): ?>
+                <?php
+                $filePath = './../manager/pr_movie/' . $row['pr_clip'];
+                // ファイルタイプを判定
+                $fileType = mime_content_type($filePath);
+                // MIMEタイプを取得
+                $finfo = finfo_open(FILEINFO_MIME_TYPE);
+                $fileType = finfo_file($finfo, $filePath);
+                finfo_close($finfo);
+                ?>
                 <div class="pr_area">
-                    <img src="./../manager/pr_movie/<?=$row['pr_clip']?>" class="pr_clip">
+                    <?php
+                    if (in_array($fileType, ['image/jpeg', 'image/png', 'image/gif'])) : ?>
+                        <img src="<?= $filePath ?>" class="pr_clip">
+                    <?php elseif (in_array($fileType, ['video/mp4', 'video/webm', 'video/ogg'])): ?>
+                        <video controls class="pr_video">
+                            <source src="<?= $filePath ?>" type='video/mp4' class="pr_clip">
+                        </video>
+                    <?php else : ?>
+                        echo "サポートされていないファイルタイプです。";
+                    <?php endif; ?>
                     <div class="pr_detail">
                         投稿者：<?= $row['user_name'] ?><br>
                         PRポイント：<br><?= $row['pr_content'] ?>
@@ -41,6 +63,7 @@ session_start();
             <?php endforeach ?>
         </div>
     </main>
+    <script src="./../js/user.js"></script>
 </body>
 
 </html>
