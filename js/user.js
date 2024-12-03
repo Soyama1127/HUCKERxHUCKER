@@ -418,7 +418,7 @@ function PassUpdate() {
     xhr.onload = function () {
         if (xhr.status === 200) {
             if (xhr.responseText === "false") {
-                RePasserrorMessage.innerHTML = "パスワードが一致しません";
+                RePasserrorMessage.innerHTML = "現在のパスワードが一致しません";
             } else if (xhr.responseText === "true") {
                 document.getElementById("updatepass").submit();
             }
