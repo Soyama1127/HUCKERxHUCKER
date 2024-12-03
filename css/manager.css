@@ -317,3 +317,13 @@ body {
 
 /*ユーザー削除*/
 
+/*売上*/
+
+.price {
+    display: flex;
+    justify-content: center;
+}
+
+.salestable {
+    width: 1300px;
+}
