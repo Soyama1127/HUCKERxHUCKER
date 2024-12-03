@@ -394,9 +394,11 @@ function confirmRequest() {
 function PassUpdate() {
     const password = document.getElementById("user_currentpass").value;
 
+    const CurrentPassErrorMessage = document.getElementById("error-message-currentpass");
     const PasserrorMessage = document.getElementById("error-message-pass");
     const RePasserrorMessage = document.getElementById("error-message-repass");
 
+    CurrentPassErrorMessage.innerHTML = '';
     PasserrorMessage.innerHTML = '';
     RePasserrorMessage.innerHTML = '';
 
@@ -418,9 +420,13 @@ function PassUpdate() {
     xhr.onload = function () {
         if (xhr.status === 200) {
             if (xhr.responseText === "false") {
-                RePasserrorMessage.innerHTML = "現在のパスワードが一致しません";
+                CurrentPassErrorMessage.innerHTML = "パスワードが違います。";
             } else if (xhr.responseText === "true") {
-                document.getElementById("updatepass").submit();
+                if(confirm('変更してよろしいですか？')){
+                    document.getElementById("updatepass").submit();
+                }else {
+                    return false;
+                }
             }
         }
     };
@@ -475,7 +481,11 @@ function IdUpdate() {
             if (xhr.responseText === "exists") {
                 UserIdErrorMessage.innerHTML = "このIDは使用されています";
             } else {
-                document.getElementById("update").submit();
+                if(confirm('変更してよろしいですか？')){
+                    document.getElementById("update").submit();
+                }else {
+                    return false;
+                }  
             }
         }
     };
