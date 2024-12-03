@@ -32,7 +32,7 @@ session_start();
             $sql = $pdo->prepare('select * from user where user_id = ?');
             $sql->execute([$_SESSION['user_id']]);
             foreach ($sql as $row): ?>
-                <form action="address_update.php" method="post" onsubmit="return validateForm()" class="address_form">
+                <form action="address_update.php" method="post" onsubmit="addressCheck()" class="address_form">
 
                     <label>姓(全角)</label>
                     <input type="text" name="last_name" placeholder="例)山田" id="last_name" class="user_text" value=<?= $row['last_name'] ?>><br>

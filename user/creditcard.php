@@ -25,7 +25,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             $sql = $pdo->prepare('select * from user where user_id = ?');
             $sql->execute([$_SESSION['user_id']]);
             foreach ($sql as $row): ?>
-            <form action="update_card.php" method="post" class="credit_form">
+            <form action="update_card.php" method="post" class="credit_form" onsubmit="creditCheck()">
                 <label>カード番号</label>
                 <input type="tel" name="card_id" placeholder="0000 0000 0000 0000" class="credit_text" maxlength="19" pattern="\d{4} \d{4} \d{4} \d{4}" title="カード番号は0000 0000 0000 0000の形式で入力してください" value="<?= $row['card_number'] ?>"><br>
                 <label>有効期限</label>
@@ -44,6 +44,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
             <?php endforeach; ?>
         </div>
     </main>
+    <script src="./../js/user.js"></script>
 </body>
 
 </html>

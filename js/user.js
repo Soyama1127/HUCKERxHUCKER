@@ -507,3 +507,90 @@ function change() {
         document.getElementById("creditCardInfo").style.display = "none";
     }
 }
+
+function creditCheck() {
+    confirm('登録してよろしいですか。');
+}
+
+function addressCheck() {
+    // 姓、名、姓カナ、名カナが入力されているかチェック
+    const lastName = document.getElementById("last_name").value;
+    const firstName = document.getElementById("first_name").value;
+    const lastNameKana = document.getElementById("last_namekana").value;
+    const firstNameKana = document.getElementById("first_namekana").value;
+    const postCode = document.getElementById("post_code").value;
+    const state = document.getElementById("state").value;
+    const city = document.getElementById("city").value;
+    const houseNumber = document.getElementById("house_number").value;
+    const lNameerrorMessage = document.getElementById("error-message-lname");
+    const fNameerrorMessage = document.getElementById("error-message-fname");
+    const lKanaerrorMessage = document.getElementById("error-message-lkana");
+    const fKanaerrorMessage = document.getElementById("error-message-fkana");
+    const posterrorMessage = document.getElementById("error-message-post");
+    const stateerrorMessage = document.getElementById("error-message-state");
+    const cityerrorMessage = document.getElementById("error-message-city");
+    const houseNumerrorMessage = document.getElementById("error-message-houseNum");
+
+    lNameerrorMessage.innerHTML = "";
+    fNameerrorMessage.innerHTML = "";
+    lKanaerrorMessage.innerHTML = "";
+    fKanaerrorMessage.innerHTML = "";
+    posterrorMessage.innerHTML = "";
+    stateerrorMessage.innerHTML = "";
+    cityerrorMessage.innerHTML = "";
+    houseNumerrorMessage.innerHTML = "";
+
+    let error_count = 0; //エラー数の初期化
+
+    // 姓、名、姓カナ、名カナが空でないか
+    if (lastName == "") {
+        lNameerrorMessage.innerHTML = "姓は必須項目です";
+        error_count++;
+    }
+
+    if (firstName == "") {
+        fNameerrorMessage.innerHTML = "名は必須項目です";
+        error_count++;
+    }
+
+    if (lastNameKana == "") {
+        lKanaerrorMessage.innerHTML = "姓カナは必須項目です";
+        error_count++;
+    }
+
+    if (firstNameKana == "") {
+        fKanaerrorMessage.innerHTML = "名カナは必須項目です";
+        error_count++;
+    }
+
+    // 郵便番号が正しい形式か (例: 123-4567)
+    const postCodePattern = /^[0-9]{3}-[0-9]{4}$/;
+    if (!postCode.match(postCodePattern)) {
+        posterrorMessage.innerHTML = "郵便番号は正しい形式で入力してください。<br>例) 123-4567";
+        error_count++;
+    }
+
+    // 都道府県が選択されているか
+    if (state == "選択してください") {
+        stateerrorMessage.innerHTML = "都道府県を選択してください。";
+        error_count++;
+    }
+
+    // 市町村と番地が空でないか
+    if (city == "") {
+        cityerrorMessage.innerHTML = "市町村は必須項目です。";
+        error_count++;
+    }
+
+    if (houseNumber == "") {
+        houseNumerrorMessage.innerHTML = "番地は必須項目です";
+        error_count++;
+    }
+
+    if (error_count > 0) {
+        return false;
+    }
+
+
+    return confirm("登録してもよろしいですか？");
+}
