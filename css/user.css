@@ -381,11 +381,21 @@ hr {
     margin-right: 30px;
 }
 
+.modelprice {
+    display: flex;
+    justify-content: space-between;
+}
+
 .game_title {
     display: flex;
     align-items: center;
     color: white;
-    width: 60%;
+    width: 100%;
+}
+
+.game_title_detail {
+    width: 100%;
+    padding-right: 10px;
 }
 
 .detail_form {
