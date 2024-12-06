@@ -832,6 +832,8 @@ hr {
 }
 
 .account_btn {
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 50px;
     margin-bottom: 20px;
@@ -890,6 +892,17 @@ hr {
     background-color: rgb(253, 115, 115);
     border-radius: 10px;
     align-items: center;
+}
+
+.account_setting_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+.black_btn {
+    height: 30px;
 }
 
 /*パスワード・ログインID////////////////////////////*/

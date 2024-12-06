@@ -25,9 +25,24 @@ session_start();
                 <button onclick="location.href='home.php'" class='accountname_update_btn'>更新</button><br>
             </form>
             <hr><br>
-            <button onclick="location.href='update.php'" class='account_btn'>パスワード/ログインID</button><br>
-            <button onclick="updateAddressBackNumber(1);location.href='address.php'" class='account_btn'>住所</button><br>
-            <button onclick="location.href='creditcard.php'" class='account_btn'>クレジットカード情報</button>
+            <button onclick="location.href='update.php'" class='account_btn'>
+                <div class="account_setting_btn">
+                    パスワード/ログインID
+                    <img src='./../img/black_backbtn.png' class="black_btn">
+                </div>
+            </button><br>
+            <button onclick="updateAddressBackNumber(1);location.href='address.php'" class='account_btn'>
+                <div class="account_setting_btn">
+                    住所
+                    <img src='./../img/black_backbtn.png' class="black_btn">
+                </div>
+            </button><br>
+            <button onclick="location.href='creditcard.php'" class='account_btn'>
+                <div class="account_setting_btn">
+                    クレジットカード情報
+                    <img src='./../img/black_backbtn.png' class="black_btn">
+                </div>
+            </button>
         </div>
     </main>
     <script src="./../js/user.js"></script>

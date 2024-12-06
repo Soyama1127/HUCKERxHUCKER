@@ -22,15 +22,21 @@ $_SESSION['address_root'] = 1;
         <div class="account_container">
             <label>商品管理</label>
             <form action="favorite.php" method="post">
-                <input type="submit" value="お気に入り一覧" class="account_btn">
+                <div class="account_btn_text">
+                    <input type="submit" value="お気に入り一覧" class="account_btn">
+                </div>
             </form>
             <form action="buy_history.php" method="post">
-                <input type="submit" value="購入履歴" class="account_btn">
+                <div class="account_btn_text">
+                    <input type="submit" value="購入履歴" class="account_btn">
+                </div>
             </form>
             <br>
             <label>ユーザー管理</label>
             <form action="account_setting.php" method="post">
-                <input type="submit" value="アカウント" class="account_btn">
+                <div class="account_btn_text">
+                    <input type="submit" value="アカウント" class="account_btn">
+                </div>
             </form>
             <br><br>
             <form action="destroySession.php" method="post" onsubmit="return confirmLogout();" class="logout_form">
