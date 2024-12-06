@@ -76,7 +76,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     特定のユーザーid,名前,パスワードを表示
     select user_id, user_name, user_password from user where login_id = ?
 
-    連番降り直し
+    連番降り直し重複回避
     update cart set cart_game_no = cart_game_no + 1000 where cart_no = ?
 
     お気に入りの削除
@@ -109,8 +109,41 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     パスワードを変更
     UPDATE `user` SET `user_password` = ? WHERE `user`.`user_id` = ?
     
+    お気に入り登録
+    insert into favorite(user_id, game_id) values(?,?)
 
+    特定のカートを表示
+    select game_id from cart where cart_no= ?
 
+    購入後のカート処理
+    delete from cart where cart_no = ?
+
+    購入履歴の履歴
+    select * from game inner join bought on game.game_id = bought.game_id where user_id = ? order by buy_date desc
+
+    特定のユーザーのパスワードを表示
+    select user_password from user where user_id = ?
+
+    カート内ゲーム削除
+    delete from cart WHERE cart_no = ? and cart_game_no = ?
+
+    連番降り直し
+    set @row_number = 0; update cart set cart_game_no = (@row_number := @row_number + 1) where cart_no = ? order by cart_game_no
+
+    ユーザーPR登録
+    'insert into userpr (user_id, game_id, pr_content, pr_clip) values (?,?,?,?)
+
+    特定のゲームを表示
+    select * from game where game_id=?
+
+    ユーザーID更新
+    UPDATE `user` SET `login_id` = ? WHERE `user`.`user_id` = ?;
+
+    ユーザーの名前更新
+    UPDATE `user` SET `user_name` = ? WHERE `user`.`user_id` = ?;
+
+    ユーザーパスワード更新
+    UPDATE `user` SET `user_password` = ? WHERE `user`.`user_id` = ?
     
 
     
