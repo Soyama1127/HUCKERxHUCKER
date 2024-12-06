@@ -832,8 +832,6 @@ hr {
 }
 
 .account_btn {
-    display: flex;
-    align-items: center;
     width: 100%;
     height: 50px;
     margin-bottom: 20px;
