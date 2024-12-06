@@ -34,10 +34,12 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
                 </form>
                 <img src='./../manager/game/<?= $row['game_icon'] ?>' alt='ゲーム画像' class='game_icon'>
                 <div class="game_title">
-                    <div>
-                        <h5 class="home_h5"><?= $row['game_name'] ?></h5>
-                        <?= $row['game_model'] ?><br>
-                        ￥<?= $row['game_price'] ?>
+                    <div class="game_title_detail">
+                        <h3><?= $row['game_name'] ?></h3>
+                        <div class="modelprice">
+                            <p><?= $row['game_model'] ?></p>
+                            <p>￥<?= $row['game_price'] ?></p>
+                        </div>
                     </div>
                 </div>
                 <form action="game.php" method="post" class="detail_form">
