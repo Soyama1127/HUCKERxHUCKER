@@ -18,7 +18,7 @@
     </div>
     <main class="game_choose_main">
         <div class="game_choose_container">
-            <table class="tablesorter">
+            <table border="1" class="userdeletetable">
                 <thead>
                     <tr>
                         <th>ユーザーID</th>
