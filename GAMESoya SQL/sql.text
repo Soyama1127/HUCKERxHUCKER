@@ -5,26 +5,44 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     管理者追加
     insert into manager(manager_id,manager_password,manager_name) values(?,?,?);
 
-    ゲーム追加
-    insert into game(game_name,game_price,game_model,game_genre,game_icon,game_sample1,game_sample2,game_sample3,game_summary) values(?,?,?,?,?,?,?,?,?);
+    特定の管理者を表示
+    select * from manager where manager_id = ?
 
-    ユーザー削除
-    delete from user where user_id = ?
-
-    在庫追加
-    update  game  set  game_stock = ? where game_id = ?
+    特定の管理者のパスワードを表示
+    select manager_password from manager where manager_id = ?
 
     ゲーム一覧
     select * from game
 
-    特定の管理者を表示
-    select * from manager where manager_id = ?
+    ゲーム追加
+    insert into game(game_name,game_price,game_model,game_genre,game_icon,game_sample1,game_sample2,game_sample3,game_summary) values(?,?,?,?,?,?,?,?,?);
+
+    ゲーム情報の更新
+    update game set game_name = ?, game_price = ?, game_model = ?, game_genre = ?, game_icon = ?, game_sample1 = ?, game_sample2 = ?, game_sample3 = ?, game_summary = ? WHERE game_id = ?
+
+    ゲームの削除
+    delete from game where game_id = ?
 
     特定のゲームを表示
     select * from game where game_id = ?
 
+    ユーザー一覧
+    select * from user
+    
+    ユーザー削除
+    delete from user where user_id = ?
+
+    在庫数を表示
+    select game_stock from game where game_id = ?
+
+    在庫追加
+    update  game  set  game_stock = ? where game_id = ?
+
     ユーザーPRを承認
     update userpr set pr_approval=1 where pr_id=?
+
+    ユーザーPRを却下
+    update userpr set pr_approval=0 where pr_id=?
 
     確認されていないユーザーPRを表示
     select * from userpr where pr_approval is null
@@ -33,9 +51,7 @@ $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1553864-gamesoya;'
     select user.user_name as user_name from user inner join userpr on user.user_id = userpr.user_id where user.user_id = ?'
 
     特定のユーザーPRを表示
-    select * from userpr where pr_id = ?
-
-
+    select * from userpr where pr_id = ?  
 
 ユーザーSQL
 
